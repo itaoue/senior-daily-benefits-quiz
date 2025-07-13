@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Daily Benefits - Are You Claiming All Your Benefits?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+        }
+        
+        .container {
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #f0fdf4, #eff6ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .hero-section {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .content {
+            space-y: 32px;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background: #dcfce7;
+            color: #166534;
+            border-radius: 9999px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        
+        .badge::before {
+            content: "✓";
+            margin-right: 8px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #1f2937;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: #059669;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .description {
+            font-size: 1.125rem;
+            color: #6b7280;
+            margin-bottom: 32px;
+        }
+        
+        .cta-button {
+            background: #ea580c;
+            color: white;
+            padding: 16px 32px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .cta-button::after {
+            content: "→";
+            margin-left: 8px;
+        }
+        
+        .trust-text {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .trust-text::before {
+            content: "🛡️";
+            margin-right: 8px;
+        }
+        
+        .image-section {
+            position: relative;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        }
+        
+        .savings-badge {
+            position: absolute;
+            bottom: -24px;
+            right: -24px;
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .savings-amount {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #059669;
+        }
+        
+        .savings-text {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .quiz-container {
+            display: none;
+            max-width: 600px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            padding: 32px;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #059669;
+            transition: width 0.5s ease;
+        }
+        
+        .question-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        .option-button {
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 12px;
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+        }
+        
+        .option-button:hover {
+            background: #f0fdf4;
+            border-color: #059669;
+        }
+        
+        .email-section {
+            display: none;
+            max-width: 600px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            padding: 32px;
+            text-align: center;
+        }
+        
+        .email-icon {
+            width: 64px;
+            height: 64px;
+            background: #dcfce7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 32px;
+        }
+        
+        .email-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        
+        .email-subtitle {
+            font-size: 1.25rem;
+            color: #6b7280;
+            margin-bottom: 32px;
+        }
+        
+        .email-input {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.125rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .email-input:focus {
+            outline: none;
+            border-color: #059669;
+        }
+        
+        .privacy-text {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 16px;
+        }
+        
+        .testimonials-section {
+            background: white;
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+        
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonials-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 16px;
+        }
+        
+        .testimonials-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #6b7280;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+        
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .testimonial-quote {
+            font-size: 1.125rem;
+            color: #4b5563;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            background: #059669;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 16px;
+        }
+        
+        .author-info h4 {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+        
+        .author-info p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+        
+        .quote-icon {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 24px;
+            color: #059669;
+            opacity: 0.3;
+        }
+        
+        .stats-section {
+            background: #059669;
+            color: white;
+            padding: 60px 20px;
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .stat-item p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+        
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 60px 20px 40px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-link {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 20px;
+            text-align: center;
+            color: #9ca3af;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 16px;
+            }
+            
+            .testimonials-title {
+                font-size: 2rem;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .stat-item h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    
+    <!-- Start NB Pixel Snippet -->
+    <script>
+    !(function (e, n, t, i, p, a, s) {
+      e[i] ||
+        (((p = e[i] =
+          function () {
+            p.process ? p.process.apply(p, arguments) : p.queue.push(arguments);
+          }).queue = []),
+        (p.t = +new Date()),
+        ((a = n.createElement(t)).async = 1),
+        (a.src = 'https://static.newsbreak.com/business/tracking/nbpixel.js?t=' + 864e5 * Math.ceil(new Date() / 864e5)),
+        (s = n.getElementsByTagName(t)[0]).parentNode.insertBefore(a, s));
+    })(window, document, 'script', 'nbpix'),
+      nbpix('init', 'ID-1900614605618270209'),
+      nbpix('event', 'pageload');
+    </script>
+    <!-- End NB Pixel Snippet -->
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div id="hero" class="hero-section">
+            <div class="content">
+                <div class="badge">Free Benefits Assessment</div>
+                <h1>Are You Claiming All the Senior Benefits You're Entitled To?</h1>
+                <div class="subtitle">Take This 60-Second Quiz to Find Out!</div>
+                <div class="description">
+                    Millions of American seniors are missing out on thousands of dollars in benefits they don't even know exist. Don't be one of them.
+                </div>
+                <button class="cta-button" onclick="startQuiz()">Start Free Quiz</button>
+                <div class="trust-text">100% Free • No Credit Card Required • 2 Minutes</div>
+            </div>
+            <div class="image-section">
+                <img src="hero-couple.jpg" alt="Happy senior couple" class="hero-image">
+                <div class="savings-badge">
+                    <div class="savings-amount">$1,000s</div>
+                    <div class="savings-text">in potential savings</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quiz Section -->
+        <div id="quiz" class="quiz-container">
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill" style="width: 25%"></div>
+            </div>
+            <div id="question-counter" style="text-align: center; margin-bottom: 16px; color: #6b7280;">Question 1 of 4</div>
+            <div id="question" class="question-text">Are you currently paying more than $25/month for your cell phone bill?</div>
+            <div id="options">
+                <button class="option-button" onclick="selectAnswer('Yes')">Yes</button>
+                <button class="option-button" onclick="selectAnswer('No')">No</button>
+            </div>
+        </div>
+        
+        <!-- Email Section -->
+        <div id="email" class="email-section">
+            <div class="email-icon">✓</div>
+            <div class="email-title">Almost There!</div>
+            <div class="email-subtitle">Enter your email to see your results and reveal the benefits you might be missing</div>
+            <form onsubmit="submitEmail(event)">
+                <input type="email" class="email-input" placeholder="Enter your email address" required>
+                <button type="submit" class="cta-button" style="width: 100%;">SHOW MY RESULTS!</button>
+            </form>
+            <div class="privacy-text">🛡️ We respect your privacy. Unsubscribe at any time.</div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <h2 class="testimonials-title">What Seniors Are Saying</h2>
+            <p class="testimonials-subtitle">Thousands of seniors have discovered benefits they never knew existed. Here are their stories.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-quote">"I had no idea I was eligible for a phone discount! This quiz helped me save $35 per month on my cell phone bill. That's over $400 a year!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div class="author-info">
+                            <h4>Margaret Johnson</h4>
+                            <p>Age 67, Retired Teacher</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-quote">"The quiz revealed I was missing out on property tax exemptions. I saved $1,200 this year alone! I wish I had known about this sooner."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RW</div>
+                        <div class="author-info">
+                            <h4>Robert Williams</h4>
+                            <p>Age 72, Veteran</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-quote">"Thanks to this quiz, I discovered prescription assistance programs that cut my medication costs by 60%. It's been life-changing for my budget."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DB</div>
+                        <div class="author-info">
+                            <h4>Dorothy Brown</h4>
+                            <p>Age 69, Retired Nurse</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-quote">"I found out about utility assistance programs I never knew existed. My electric bill is now 40% lower every month. This quiz really works!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>James Davis</h4>
+                            <p>Age 74, Retired Mechanic</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-quote">"The quiz helped me discover senior discounts at stores I shop at regularly. I'm saving hundreds of dollars every year on groceries and essentials."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LM</div>
+                        <div class="author-info">
+                            <h4>Linda Miller</h4>
+                            <p>Age 65, Retired Librarian</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-quote">"I discovered I was eligible for Medicare Savings Programs that I had never heard of. This quiz opened my eyes to so many opportunities."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CW</div>
+                        <div class="author-info">
+                            <h4>Charles Wilson</h4>
+                            <p>Age 68, Retired Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>50,000+</h3>
+                <p>Seniors Helped</p>
+            </div>
+            <div class="stat-item">
+                <h3>$2.3M+</h3>
+                <p>Total Savings Discovered</p>
+            </div>
+            <div class="stat-item">
+                <h3>98%</h3>
+                <p>Found New Benefits</p>
+            </div>
+            <div class="stat-item">
+                <h3>$1,847</h3>
+                <p>Average Annual Savings</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Senior Daily Benefits</h3>
+                <p style="color: #d1d5db; margin-bottom: 16px;">Helping seniors discover the benefits they deserve. Take our free quiz and unlock thousands in potential savings.</p>
+                <p style="color: #9ca3af; font-size: 14px;">Your trusted benefits discovery partner</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">Take Quiz</a></li>
+                    <li><a href="about.html" class="footer-link">About Us</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                    <li><a href="terms-conditions.html" class="footer-link">Terms & Conditions</a></li>
+                    <li><a href="#" class="footer-link">Disclaimer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li style="color: #d1d5db;">📧 support@seniordailybenefits.com</li>
+                    <li style="color: #d1d5db;">📍 123 Benefits Street<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Senior City, SC 12345</li>
+                    <li style="color: #d1d5db;">⏰ Mon-Fri: 9 AM - 6 PM EST</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Senior Daily Benefits. All rights reserved. | This website is for informational purposes only and does not constitute professional advice.</p>
+        </div>
+    </footer>
+
+    <script>
+        const questions = [
+            {
+                question: "Are you currently paying more than $25/month for your cell phone bill?",
+                options: ["Yes", "No"]
+            },
+            {
+                question: "Do you own a home that was built before 1995?",
+                options: ["Yes", "No"]
+            },
+            {
+                question: "Do you have less than $10,000 in credit card debt?",
+                options: ["Yes", "No"]
+            },
+            {
+                question: "When was the last time you compared auto insurance rates?",
+                options: ["In the last 6 months", "Over a year ago", "I've never done it"]
+            }
+        ];
+        
+        let currentQuestion = 0;
+        let answers = {};
+        
+        function startQuiz() {
+            document.getElementById('hero').style.display = 'none';
+            document.getElementById('quiz').style.display = 'block';
+            showQuestion();
+        }
+        
+        function showQuestion() {
+            const q = questions[currentQuestion];
+            document.getElementById('question').textContent = q.question;
+            document.getElementById('question-counter').textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+            
+            const optionsDiv = document.getElementById('options');
+            optionsDiv.innerHTML = '';
+            
+            q.options.forEach(option => {
+                const button = document.createElement('button');
+                button.className = 'option-button';
+                button.textContent = option;
+                button.onclick = () => selectAnswer(option);
+                optionsDiv.appendChild(button);
+            });
+            
+            const progress = ((currentQuestion + 1) / questions.length) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+        }
+        
+        function selectAnswer(answer) {
+            answers[currentQuestion] = answer;
+            
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion < questions.length) {
+                    showQuestion();
+                } else {
+                    showEmailForm();
+                }
+            }, 500);
+        }
+        
+        function showEmailForm() {
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('email').style.display = 'block';
+        }
+        
+        function submitEmail(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            // 显示处理状态
+            const button = event.target.querySelector('button');
+            const originalText = button.textContent;
+            button.textContent = 'Processing...';
+            button.disabled = true;
+            
+            // 准备数据
+            const data = {
+                email: email,
+                answers: answers
+            };
+            
+            // 调用后端API
+            fetch('/api/submit-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // 成功提交，显示成功消息
+                    button.textContent = 'Success! Redirecting...';
+                    
+                    // 触发转化像素事件
+                    if (typeof nbpix !== 'undefined') {
+                        nbpix('event', 'subscribe');
+                    }
+                    
+                    // 延迟跳转到目标页面
+                    setTimeout(() => {
+                        window.location.href = 'https://financebuzz.com/money-moves-senior-benefits-yaez-1';
+                    }, 1500);
+                } else {
+                    // 处理错误
+                    alert('Error: ' + (data.error || 'Failed to submit email. Please try again.'));
+                    button.textContent = originalText;
+                    button.disabled = false;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Network error. Please check your connection and try again.');
+                button.textContent = originalText;
+                button.disabled = false;
+            });
+        }
+    </script>
+</body>
+</html>
+
