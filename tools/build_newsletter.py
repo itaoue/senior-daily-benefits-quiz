@@ -20,7 +20,7 @@ Issue JSON keys (all strings may contain simple inline HTML):
     roundup         [ {"tag","text","url"} ... ]  "Also making the rounds today"
     signoff         (optional) closing line
     byline          (optional) "Today's newsletter was written by ..."
-    postal_address  REQUIRED by CAN-SPAM before sending; a placeholder is used if missing
+    postal_address  (optional) overrides the default POSTAL_ADDRESS below (CAN-SPAM)
 Output: dist/newsletters/<date>.html and .txt
 
 Layout notes (mirrors the Moneywise Digest template): white background, one 600px
@@ -41,9 +41,9 @@ LINK = NAVY                     # Moneywise uses its brand purple for links + bu
 SANS = "'Work Sans','Lucida Grande',Verdana,Arial,sans-serif"
 SERIF = "Georgia,'Times New Roman',serif"
 UTM = "?utm_source=newsletter&utm_medium=email&utm_campaign={date}&utm_content={slot}"
-UNSUB = "{{unsubscribe_link}}"      # BigMailer merge tags
-WEBVIEW = "{{web_version_link}}"
-PREFS = "{{preferences_link}}"
+UNSUB = "*|UNSUB|*"      # BigMailer merge tags
+WEBVIEW = "*|VIEW|*"
+POSTAL_ADDRESS = "499 Evernia Street, Apt 303, West Palm Beach, FL 33401"
 
 def esc(s): return html.escape(s, quote=False)
 
@@ -185,7 +185,7 @@ def build(issue):
 
     body_html = "\n".join(parts)
     byline = issue.get("byline", "Today's newsletter was written and edited by the Senior Daily Benefits team.")
-    address = issue.get("postal_address") or "[POSTAL ADDRESS REQUIRED BY CAN-SPAM: add postal_address to the issue JSON]"
+    address = issue.get("postal_address") or POSTAL_ADDRESS
 
     doc = f'''<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="x-apple-disable-message-reformatting">
@@ -201,7 +201,7 @@ def build(issue):
 <tr><td class="pad" style="padding:8px 35px 0">
 {p(byline, 12, GRAY, margin="0 0 14px")}
 {p("<em>The content provided by Senior Daily Benefits is information to help readers become financially literate. It is neither investment, tax, legal, nor medical advice, and it is not a recommendation to buy or sell any product, enter into any loan, insurance, or investment, or adopt any strategy. Decisions should be made only with guidance from a qualified professional. We may earn a commission from partner links; sponsored content is labeled. Senior Daily Benefits is not affiliated with the U.S. Government or any federal agency.</em>", 12, GRAY)}
-{p(f'<a href="{PREFS}" style="color:{GRAY};text-decoration:underline">Update your email preferences</a> or <a href="{UNSUB}" style="color:{GRAY};text-decoration:underline">unsubscribe here</a>', 12, GRAY)}
+{p(f'<a href="{UNSUB}" style="color:{GRAY};text-decoration:underline">Unsubscribe here</a>', 12, GRAY)}
 {p(esc(address), 12, GRAY)}
 {p(f'&copy; {datetime.date.today().year} Senior Daily Benefits &middot; <a href="{SITE}/privacy-policy.html" style="color:{GRAY}">Privacy</a> &middot; <a href="{SITE}/terms-conditions.html" style="color:{GRAY}">Terms</a>', 12, GRAY, margin="0")}
 </td></tr>
@@ -229,8 +229,6 @@ def main():
     (OUT / f"{issue['date']}.html").write_text(doc, encoding="utf-8")
     (OUT / f"{issue['date']}.txt").write_text(txt, encoding="utf-8")
     print("built", OUT / f"{issue['date']}.html")
-    if not issue.get("postal_address"):
-        print("WARNING: no postal_address in issue JSON; CAN-SPAM requires one before sending")
 
 if __name__ == "__main__":
     main()
