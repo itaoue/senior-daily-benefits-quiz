@@ -300,3 +300,24 @@ input:focus{outline:none;border-color:var(--navy)}
 .postrow{display:grid;grid-template-columns:220px 1fr;gap:1.4rem;align-items:start}
 .postrow .thumb{width:100%;height:auto;border-radius:.6rem;display:block}
 @media (max-width:640px){.postrow{grid-template-columns:1fr}}
+
+/* ── Article comments ───────────────────────────────────────────── */
+.comments{border-top:1px solid var(--line);margin-top:2rem;padding-top:1.6rem}
+.comments h2{font-size:1.5rem;margin:0 0 1rem}
+.comments .comment-count{font-size:1rem;font-weight:400;margin-left:.4rem}
+.comment{padding:1rem 0;border-bottom:1px solid var(--line)}
+.comment:last-child{border-bottom:0}
+.comment-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.35rem}
+.comment-head time{color:var(--muted);font-size:.9rem;margin-left:auto}
+.comment-avatar{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-size:.95rem;flex:none}
+.comment p{margin:0;font-size:1.05rem}
+.comment-form{background:var(--cream);border-radius:var(--r);padding:1.4rem 1.4rem 1.2rem;margin-top:1.4rem}
+.comment-form h3{margin:0 0 .4rem;font-size:1.2rem}
+.comment-form label{display:block;font-weight:600;font-size:.95rem;color:var(--navy);margin:.8rem 0 0}
+.comment-form input,.comment-form textarea{display:block;width:100%;font-family:var(--body);font-size:1.05rem;padding:.75rem .9rem;border:2px solid #E5E7EB;border-radius:var(--r);margin-top:.35rem;background:#fff;color:var(--ink)}
+.comment-form textarea{resize:vertical}
+.comment-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+.comment-form button{margin-top:1rem}
+.comment-form .hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.comment-note{margin:.8rem 0 0;font-weight:600;color:var(--navy)}
+@media (max-width:640px){.comment-grid{grid-template-columns:1fr}}

@@ -365,9 +365,25 @@ def build_article(meta, body_md):
 <article class="article"><div class="container">
 {body_html}
 {QUIZ_CTA}
+<section class="comments" id="comments" data-slug="{meta['slug']}">
+  <h2>Comments <span class="comment-count muted"></span></h2>
+  <div class="comment-list"><p class="muted">Loading comments…</p></div>
+  <form class="comment-form" autocomplete="off">
+    <h3>Add your comment</h3>
+    <p class="muted">Share your experience or a question. Comments are reviewed before they appear, usually within a day. Please don't include account numbers or other private details.</p>
+    <div class="comment-grid">
+      <label>Your name<input name="name" type="text" maxlength="60" required placeholder="First name is fine"></label>
+      <label>Email (optional, never shown)<input name="email" type="email" maxlength="320" placeholder="you@example.com"></label>
+    </div>
+    <label>Comment<textarea name="body" rows="5" maxlength="2000" required placeholder="What's your experience with this?"></textarea></label>
+    <div class="hp" aria-hidden="true"><label>Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+    <button class="btn btn-orange" type="submit">Post comment</button>
+    <p class="comment-note" role="status"></p>
+  </form>
+</section>
 {sources}
 <p class="disclosure">{DISCLOSURE if sp else ""} This article is for general information and is not financial, legal, or tax advice.</p>
-</div></article>"""
+</div></article>\n<script src="/comments.js" defer></script>"""
     return page(meta["title"], meta["summary"], body, f"{SITE}/articles/{meta['slug']}.html", SITE + article_image(meta))
 
 def build_index(articles):
