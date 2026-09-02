@@ -64,3 +64,18 @@ The application will be available at `http://localhost:5000`
 
 Private - All rights reserved
 
+## Articles section
+
+Articles live in `content/articles/*.md` (front matter + Markdown).
+`tools/build_articles.py` turns them into HTML under `src/static/articles/`.
+Railway runs the builder automatically at deploy time (see `railway.json`), so
+only the `.md` files need to be committed. Partner/affiliate blocks and links are
+defined once in `SPONSORS` inside `tools/build_articles.py`.
+
+To preview locally: `python tools/build_articles.py && python src/main.py`
+
+## Environment variables (set in Railway → Variables)
+
+- `BIGMAILER_API_KEY` – required for quiz email capture
+- `BIGMAILER_BRAND_ID`, `BIGMAILER_LIST_ID` – optional overrides
+- `SECRET_KEY` – Flask session secret
