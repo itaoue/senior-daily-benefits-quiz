@@ -11,6 +11,23 @@ const questions = [
 let current = 0;
 const answers = {};
 
+// ─── Attribution captured once per session (referrer, landing page, utm) ─────
+function captureTrack() {
+  try {
+    const key = 'sdb_track';
+    let t = JSON.parse(sessionStorage.getItem(key) || 'null');
+    if (!t) {
+      const u = new URL(window.location.href);
+      t = { referrer: document.referrer || '', landing_url: u.origin + u.pathname + u.search };
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(k => { t[k] = u.searchParams.get(k) || ''; });
+      sessionStorage.setItem(key, JSON.stringify(t));
+    }
+    return t;
+  } catch (e) { return {}; }
+}
+const TRACK = captureTrack();
+
+
 function startQuiz() {
   document.getElementById('quiz-start').hidden = true;
   document.getElementById('quiz-body').hidden = false;
@@ -47,7 +64,7 @@ function submitEmail(event) {
   button.textContent = 'Processing…'; button.disabled = true;
   fetch('/api/submit-email', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, answers }),
+    body: JSON.stringify({ email, answers, track: Object.assign({ source: 'quiz' }, TRACK) }),
   })
     .then(r => r.json())
     .then(data => {
@@ -76,7 +93,7 @@ function subscribe(event, source) {
   button.textContent = 'Sending…'; button.disabled = true;
   fetch('/api/submit-email', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, answers: { source } }),
+    body: JSON.stringify({ email, answers: { source }, track: Object.assign({ source: 'newsletter-' + source }, TRACK) }),
   })
     .then(r => r.json())
     .then(data => {

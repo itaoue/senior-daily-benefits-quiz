@@ -25,6 +25,13 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
+# leads table (Postgres via DATABASE_URL on Railway; temp SQLite locally)
+try:
+    from src import leads
+    leads.ensure_table()
+except Exception as e:  # noqa: BLE001
+    print(f"[leads] table init failed: {e}", file=sys.stderr)
+
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve(path):
