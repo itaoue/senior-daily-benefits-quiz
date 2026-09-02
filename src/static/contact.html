@@ -1,362 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Senior Daily Benefits</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            line-height: 1.6;
-            color: #2d3436;
-            background: #f8f9fa;
-        }
-        
-        .header {
-            background: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #059669;
-        }
-        
-        .nav-link {
-            color: #6b7280;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: #059669;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        
-        .hero {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #1f2937;
-            margin-bottom: 16px;
-        }
-        
-        .hero p {
-            font-size: 1.25rem;
-            color: #6b7280;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-        
-        .contact-form {
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .contact-info {
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .form-group {
-            margin-bottom: 24px;
-        }
-        
-        .form-label {
-            display: block;
-            font-weight: 600;
-            color: #374151;
-            margin-bottom: 8px;
-        }
-        
-        .form-input {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
-        
-        .form-input:focus {
-            outline: none;
-            border-color: #059669;
-        }
-        
-        .form-textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            font-size: 16px;
-            min-height: 120px;
-            resize: vertical;
-            transition: border-color 0.3s ease;
-        }
-        
-        .form-textarea:focus {
-            outline: none;
-            border-color: #059669;
-        }
-        
-        .submit-btn {
-            background: #059669;
-            color: white;
-            padding: 16px 32px;
-            font-size: 1.125rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-        
-        .submit-btn:hover {
-            background: #047857;
-            transform: translateY(-2px);
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 24px;
-            padding: 20px;
-            background: #f0fdf4;
-            border-radius: 8px;
-        }
-        
-        .contact-icon {
-            width: 48px;
-            height: 48px;
-            background: #059669;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 16px;
-            font-size: 20px;
-            color: white;
-        }
-        
-        .contact-details h3 {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: #1f2937;
-            margin-bottom: 4px;
-        }
-        
-        .contact-details p {
-            color: #6b7280;
-        }
-        
-        .footer {
-            background: #1f2937;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-bottom: 20px;
-        }
-        
-        .footer-link {
-            color: #d1d5db;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-link:hover {
-            color: white;
-        }
-        
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 16px;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            .contact-form, .contact-info {
-                padding: 24px;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 16px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">Senior Daily Benefits</div>
-            <nav>
-                <a href="index.html" class="nav-link">← Back to Quiz</a>
-            </nav>
-        </div>
-    </header>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Senior Daily Benefits</title>
+<meta name="description" content="Questions about the quiz or a benefit program? Get in touch.">
+<link rel="canonical" href="https://seniordailybenefits.com/contact.html"><link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/site.css"></head><body>
+<div class="topbar"><span>ℹ Not affiliated with the U.S. Government or any federal agency</span><a href="/#newsletter">Get the free daily benefits email →</a></div>
+<header class="site-header"><div class="container header-inner">
+  <a href="/" class="brand"><span class="brand-mark">SDB</span><span class="brand-text"><span class="brand-name">Senior Daily Benefits</span><span class="brand-domain">seniordailybenefits.com</span></span></a>
+  <nav class="nav"><a href="/#topics">Topics</a><a href="/articles/">Articles</a><a href="/#how">How It Works</a><a href="/#faq">FAQs</a></nav>
+  <div class="header-cta"><a href="/#quiz" class="btn btn-outline">Check My Benefits</a><a href="/#newsletter" class="btn btn-orange">✉ Free Newsletter</a></div>
+  <a href="/#quiz" class="btn btn-orange menu-btn" style="padding:.5rem 1rem">Quiz</a>
+</div></header>
+<section class="article-band"><div class="container"><span class="topic-chip">Contact</span><h1>We're here to help</h1>
+<p class="summary">Questions about the quiz, a benefit program, or something you read here? Send us a note and a real person will reply, usually within one business day.</p></div></section>
+<section class="contact"><div class="container contact-grid">
+  <div class="card">
+    <h3>Send us a message</h3>
+    <form onsubmit="sendContact(event)">
+      <label>Your name<input type="text" name="name" required autocomplete="name"></label>
+      <label>Email address<input type="email" name="email" required autocomplete="email"></label>
+      <label>Topic<select name="topic"><option>Quiz help</option><option>Benefit question</option><option>Technical issue</option><option>Feedback</option><option>Partnership / advertising</option><option>Other</option></select></label>
+      <label>Message<textarea name="message" rows="6" required></textarea></label>
+      <button type="submit" class="btn btn-orange btn-lg">Send message →</button>
+    </form>
+    <p class="fineprint">This opens a pre-filled email in your mail app. You can also write to us directly at the address on the right.</p>
+  </div>
+  <div class="contact-side">
+    <div class="contact-item"><span>📧</span><div><strong>Email</strong><a href="mailto:support@seniordailybenefits.com">support@seniordailybenefits.com</a><small>Replies within 24 hours on business days</small></div></div>
+    <div class="contact-item"><span>⏰</span><div><strong>Hours</strong>Monday – Friday, 9 AM – 6 PM ET<small>Messages sent on weekends are answered Monday</small></div></div>
+    <div class="contact-item"><span>🛡️</span><div><strong>Please don't send</strong>Social Security numbers, Medicare numbers, or bank details. We never need them and will never ask.</div></div>
+    <div class="contact-item"><span>🏛️</span><div><strong>Official agencies</strong>For your own benefit record, contact <a href="https://www.ssa.gov" target="_blank" rel="noopener">SSA.gov</a> or <a href="https://www.medicare.gov" target="_blank" rel="noopener">Medicare.gov</a> directly. We are not affiliated with any government agency.</div></div>
+  </div>
+</div></section>
+<script>
+function sendContact(e){e.preventDefault();const f=e.target;const body=`Name: ${f.name.value}\nEmail: ${f.email.value}\nTopic: ${f.topic.value}\n\n${f.message.value}`;
+window.location.href='mailto:support@seniordailybenefits.com?subject='+encodeURIComponent('[SDB] '+f.topic.value)+'&body='+encodeURIComponent(body);}
+</script>
 
-    <div class="container">
-        <div class="hero">
-            <h1>Contact Us</h1>
-            <p>Have questions about senior benefits or need help with our quiz? We're here to help you navigate your options and find the benefits you deserve.</p>
-        </div>
-
-        <div class="contact-grid">
-            <div class="contact-form">
-                <h2 style="margin-bottom: 24px; color: #1f2937;">Send us a Message</h2>
-                <form onsubmit="submitContactForm(event)">
-                    <div class="form-group">
-                        <label class="form-label" for="name">Full Name</label>
-                        <input type="text" id="name" name="name" class="form-input" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label" for="email">Email Address</label>
-                        <input type="email" id="email" name="email" class="form-input" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label" for="phone">Phone Number (Optional)</label>
-                        <input type="tel" id="phone" name="phone" class="form-input">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label" for="subject">Subject</label>
-                        <select id="subject" name="subject" class="form-input" required>
-                            <option value="">Select a topic</option>
-                            <option value="quiz-help">Quiz Help</option>
-                            <option value="benefit-question">Benefit Questions</option>
-                            <option value="technical-issue">Technical Issue</option>
-                            <option value="feedback">Feedback</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label" for="message">Message</label>
-                        <textarea id="message" name="message" class="form-textarea" placeholder="Please describe your question or concern..." required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-
-            <div class="contact-info">
-                <h2 style="margin-bottom: 24px; color: #1f2937;">Get in Touch</h2>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div class="contact-details">
-                        <h3>Email Support</h3>
-                        <p>support@seniordailybenefits.com</p>
-                        <p style="font-size: 14px; margin-top: 4px;">Response within 24 hours</p>
-                    </div>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-details">
-                        <h3>Mailing Address</h3>
-                        <p>123 Benefits Street, Suite 100<br>Senior City, SC 12345</p>
-                    </div>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">⏰</div>
-                    <div class="contact-details">
-                        <h3>Business Hours</h3>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM EST<br>
-                        Saturday: 10:00 AM - 4:00 PM EST<br>
-                        Sunday: Closed</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="index.html" class="footer-link">Home</a>
-            <a href="about.html" class="footer-link">About Us</a>
-            <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
-            <a href="terms-conditions.html" class="footer-link">Terms & Conditions</a>
-            <a href="contact.html" class="footer-link">Contact Us</a>
-        </div>
-        <p>&copy; 2025 Senior Daily Benefits. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function submitContactForm(event) {
-            event.preventDefault();
-            
-            const button = event.target.querySelector('button[type="submit"]');
-            const originalText = button.textContent;
-            
-            button.textContent = 'Sending...';
-            button.disabled = true;
-            
-            // Simulate form submission
-            setTimeout(() => {
-                alert('Thank you for your message! We will get back to you within 24 hours.');
-                event.target.reset();
-                button.textContent = originalText;
-                button.disabled = false;
-            }, 2000);
-        }
-    </script>
-</body>
-</html>
-
+<footer class="site-footer"><div class="container footer-grid">
+  <div class="footer-brand"><a href="/" class="brand"><span class="brand-mark gold">SDB</span><span class="brand-text"><span class="brand-name">Senior Daily Benefits</span><span class="brand-domain">seniordailybenefits.com</span></span></a>
+  <p>Helping Americans 60+ find and claim the benefits, discounts, and programs they've already earned. Plain English, no jargon.</p></div>
+  <div><h4>Topics</h4><ul><li><a href="/articles/">🏥 Medicare &amp; Health</a></li><li><a href="/articles/">💰 Social Security</a></li><li><a href="/articles/">📋 Taxes &amp; Retirement</a></li><li><a href="/articles/">🏠 Home &amp; Utilities</a></li><li><a href="/articles/">🛒 Senior Discounts</a></li><li><a href="/articles/">🛡️ Scam Alerts</a></li></ul></div>
+  <div><h4>Quick links</h4><ul><li><a href="/#quiz">Benefits quiz</a></li><li><a href="/#newsletter">Newsletter</a></li><li><a href="/about.html">About us</a></li><li><a href="/contact.html">Contact</a></li></ul>
+  <h4>Official resources</h4><ul><li><a href="https://www.ssa.gov" target="_blank" rel="noopener">SSA.gov ↗</a></li><li><a href="https://www.medicare.gov" target="_blank" rel="noopener">Medicare.gov ↗</a></li></ul></div>
+</div><div class="footer-bottom"><div class="container"><p>© 2026 Senior Daily Benefits. Not affiliated with the U.S. Government or any federal agency. This website is for informational purposes only and does not constitute financial, legal, or medical advice. We may earn a commission from partner links.</p>
+<div><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-conditions.html">Terms &amp; Conditions</a><a href="/contact.html">Contact Us</a></div></div></div></footer>
+</body></html>

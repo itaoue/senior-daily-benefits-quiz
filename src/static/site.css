@@ -277,3 +277,18 @@ input:focus{outline:none;border-color:var(--navy)}
   .float-stat{right:.5rem}
   .card{padding:1.5rem}
 }
+
+/* contact + legal pages */
+.contact{padding:3rem 0 4rem}
+.contact-grid{display:grid;grid-template-columns:3fr 2fr;gap:2.5rem;align-items:start;max-width:1050px}
+.contact form{display:flex;flex-direction:column;gap:.9rem;margin-top:1rem}
+.contact label{font-weight:600;font-size:.95rem;display:flex;flex-direction:column;gap:.35rem}
+.contact select,.contact textarea{width:100%;font-family:var(--body);font-size:1.1rem;padding:.9rem 1rem;border:2px solid #E5E7EB;border-radius:var(--r);color:var(--ink);background:#fff}
+.contact textarea:focus,.contact select:focus{outline:none;border-color:var(--navy)}
+.contact-item{display:flex;gap:1rem;padding:1.2rem 0;border-bottom:1px solid var(--line)}
+.contact-item>span{font-size:1.6rem}
+.contact-item strong{display:block;color:var(--navy);margin-bottom:.15rem}
+.contact-item small{display:block;color:var(--muted);font-size:.9rem;margin-top:.2rem}
+.legal{font-size:1.1rem}
+.legal h2{font-size:1.4rem}
+@media (max-width:800px){.contact-grid{grid-template-columns:1fr}}
