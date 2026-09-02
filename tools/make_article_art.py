@@ -81,6 +81,18 @@ SCENES = {
         "A smartphone showing an incoming call from an unknown number lying on a kitchen counter next to a gift card and a wallet, tense low light.",
     "social-security-october-2026-payment-calendar":
         "A wall calendar turned to October with two dates circled in red marker, a bank deposit slip and a pen on the counter below it, morning light.",
+    "buffett-90-10-plan-what-retirees-can-borrow":
+        "A tidy home office desk with a single brokerage statement, a fountain pen, a folded pair of reading glasses and a small framed photo turned away, warm lamp light, no people.",
+    "how-much-cash-should-a-retiree-hold":
+        "A glass jar of rolled bills and coins next to a bank passbook and a stack of Treasury-style savings certificates on a kitchen table, soft window light.",
+    "commemorative-coins-gold-iras-what-to-check":
+        "A gold-colored one-dollar coin resting on a velvet display tray beside a magnifying glass, a jeweler's scale and a glossy brochure, dramatic side light, faces on the coin out of focus.",
+    "national-debt-40-trillion-what-it-means-for-retirees":
+        "The United States Treasury building in Washington DC with its columns and the statue out front, late afternoon light, wide shot, no people.",
+    "market-drop-early-in-retirement-sequence-risk":
+        "A wooden desk with a printed stock chart showing a sharp red decline, a coffee mug, reading glasses and a hand resting on the paper, muted morning light, no face.",
+    "should-you-pay-off-the-mortgage-before-you-retire":
+        "A house key and a mortgage statement on a kitchen counter in front of a window showing a modest suburban home, warm evening light, no people.",
 }
 
 # Fallback scenes by topic keyword for articles not listed above.
