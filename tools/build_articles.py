@@ -26,6 +26,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "articles"
 OUT = ROOT / "src" / "static" / "articles"
 SITE = "https://seniordailybenefits.com"
+import hashlib as _hl
+CSS_VERSION = _hl.md5((ROOT / "src" / "static" / "site.css").read_bytes()).hexdigest()[:8]  # cache-busting for /site.css
 
 # Topic -> fallback banner (src/static/images/topics/*.svg). Articles may set `image:` in
 # front matter to a path under src/static (e.g. images/2026-09-medicare.jpg) to use a photo.
@@ -288,7 +290,7 @@ def nice_date(iso):
 # ---------------------------------------------------------------------------
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
          '<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">'
-         '<link rel="stylesheet" href="/site.css">')
+         '<link rel="stylesheet" href="/site.css?v={CSS_VERSION}">')
 
 HEADER = """<div class="topbar"><span>ℹ Not affiliated with the U.S. Government or any federal agency</span><a href="/#newsletter">Get the free daily benefits email →</a></div>
 <header class="site-header"><div class="container header-inner">
