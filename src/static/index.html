@@ -17,6 +17,14 @@
             color: #2d3436;
         }
         
+        .site-header { background: #fff; border-bottom: 1px solid #e5e7eb; }
+        .site-header-inner { max-width: 1200px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .site-logo { font-size: 1.5rem; font-weight: 700; color: #1f2937; text-decoration: none; letter-spacing: -0.01em; }
+        .site-logo span { font-weight: 400; color: #059669; }
+        .site-nav a { color: #4b5563; text-decoration: none; font-weight: 500; margin-left: 24px; font-size: 1.05rem; }
+        .site-nav a:hover { color: #059669; }
+        @media (max-width: 640px) { .site-logo { font-size: 1.2rem; } .site-nav a { margin-left: 14px; } }
+        
         .container {
             min-height: 100vh;
             background: linear-gradient(to bottom right, #f0fdf4, #eff6ff);
@@ -465,6 +473,15 @@
     <!-- End NB Pixel Snippet -->
 </head>
 <body>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a href="/" class="site-logo">Senior Daily <span>Benefits</span></a>
+            <nav class="site-nav">
+                <a href="articles/">Articles</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
     <div class="container">
         <!-- Hero Section -->
         <div id="hero" class="hero-section">
@@ -621,7 +638,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Senior Daily Benefits</h3>
+                <h3>Senior Daily <span style="font-weight:400;color:#6ee7b7">Benefits</span></h3>
                 <p style="color: #d1d5db; margin-bottom: 16px;">Helping seniors discover the benefits they deserve. Take our free quiz and unlock thousands in potential savings.</p>
                 <p style="color: #9ca3af; font-size: 14px;">Your trusted benefits discovery partner</p>
             </div>
@@ -630,6 +647,7 @@
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
                     <li><a href="index.html" class="footer-link">Take Quiz</a></li>
+                    <li><a href="articles/" class="footer-link">Articles</a></li>
                     <li><a href="about.html" class="footer-link">About Us</a></li>
                     <li><a href="contact.html" class="footer-link">Contact Support</a></li>
                 </ul>
