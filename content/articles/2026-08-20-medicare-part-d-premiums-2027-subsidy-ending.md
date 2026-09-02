@@ -4,6 +4,7 @@ slug: medicare-part-d-premiums-2027-subsidy-ending
 date: 2026-08-20
 topic: Medicare
 summary: For two years a temporary federal program paid stand-alone Part D plans to keep premiums steady. It ends after 2026, and Medicare's own estimate is that about three in four people in those plans will pay more next year. Here's the timeline, what to look for in the notice arriving this fall, and how to shop.
+image: images/articles/medicare-part-d-premiums-2027-subsidy-ending.jpg
 sponsor: hearing, home_security
 sources:
   - Centers for Medicare & Medicaid Services, Medicare Part D 2027 national average monthly bid amount|https://www.cms.gov/newsroom/fact-sheets/medicare-part-d-2027-national-average-monthly-bid-amount-information

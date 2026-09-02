@@ -4,6 +4,7 @@ slug: jury-duty-scam-tap-to-pay-theft-seniors
 date: 2026-09-01
 topic: Scam Alerts
 summary: One arrives as a phone call from a "deputy." The other happens in a crowded store without a word being spoken. Here's how each works and the two-minute fix for both.
+image: images/articles/jury-duty-scam-tap-to-pay-theft-seniors.jpg
 sponsor: adblock, home_security
 sources:
   - Federal Trade Commission, Jury duty scams|https://consumer.ftc.gov/consumer-alerts/2024/07/jury-duty-scam-back-heres-how-spot-it

@@ -4,6 +4,7 @@ slug: parent-credit-card-debt-after-death-who-pays
 date: 2026-08-27
 topic: Taxes & Retirement Accounts
 summary: Debt collectors count on grieving families not knowing the rules. In almost every case, a deceased person's debt is paid by their estate, not their children, and there are firm limits on what collectors can say.
+image: images/articles/parent-credit-card-debt-after-death-who-pays.jpg
 sponsor: debt_settlement, title_lock, adblock
 sources:
   - Federal Trade Commission, Debts and deceased relatives|https://consumer.ftc.gov/articles/debts-and-deceased-relatives

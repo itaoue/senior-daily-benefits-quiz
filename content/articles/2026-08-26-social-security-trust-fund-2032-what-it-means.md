@@ -4,6 +4,7 @@ slug: social-security-trust-fund-2032-what-it-means
 date: 2026-08-26
 topic: Social Security
 summary: The 2026 Trustees Report moved the depletion date for the retirement trust fund up to the fourth quarter of 2032. Benefits don't stop at that point, but without action from Congress they'd be cut to about 78% of what's promised. Here's the plain-English version and how to plan around it.
+image: images/articles/social-security-trust-fund-2032-what-it-means.jpg
 sponsor: debt_settlement, auto_insurance
 sources:
   - Social Security Administration, 2026 Trustees Report summary|https://www.ssa.gov/oact/trsum/

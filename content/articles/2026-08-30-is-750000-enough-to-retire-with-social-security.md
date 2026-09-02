@@ -4,6 +4,7 @@ slug: is-750000-enough-to-retire-with-social-security
 date: 2026-08-30
 topic: Retirement Planning
 summary: Surveys say Americans think they need about $1.5 million. The median household near retirement has far less, and most do fine. The honest answer depends on three numbers: what your savings can safely pay, what Social Security adds, and what you spend. Here's how to run them for yourself.
+image: images/articles/is-750000-enough-to-retire-with-social-security.jpg
 sponsor: heloc, aarp, home_warranty
 sources:
   - Social Security Administration, 2026 COLA fact sheet (average benefits)|https://www.ssa.gov/news/en/cola/factsheets/2026.html

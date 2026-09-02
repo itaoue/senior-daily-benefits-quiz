@@ -4,6 +4,7 @@ slug: aging-in-place-vs-assisted-living-costs-programs
 date: 2026-08-25
 topic: Home, Utilities & Phone
 summary: Assisted living now runs $5,000 to $7,000 a month in most of the country. A few home modifications and the right assistance programs can keep you in your own house for a fraction of that.
+image: images/articles/aging-in-place-vs-assisted-living-costs-programs.jpg
 sponsor: walkin_shower, home_security, home_warranty
 sources:
   - Eldercare Locator (Area Agencies on Aging)|https://eldercare.acl.gov/

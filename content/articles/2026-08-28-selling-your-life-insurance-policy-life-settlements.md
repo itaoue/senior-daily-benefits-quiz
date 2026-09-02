@@ -4,6 +4,7 @@ slug: selling-your-life-insurance-policy-life-settlements
 date: 2026-08-28
 topic: Insurance & Estate
 summary: A life settlement means selling a policy you no longer want to a company that pays the premiums and collects the death benefit when you die. It's legal, and the offer can be far more than the cash surrender value. It also comes with tax, benefit, and family consequences that sellers often hear about too late.
+image: images/articles/selling-your-life-insurance-policy-life-settlements.jpg
 sponsor: timeshare_exit, tax_relief
 sources:
   - FINRA, Seniors beware: what you should know about life settlements|https://www.finra.org/investors/insights/life-settlements

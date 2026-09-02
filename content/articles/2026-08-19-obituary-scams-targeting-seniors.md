@@ -4,6 +4,7 @@ slug: obituary-scams-grandparent-scams-seniors
 date: 2026-08-19
 topic: Scam Alerts
 summary: Widows and widowers are the most targeted group in America, and artificial intelligence has made the old cons faster and more convincing. The defense is simple, but it has to be automatic.
+image: images/articles/obituary-scams-grandparent-scams-seniors.jpg
 sponsor: adblock, title_lock, home_security
 sources:
   - Federal Trade Commission, Grandparent scams|https://consumer.ftc.gov/articles/what-know-about-grandparent-scams

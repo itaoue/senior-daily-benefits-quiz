@@ -4,6 +4,7 @@ slug: required-minimum-distributions-before-73-checklist
 date: 2026-08-18
 topic: Taxes & Retirement Accounts
 summary: Most retirees withdraw less from their accounts than the rules assume, then get hit with a larger forced withdrawal and tax bill at 73. Here's how RMDs are calculated, why the percentage keeps rising, and three things to do in your 60s while you still have a choice.
+image: images/articles/required-minimum-distributions-before-73-checklist.jpg
 sponsor: tax_relief, home_warranty
 sources:
   - Internal Revenue Service, Retirement plan and IRA required minimum distributions FAQs|https://www.irs.gov/retirement-plans/retirement-plan-and-ira-required-minimum-distributions-faqs

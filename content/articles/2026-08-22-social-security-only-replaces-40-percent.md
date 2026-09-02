@@ -4,6 +4,7 @@ slug: social-security-40-percent-replacement-what-to-do
 date: 2026-08-22
 topic: Social Security
 summary: Nearly half of Americans expect Social Security to cover retirement. It was designed to cover less than half of it. Three moves close the gap, none of which require a windfall.
+image: images/articles/social-security-40-percent-replacement-what-to-do.jpg
 sponsor: heloc, aarp
 sources:
   - Social Security Administration, Understanding the benefits (replacement rates)|https://www.ssa.gov/pubs/EN-05-10024.pdf

@@ -4,6 +4,7 @@ slug: three-retirement-rules-changed-2026
 date: 2026-08-14
 topic: Social Security & Taxes
 summary: No press conference, no headline, but each of these changes can move your monthly check or your tax bill. Here's what changed and the one step to take for each.
+image: images/articles/three-retirement-rules-changed-2026.jpg
 sponsor: tax_relief, aarp
 sources:
   - Social Security Administration, overpayment withholding rate change (April 2025)|https://www.ssa.gov/news/press/releases/2025/#4-2025-1

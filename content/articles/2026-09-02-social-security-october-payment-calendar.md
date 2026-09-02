@@ -4,6 +4,7 @@ slug: social-security-october-2026-payment-calendar
 date: 2026-09-02
 topic: Social Security
 summary: SSI recipients will see deposits on October 1 and October 30 this year, and none in November. It's a calendar quirk, not extra money. Here's the full schedule so nothing catches you off guard.
+image: images/articles/social-security-october-2026-payment-calendar.jpg
 sponsor: balance_transfer, auto_insurance
 sources:
   - Social Security Administration, Schedule of Social Security benefit payments 2026|https://www.ssa.gov/pubs/EN-05-10031-2026.pdf

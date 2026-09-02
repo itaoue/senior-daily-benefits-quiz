@@ -4,6 +4,7 @@ slug: adult-child-moved-back-home-house-rules
 date: 2026-08-13
 topic: Money & Family
 summary: A record share of young adults are living with parents, and many of those parents are retired or close to it. Helping is fine. Quietly funding a working adult out of a fixed income is not. Here's a practical way to set expectations, plus the tax and benefit details to watch.
+image: images/articles/adult-child-moved-back-home-house-rules.jpg
 sponsor: debt_settlement, home_warranty
 sources:
   - Internal Revenue Service, Publication 501, Dependents, standard deduction, and filing information|https://www.irs.gov/publications/p501

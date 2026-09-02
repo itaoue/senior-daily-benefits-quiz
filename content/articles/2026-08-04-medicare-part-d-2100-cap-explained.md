@@ -4,6 +4,7 @@ slug: medicare-part-d-2100-out-of-pocket-cap-2026
 date: 2026-08-04
 topic: Medicare
 summary: Headlines about rising drug-plan premiums have some people assuming the new out-of-pocket cap is going away. It isn't. Here's how the $2,100 limit works, which costs count toward it, and the payment option that spreads a big pharmacy bill across the year.
+image: images/articles/medicare-part-d-2100-out-of-pocket-cap-2026.jpg
 sponsor: hearing, cashback_card
 sources:
   - Medicare.gov, Costs for Medicare drug coverage|https://www.medicare.gov/drug-coverage-part-d/costs-for-medicare-drug-coverage
