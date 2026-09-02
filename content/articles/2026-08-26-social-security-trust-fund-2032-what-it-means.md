@@ -1,54 +1,50 @@
 ---
-title: Social Security's retirement fund is now projected to run short in late 2032. What that means, and what it doesn't
+title: Trump made two big moves that are speeding up Social Security's shortfall. The retirement fund now hits zero in late 2032, and checks shrink unless Congress acts
 slug: social-security-trust-fund-2032-what-it-means
 date: 2026-08-26
 topic: Social Security
-summary: The 2026 Trustees Report moved the depletion date for the retirement trust fund up to the fourth quarter of 2032. Benefits don't stop at that point, but without action from Congress they'd be cut to about 78% of what's promised. Here's the plain-English version and how to plan around it.
+summary: The 2026 Trustees Report moved the depletion date for the retirement trust fund up to the fourth quarter of 2032, and the trustees' own explanation points at two policy shifts from the current administration: far fewer immigrants paying into the system, and a tax law that cut one of the program's three funding sources. Here's what changed, what a 22% cut looks like on your check, and how to plan around a deadline Congress has yet to touch.
 image: images/articles/social-security-trust-fund-2032-what-it-means.jpg
+image_credit: Photo: The White House / Wikimedia Commons, public domain
 sponsor: debt_settlement, auto_insurance
 sources:
   - Social Security Administration, 2026 Trustees Report summary|https://www.ssa.gov/oact/trsum/
   - Social Security Administration, Trustees Report press release, June 9, 2026|https://www.ssa.gov/news/en/press/releases/2026-06-09.html
   - Social Security Administration, 2026 Trustees Report highlights|https://www.ssa.gov/oact/TR/2026/II_A_highlights.html
+  - Social Security Administration, Office of the Chief Actuary, solvency analyses|https://www.ssa.gov/oact/solvency/
 ---
-Every June the Social Security trustees publish a report on the program's finances. This year's has a date in it that will show up in a lot of headlines: the Old-Age and Survivors Insurance trust fund, which pays retirement and survivor benefits, is projected to be depleted in the **fourth quarter of 2032**. That's one quarter sooner than last year's report.
+Every June the Social Security trustees publish a report on the program's finances, and every year the depletion date gets a little closer. This year it moved for reasons the trustees spelled out, and both trace back to decisions made in Washington since January 2025.
 
-The word "depleted" does a lot of work in those headlines, so let's be precise about it.
+The Old-Age and Survivors Insurance trust fund, which pays retirement and survivor benefits, is now projected to run dry in the **fourth quarter of 2032**, one quarter sooner than last year's estimate. When that happens, incoming payroll taxes cover about **78%** of scheduled benefits. Under current law, that's what gets paid, automatically, to current retirees and future ones alike.
 
-## What depletion means
+## The two moves
 
-Social Security is funded mostly by payroll taxes on people working now. For decades those taxes brought in more than the program paid out, and the surplus built up a reserve. Since 2021 the program has been paying out more than it takes in and drawing down that reserve.
+**1. Immigration.** Immigrants, including those without legal status, pay billions in payroll taxes every year for benefits many will never collect. The trustees lowered their assumption for net immigration to reflect the administration's enforcement and deportation push. Fewer workers means less money coming in, and the trustees say this is one of the largest single drags on the new projection.
 
-When the reserve hits zero, payroll taxes keep coming in. They just don't cover the full bill. The trustees estimate that incoming revenue in 2032 would cover about **78%** of scheduled benefits. Under current law, that's what would be paid.
+**2. The tax law.** The One Big Beautiful Bill Act, signed in July 2025, reduced the income tax that higher-income retirees pay on their benefits, mainly through the new $6,000 senior deduction. That tax isn't general revenue; under a 1983 law it flows straight into the trust fund. The Social Security Administration's chief actuary put the cost at about $169 billion over ten years and said it alone moved the depletion date from early 2033 to late 2032.
 
-So the cliff is real, but it's a 22% cut, not a stop. And it's a cut Congress has seven years to prevent, which is roughly the same window it had in 1983, the last time the fund got this close.
+Trump campaigned on never touching Social Security. Neither move cut a check directly. Both drained the fund that pays the checks, and the agency's own actuaries are the ones saying so.
 
-> **What to do:** Ignore anyone who tells you Social Security is "going bankrupt" or won't exist. Also ignore anyone who tells you not to worry. The accurate position is in between: a cut is possible, and planning for it is reasonable.
+> **What to do:** Sign in at ssa.gov/myaccount, find your projected benefit, and multiply by 0.78. That is your check in 2033 if Congress does nothing. Plan the budget on that number and treat the rest as a margin.
 
-## Why the date moved
+## What a 22% cut looks like
 
-Two things changed the arithmetic this year. Lower projected immigration means fewer workers paying in. And the 2025 tax law, which created the $6,000 senior deduction and other cuts, reduced the income tax that some retirees pay on their benefits. That tax is one of the program's three funding sources, and the trustees estimate the change trimmed roughly $169 billion from trust fund income over the next decade.
+On the average retired worker's benefit of roughly $2,000 a month, 22% is about $440. For a couple with two average benefits, close to $900 a month. It would land on people already retired, not just future ones, because the law has no mechanism to protect anyone. And it would arrive with a 3.6% COLA the same year, which would not come close to covering it.
 
-The combined retirement and disability funds, which is the figure the trustees emphasize, still show a depletion date of 2034. That's unchanged from last year.
+The combined retirement and disability funds, the figure the trustees emphasize, still show 2034. That is one year of extra room, not a fix.
 
-## What Congress could do
+## Why "Congress will fix it" is only half true
 
-Any fix will involve some mix of the same levers that have been on the table for 20 years:
+In 1983, with the fund months from running dry, Congress raised the payroll tax, phased in a higher retirement age over decades, and started taxing benefits. It worked, and it's the model every serious proposal follows: lift or remove the $184,500 cap on wages subject to payroll tax, nudge the rate, trim the formula for the highest earners, slowly raise the full retirement age for people now in their 40s.
 
-- Raising or removing the cap on wages subject to payroll tax (currently $184,500)
-- A small increase in the payroll tax rate
-- Gradually raising the full retirement age for people now in their 40s and younger
-- Changing the formula that sets initial benefits for higher earners
-- Adjusting how the COLA is calculated
+Every one of those requires a president to spend political capital on a program he has promised not to touch, and a Congress that has not held a vote on solvency in more than 40 years. A fix is likely. A fix before the last possible moment is not, and the last moment is now seven years away.
 
-In 1983 the fix came a few months before the deadline and included a tax increase, a retirement-age increase phased in over decades, and taxation of benefits. Expect something similar, and expect it late.
+> **What to do:** Most proposals leave current retirees and people near retirement alone. If you're already collecting, or within a few years, the realistic risk is a late, phased fix that spares you. Plan for the 78% number anyway, because "realistic" is not "guaranteed."
 
-> **What to do:** If you're already collecting, or within a few years of it, most proposals leave your benefits alone. The changes that get discussed almost always exempt current retirees and people near retirement. That doesn't make a 2032 cut impossible, but it makes a phased fix that spares you the more likely outcome.
+## Planning around it
 
-## How to plan for it anyway
+- **Don't claim early because of the headline.** Claiming at 62 instead of 67 permanently cuts the benefit by about 30%. That's a larger and more certain cut than the one the trustees are warning about, and it applies whether or not Congress acts.
+- **Reduce fixed costs before 2032.** Debt payments are the expense that turns a smaller check into a crisis. A car loan or a card balance carried into your 70s removes the cushion that would absorb it.
+- **Build the margin now.** If your budget only works at 100% of the projected benefit, the gap between that and 78% is the number to close, through savings, delayed claiming, or a smaller fixed-cost base.
 
-- **Don't claim early because of the headline.** Claiming at 62 instead of 67 permanently cuts your benefit by about 30%. That's a larger and more certain reduction than the one the trustees are warning about, and it applies whether or not Congress acts.
-- **Run a stress test.** Take your projected benefit from your my Social Security statement, multiply by 0.78, and ask whether your budget works. If it does, you're fine either way. If it doesn't, that gap is what to work on now.
-- **Reduce fixed costs.** Debt payments, in particular, are the expense that makes a benefit cut hurt most. Carrying a car loan or credit card balances into your 70s removes the cushion that would absorb a smaller check.
-
-> **What to do:** Sign in at ssa.gov/myaccount, download your statement, and write two numbers on it: your full benefit and 78% of it. Plan to the second one and treat the difference as a margin.
+> **What to do:** Write your senators and representative one sentence: "What is your plan for the 2032 Social Security depletion date?" The people who moved that date closer are counting on retirees not asking.
