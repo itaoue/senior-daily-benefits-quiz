@@ -70,6 +70,7 @@ def main():
     ap.add_argument("--lists", action="store_true", help="print lists and exit")
     ap.add_argument("--name", help="internal campaign name (default: Senior Daily Brief <date>)")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--message-id", type=int, help="reuse an already-created message instead of uploading again")
     a = ap.parse_args()
 
     if a.lists:
@@ -111,14 +112,18 @@ def main():
     if a.dry_run:
         print("dry run: nothing sent"); return
 
-    msg = api("message_add", {
-        "format": "mime", "subject": subject, "fromemail": from_email, "fromname": from_name,
-        "reply2": reply_to, "priority": 3, "charset": "utf-8", "encoding": "quoted-printable",
-        "htmlconstructor": "editor", "html": html, "textconstructor": "editor", "text": text,
-        f"p[{list_id}]": list_id,
-    })
-    mid = msg["id"]
-    print(f"message    created id {mid}")
+    if a.message_id:
+        mid = a.message_id
+        print(f"message    reusing id {mid}")
+    else:
+        msg = api("message_add", {
+            "format": "mime", "subject": subject, "fromemail": from_email, "fromname": from_name,
+            "reply2": reply_to, "priority": 3, "charset": "utf-8", "encoding": "quoted-printable",
+            "htmlconstructor": "editor", "html": html, "textconstructor": "editor", "text": text,
+            f"p[{list_id}]": list_id,
+        })
+        mid = msg["id"]
+        print(f"message    created id {mid}")
 
     sdate = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime("%Y-%m-%d 09:00:00")
     camp = api("campaign_create", {
