@@ -5,6 +5,7 @@ date: 2026-08-23
 topic: Social Security
 summary: The pledge was repeated at every rally. The 2025 tax law then reduced the income tax retirees pay on benefits, which happens to be one of Social Security's three funding sources. The Social Security Administration's own chief actuary put the cost at $168.6 billion and moved the trust fund's depletion date up to late 2032. Here's what he promised, what the law did, and what a 22% cut looks like on your check.
 image: images/articles/trump-promised-not-to-touch-social-security-169-billion.jpg
+image_credit: Photo: The White House / Wikimedia Commons, public domain
 sponsor: debt_settlement, aarp
 sources:
   - Social Security Administration, Office of the Chief Actuary, letter on the One Big Beautiful Bill Act (2025)|https://www.ssa.gov/oact/solvency/

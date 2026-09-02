@@ -5,6 +5,7 @@ date: 2026-08-15
 topic: Home, Utilities & Phone
 summary: Four in ten homeowners over 65 still have a mortgage, and the lending industry would like that number higher. Orman's rule, retire without a house payment, is the rare piece of celebrity money advice we'd put on the fridge. Here's why it's right, the one way of following it that backfires, and the home-equity pitch to hang up on.
 image: images/articles/should-you-pay-off-the-mortgage-before-you-retire.jpg
+image_credit: Photo: David Shankbone / Wikimedia Commons, CC BY 3.0
 sponsor: heloc, roof, title_lock
 sources:
   - Harvard Joint Center for Housing Studies, Housing America's Older Adults 2023|https://www.jchs.harvard.edu/housing-americas-older-adults-2023

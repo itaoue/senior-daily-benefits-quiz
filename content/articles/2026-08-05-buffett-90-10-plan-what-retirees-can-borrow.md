@@ -5,6 +5,7 @@ date: 2026-08-05
 topic: Retirement Planning
 summary: Buffett told his trustee to put 90% of his wife's inheritance in one cheap S&P 500 index fund and 10% in Treasury bills. No gold, no annuity, no advisor, no "opportunity." Here's why that's the advice, why the gold and annuity salesmen keep borrowing his name anyway, and the one number a retiree should change.
 image: images/articles/buffett-90-10-plan-what-retirees-can-borrow.jpg
+image_credit: Photo: U.S. International Trade Administration / Wikimedia Commons, public domain
 sponsor: cashback_card, aarp
 sources:
   - Berkshire Hathaway, 2013 letter to shareholders (the section on Buffett's will)|https://www.berkshirehathaway.com/letters/2013ltr.pdf

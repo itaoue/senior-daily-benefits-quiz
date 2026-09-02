@@ -18,6 +18,7 @@ Front matter keys:
     topic        short label shown above the headline (e.g. "Social Security")
     sponsor      (optional) block name defined in SPONSORS below
     sources      (optional) list of "Label|URL" lines
+    image_credit (optional) attribution line rendered under the hero image
 """
 import re, html, pathlib, datetime
 
@@ -276,6 +277,11 @@ def md_to_html(md):
     flush()
     return "\n".join(out)
 
+def image_credit(meta):
+    """Optional `image_credit:` front matter (e.g. "Photo: Gage Skidmore / Wikimedia Commons, CC BY-SA 2.0")."""
+    c = meta.get("image_credit", "").strip()
+    return f'<p class="img-credit">{html.escape(c)}</p>' if c else ""
+
 def nice_date(iso):
     return datetime.date.fromisoformat(iso).strftime("%B %-d, %Y")
 
@@ -355,7 +361,7 @@ def build_article(meta, body_md):
   <p class="summary">{html.escape(meta["summary"])}</p>
   <p class="meta">Updated {nice_date(meta["date"])}</p>
 </div></section>
-<div class="container" style="max-width:820px;padding-top:2rem"><img class="hero-img" src="{article_image(meta)}" alt="" width="1200" height="630"></div>
+<div class="container" style="max-width:820px;padding-top:2rem"><img class="hero-img" src="{article_image(meta)}" alt="" width="1200" height="630">{image_credit(meta)}</div>
 <article class="article"><div class="container">
 {body_html}
 {QUIZ_CTA}

@@ -295,6 +295,7 @@ input:focus{outline:none;border-color:var(--navy)}
 
 /* article images */
 .hero-img{width:100%;height:auto;border-radius:1rem;box-shadow:0 14px 34px rgba(27,46,90,.18);display:block}
+.img-credit{font-size:.8rem;color:#6b7280;margin:.5rem 0 0;text-align:right}
 .post .thumb{width:100%;height:auto;border-radius:.7rem;margin-bottom:1rem;display:block}
 .postrow{display:grid;grid-template-columns:220px 1fr;gap:1.4rem;align-items:start}
 .postrow .thumb{width:100%;height:auto;border-radius:.6rem;display:block}

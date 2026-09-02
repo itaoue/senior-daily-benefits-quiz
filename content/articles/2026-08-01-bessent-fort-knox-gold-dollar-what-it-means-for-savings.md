@@ -1,10 +1,11 @@
 ---
-title: The Treasury Secretary went on Fox to reassure you the gold is still in Fort Knox, then admitted it doesn't back your dollar. Both halves are true. Neither is the point
+title: Scott Bessent assures Americans the gold is still in Fort Knox, then reminds them the dollar is no longer backed by it. Is your money safe?
 slug: bessent-fort-knox-gold-dollar-what-it-means-for-savings
 date: 2026-08-01
 topic: Retirement Planning
-summary: Scott Bessent said in July that the gold is "all present and accounted for," worth over a trillion dollars, and then reminded viewers that the dollar hasn't been backed by it since 1971. The gold dealers cut the clip and ran it in their ads within days. Here's what a fiat dollar means for someone living on savings, and why the answer isn't in a vault.
+summary: The Treasury Secretary went on Fox News in July to kill a rumor: all the gold is there, more than a trillion dollars of it. Then he explained that none of it stands behind the dollar in your wallet, and hasn't since 1971. He's right on both counts. Here's what a dollar backed by "full faith and credit" means for someone living on savings, and the four things that actually protect them.
 image: images/articles/bessent-fort-knox-gold-dollar-what-it-means-for-savings.jpg
+image_credit: Photo: Treasury Department / Wikimedia Commons, public domain
 sponsor: tax_relief, auto_insurance, home_warranty
 sources:
   - Fortune, Bessent says U.S. has more than $1 trillion in gold, but it doesn't matter for the dollar (July 22, 2026)|https://fortune.com/2026/07/22/scott-bessent-fort-knox-1-trillion-gold-present-accounted-for/
@@ -12,41 +13,39 @@ sources:
   - TreasuryDirect, Treasury Inflation-Protected Securities and I bonds|https://www.treasurydirect.gov/
   - Commodity Futures Trading Commission, Precious metals fraud advisory|https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CustomerAdvisory_PreciousMetals.html
 ---
-In mid-July, Treasury Secretary Scott Bessent sat down with Fox News to put a rumor to rest. The gold at Fort Knox, he said, is all there, more than a trillion dollars of it at today's prices, the largest hoard in the world. Then, in the same breath, he explained that none of it backs the dollar in your wallet, and hasn't since Richard Nixon closed the gold window in 1971.
+For months, a corner of the internet insisted the gold in Fort Knox was gone. In mid-July, Treasury Secretary Scott Bessent settled it on Fox News: the gold is "all present and accounted for," more than a trillion dollars of it at today's prices, the largest hoard on earth.
 
-He was right on both counts, and the gold industry couldn't have written a better ad. "Even the Treasury Secretary admits the dollar is backed by nothing." Expect to hear it all fall.
+Then he said the part that matters more. That gold doesn't back the dollar. It hasn't since August 1971, when Richard Nixon closed the "gold window." Since then the dollar has been a fiat currency, backed by the full faith and credit of the United States government and nothing else.
 
-We'd point out that the man delivering the reassurance is the same one who unveiled a gold-colored dollar coin with his boss's face on it a week later, and whose department is presiding over a debt that just crossed $40 trillion. If you're looking for someone to trust on what backs the currency, the administration running the printing press is an odd choice. But the underlying question is a fair one for anyone living on savings. Here's the honest answer.
+Bessent was being honest, and the honesty raises a fair question for anyone living on a fixed pile of savings: if nothing physical stands behind the money, what stops it from quietly becoming worth less? The answer is: nothing does. That's the design.
 
-## What "backed by nothing" actually means
+## What "full faith and credit" has done to $100
 
-Since 1971 the dollar has been backed by the government's promise to accept it for taxes and the world's willingness to use it for trade. That's it. And it has worked, in the sense that the dollar is still the currency every other country holds in reserve and prices oil in.
+The Minneapolis Fed's calculator tells the story in one line. $100 in 1971 had the buying power of about $815 today. Put another way, a dollar from the year the gold window closed is worth about twelve cents now.
 
-What it has not done is hold its value. The Minneapolis Fed's calculator says $100 in 1971 buys what about $12 bought then. That's not a conspiracy. It's the design. A fiat currency loses a little value every year on purpose, and a lot in years like 2022.
+That didn't happen in a crash. It happened at 2% or 3% a year, with a few bad years like 2022 thrown in, which is exactly how a fiat currency is supposed to work. A little inflation every year keeps the economy moving and keeps the government's debts shrinking in real terms. For a retiree, the same arithmetic runs in reverse. Your savings are denominated in a thing built to shrink, and the trillion dollars in Kentucky does nothing to stop it.
 
-For a retiree, that's the entire problem in one sentence: your savings are denominated in a thing built to shrink.
+## Why the gold in Fort Knox doesn't help you
 
-## What the gold ads get wrong
+It just sits there. It isn't sold to defend the dollar, it isn't lent out, and it can't be redeemed by anyone holding a bill. Bessent's reassurance was about accounting, not about your purchasing power. The gold could double in value tomorrow and your savings account would earn the same 0.5%.
 
-The pitch is that gold is the fix because it's "real." Gold has kept its value over centuries. Over the ten or twenty years a retiree actually cares about, it's a coin flip. It fell for most of the 1980s and 1990s. It fell 40% from 2011 to 2015. It pays nothing while you wait, costs money to store, and the dealers who advertise on cable sell it at markups that state regulators have called fraud.
+And the gold in your closet does the same thing. Gold has held its value over centuries. Over the ten or twenty years a retiree actually cares about, it's a coin flip: it lost money for most of the 1980s and 1990s and fell 40% from 2011 to 2015. It pays nothing while you wait.
 
-Bessent's trillion in Fort Knox doesn't do anything for the government either, by the way. It just sits there. Which is exactly what it would do in your closet.
+> **What to do:** If you want gold as insurance against exactly the risk Bessent described, buy a low-cost gold ETF in a brokerage account and keep it under 5% to 10% of savings. If a TV ad or a phone call is why you're thinking about it, the markup in that ad is the bigger risk to your money than the fiat dollar.
 
-> **What to do:** If you want some gold, buy a low-cost gold ETF in a brokerage account and keep it under 5% of savings. If a dealer, a mailer, or a "patriot" newsletter is the reason you're thinking about it, the reason is the problem.
+## The four things that actually protect a fiat-dollar saver
 
-## What actually protects savings from a shrinking dollar
+The same government that runs the fiat system sells the only instruments that adjust for it directly.
 
-The government that runs the fiat system also sells the only instruments that adjust for it directly.
+1. **Treasury Inflation-Protected Securities (TIPS).** The principal rises with the Consumer Price Index. If inflation runs 4%, your bond grows 4%, plus interest.
+2. **Series I savings bonds.** The same protection for smaller savers, up to $10,000 a year per person, with no state tax and no market risk.
+3. **Social Security, claimed late.** It is inflation-indexed by law and never runs out. Every year you delay between 62 and 70 buys about 7% to 8% more of the only inflation-protected annuity that exists.
+4. **Stocks, held broadly.** Companies raise prices along with everyone else. A broad index fund has beaten inflation over every 20-year period on record, which gold cannot say.
 
-- **Treasury Inflation-Protected Securities (TIPS)** pay a fixed rate on a principal that rises with the CPI. If inflation runs 4%, your principal grows 4%.
-- **Series I savings bonds** do the same for smaller savers, up to $10,000 a year per person, with no state tax.
-- **Social Security** is inflation-indexed by law. Every year you delay claiming, you're buying more of the only inflation-protected annuity that never runs out.
-- **Stocks**, over decades, because companies raise prices along with everyone else. Buffett's index fund is an inflation hedge that pays dividends.
+> **What to do:** Check whether any of your savings is in TIPS or I bonds. If none is, that's the gap Bessent's remark exposes. It can be filled at TreasuryDirect this afternoon, for free.
 
-> **What to do:** Check whether any of your savings is in TIPS or I bonds. If none is, that's the gap the gold ad is exploiting. Fill it at TreasuryDirect for free.
+## The risk he didn't mention
 
-## The part Bessent left out
+The reason "what backs the dollar" is suddenly a live question isn't Fort Knox. It's that the government is borrowing at a pace that makes bond investors nervous, which is why the 30-year Treasury just hit its highest yield since 2007. A country doesn't debase a fiat currency by emptying a vault. It does it by running deficits it can't fund and letting inflation quietly pay for them.
 
-The reason the dollar-backed-by-nothing question is suddenly loud again isn't Fort Knox. It's that the government is borrowing at a pace that makes bond investors nervous, which is why the 30-year Treasury just hit its highest yield since 2007. The way a country debases a fiat currency isn't by emptying a vault. It's by running deficits it can't fund and letting inflation quietly pay for them. That's the risk to your savings, and the Secretary reassuring you about the gold is the person in charge of it.
-
-The gold is in Kentucky. Your protection isn't.
+The gold is in Kentucky, and it's safe. Your savings aren't in Kentucky. Make sure they're somewhere that keeps up.
