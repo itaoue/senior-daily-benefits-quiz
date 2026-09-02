@@ -53,7 +53,7 @@ PARTNER_NAMES = {
     "aarp": "AARP", "tax_relief": "TRA Tax Relief", "hearing": "our hearing partner", "walkin_shower": "HomeBuddy",
     "home_warranty": "Home Warranty", "title_lock": "Home Title Lock", "home_security": "Guardlane",
     "timeshare_exit": "Stonegate", "pillow": "Derila", "insoles": "Akusoli", "skincare": "Beverly Hills MD",
-    "detox_tea": "Lulutox", "adblock": "Total Adblock", "auto_insurance": "our auto insurance partner",
+    "detox_tea": "Lulutox", "adblock": "Total Adblock", "auto_insurance": "Insurvo",
     "balance_transfer": "our card partner", "cashback_card": "our card partner", "debt_settlement": "our debt relief partner",
     "heloc": "our home equity partner", "windows": "our window partner", "roof": "our roofing partner",
     "gutters": "our gutter partner", "solar_exit": "our solar partner",
