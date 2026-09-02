@@ -1,49 +1,47 @@
 ---
-title: The new $1 coin with the president's face is not gold, and that "gold IRA" ad is not what it sounds like either. What to check before you buy any coin
+title: A living president's face on the dollar coin, a gold finish over base metal, and a legal question nobody answered. That's the sales pitch of the year, and you're the target
 slug: commemorative-coins-gold-iras-what-to-check
 date: 2026-08-09
 topic: Scam Alerts
-summary: A gold-colored dollar coin honoring the country's 250th birthday goes on sale this fall, and the marketing around precious metals is louder than it's been in years. Coins, bullion, and metals IRAs are all legal. They're also where a lot of older Americans lose money to markups and pressure. Here's how to tell the difference.
+summary: The Treasury is striking a $1 coin with Donald Trump's likeness for the country's 250th birthday. Experts say it breaks a 160-year-old law against living people on currency, and a judge declined to rule. Meanwhile the "gold IRA" industry is running the loudest ads in a decade. Here's how the coin, the ads, and your retirement money connect.
 image: images/articles/commemorative-coins-gold-iras-what-to-check.jpg
 sponsor: adblock, title_lock, tax_relief
 sources:
   - United States Mint, Semiquincentennial 2026 $1 coin|https://www.usmint.gov/semiquincentennial-president-donald-j-trump-2026-1-coin-rolls-bags-MASTER_SEMIQDJT.html
+  - NPR, The new $1 Trump coin doesn't just buck norms, experts say it breaks laws (July 17, 2026)|https://www.npr.org/2026/07/17/nx-s1-5897380/trump-coin-face-laws-treasury-250
   - Commodity Futures Trading Commission, Precious metals fraud advisory|https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CustomerAdvisory_PreciousMetals.html
   - Internal Revenue Service, Publication 590-A, IRA investments in collectibles|https://www.irs.gov/publications/p590a
-  - Federal Trade Commission, Investing in gold and precious metals|https://consumer.ftc.gov/articles/investing-gold-coins-bullion
 ---
-The Treasury Department unveiled a one-dollar coin this summer bearing the president's likeness, part of the 250th-anniversary celebrations. It's being struck in Philadelphia and should be available in the fall. Early reports described it as a gold coin. It isn't. The Mint's finished version has a gold-colored finish on a base metal, like the dollar coins already in circulation. Its metal is worth pennies, and its face value is one dollar.
+Since 1866, federal law has barred the likeness of any living person from U.S. currency. It was passed after the head of the Treasury's currency bureau put his own face on a five-cent note. A separate 2005 law says a president can't be honored on a coin until two years after death. Calvin Coolidge is the only exception in a century and a half, and Congress voted for that one.
 
-That's a useful thing to know, because the ads that will surround it this fall are going to blur the line between three very different things.
+In July, Treasury Secretary Scott Bessent unveiled a $1 coin with Donald Trump's face on it, citing a 2020 law that lets the secretary issue coins "emblematic of" the 250th anniversary. That same 2020 law bans portraits of living people on the reverse of those coins. Legal scholars told NPR the design is unlawful. A federal judge dismissed the challenge as moot without deciding. The Mint is striking the coins in Philadelphia and will sell them this fall.
 
-## Three things that all get called "gold coins"
+We think putting a sitting president's face on the money is exactly what the 1866 law was written to prevent, and that the administration knows it, which is why it's arguing from a loophole. But this site isn't about constitutional law. It's about your money. And the coin matters to your money for a different reason.
 
-**1. Commemorative and circulating coins from the U.S. Mint.** The 250th-anniversary dollar, state quarters, presidential dollars. Buy them directly from usmint.gov at the Mint's price if you want them. They are keepsakes. Almost none of them ever become worth much more than what you paid, and many end up worth exactly face value.
+## The coin is not gold
 
-**2. Bullion coins.** American Gold Eagles, Canadian Maple Leafs, Krugerrands. Their value is the metal inside. A one-ounce gold coin is worth roughly the day's gold price plus a small dealer premium, usually a few percent. This is what most people mean by "investing in gold."
+Early renderings suggested gold. The finished piece is base metal with a gold-colored finish, the same as the dollar coins that have jangled around in vending machines for 20 years. Its metal content is worth cents. Its face value is one dollar. Buy one from the Mint as a keepsake if you like. Do not buy one from anyone else at any other price, and do not believe anyone who calls it an investment.
 
-**3. "Collectible," "proof," or "rare" coins sold by phone and on television.** This is where the trouble is. A dealer buys a bullion coin, has it graded and sealed in plastic, and sells it to you at two or three times the metal value on the theory that it's rare. When you try to sell, you find out it's worth the metal.
+> **What to do:** The Mint sells directly at usmint.gov. If a mailer, a TV ad, or a phone call offers "the Trump gold coin" at $19.95, $49.95, or "just shipping," the markup over what you're getting is the entire business model.
 
-> **What to do:** Before buying any gold coin, look up the current spot price of gold, divide the quoted price by the coin's gold content in ounces, and compare. A premium over 10% needs a very good explanation. A premium over 30% is where regulators say fraud tends to live.
+## The ads that ride on it
 
-## The gold IRA pitch
+The coin is a gift to an industry that already spends heavily on older Americans: the precious-metals dealers. Their pitch this year writes itself. The debt just passed $40 trillion. Bessent himself said in July that the dollar is no longer backed by gold. Social Security's fund is running short. Now there's a gold-colored coin with the president on it. "Protect your retirement with physical gold" plays over all of it.
 
-"Move your 401(k) into physical gold, tax-free." You've seen the ads, often next to news about the national debt or Social Security. What they're describing is a self-directed IRA that holds approved bullion at a licensed depository. It's legal. The IRS allows certain coins and bars of specified purity inside an IRA, held by a custodian, not in your safe at home.
+Here's what the pitch leaves out. A gold IRA is a self-directed account holding approved bullion at a depository. It's legal. The dealer's markup on the metal, the setup fee, the annual custodian fee, and the storage fee are not in the ad. State regulators have sued dealers for selling coins into retirement accounts at markups of 100% or more, almost entirely to people over 60. The coins were real. The price was the fraud.
 
-The costs are what the ads leave out: a setup fee, an annual custodian fee, a storage fee, and, most important, the dealer's markup on the metal itself, which can be far higher than what a brokerage would charge for a gold fund. Some dealers have been sued by state regulators for selling coins into IRAs at markups of 100% or more, mostly to people over 60.
+> **What to do:** For any gold coin, divide the price by the ounces of gold in it and compare to the day's spot price. Over 10% premium, ask why. Over 30%, walk away. For a gold IRA, get the total annual cost and the exact markup over spot in writing, then compare to a gold ETF in a regular IRA, which costs a fraction and sells in seconds.
 
-Two more things to know. Gold pays no interest or dividends, so unlike a bond or a dividend fund it produces no income to live on. And when you take required distributions after 73, you either sell the metal or take physical delivery and pay tax on it.
+## The warning signs, in the order you'll hear them
 
-> **What to do:** If you want gold in your portfolio, the simplest route is a low-cost gold ETF inside an ordinary IRA at any brokerage. You get the metal's price, you can sell in seconds, and there's no salesperson. If you still prefer physical metal in an IRA, get the total annual cost in writing from the custodian and the exact markup over spot from the dealer, then compare it to the ETF.
+1. A reference to the national debt, the collapsing dollar, or "what Washington doesn't want you to know."
+2. Urgency. A deadline, a "limited mintage," the next crash.
+3. A refusal to state the price per ounce over spot.
+4. A "guaranteed buyback" or promised return.
+5. A request to wire money before paperwork arrives.
 
-## The warning signs, in order
+## Where the two stories meet
 
-- A cold call, a TV ad, or a mailer that mentions the national debt, the dollar collapsing, or "what the government doesn't want you to know."
-- Pressure to move retirement money quickly, before a deadline or "the next crash."
-- A refusal to quote the price per ounce over spot.
-- "Guaranteed" returns, or a promise to buy the coins back at your purchase price.
-- Any request to pay by wire before you've received paperwork.
+A government that puts a living leader's face on the coinage, over the objections of its own laws, is telling you something about how it views rules. A dealer who sells you that coin at fifty times face value is telling you something about how he views you. Neither one is looking out for your retirement. That job is still yours.
 
-The Commodity Futures Trading Commission, the Federal Trade Commission, and most state attorneys general all have precious-metals fraud among their top complaints from older consumers. The coins are real. The problem is the price.
-
-> **What to do:** If you've already bought and suspect you overpaid, get an independent appraisal from a coin dealer who isn't the seller, and report the original seller to your state attorney general and at reportfraud.ftc.gov. Some states have recovered money for buyers.
+> **What to do:** If you've already bought and suspect you overpaid, get an appraisal from a dealer who isn't the seller and report at reportfraud.ftc.gov and to your state attorney general. Several states have clawed money back.

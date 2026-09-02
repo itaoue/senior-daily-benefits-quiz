@@ -1,48 +1,46 @@
 ---
-title: Warren Buffett told his trustee to put 90% of his wife's money in one index fund. What a retiree can borrow from that, and what to change
+title: Warren Buffett's will is the best free financial advice you'll get this year. Everyone quoting him to sell you something is lying
 slug: buffett-90-10-plan-what-retirees-can-borrow
 date: 2026-08-05
 topic: Retirement Planning
-summary: The most famous investor alive left simple instructions for the money his wife will inherit: 90% in a low-cost S&P 500 index fund, 10% in short-term government bonds. The simplicity is the lesson. The exact split is where most retirees should differ.
+summary: Buffett told his trustee to put 90% of his wife's inheritance in one cheap S&P 500 index fund and 10% in Treasury bills. No gold, no annuity, no advisor, no "opportunity." Here's why that's the advice, why the gold and annuity salesmen keep borrowing his name anyway, and the one number a retiree should change.
 image: images/articles/buffett-90-10-plan-what-retirees-can-borrow.jpg
 sponsor: cashback_card, aarp
 sources:
-  - Berkshire Hathaway, 2013 letter to shareholders (see the section on Buffett's will)|https://www.berkshirehathaway.com/letters/2013ltr.pdf
-  - U.S. Securities and Exchange Commission, Investor.gov, Index funds|https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1
-  - FINRA, Bonds: understanding risk|https://www.finra.org/investors/investing/investment-products/bonds
+  - Berkshire Hathaway, 2013 letter to shareholders (the section on Buffett's will)|https://www.berkshirehathaway.com/letters/2013ltr.pdf
+  - U.S. Securities and Exchange Commission, Investor.gov, Mutual funds and ETFs|https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1
+  - FINRA, Fund fees and expenses|https://www.finra.org/investors/investing/investment-products/mutual-funds/fees
 ---
-In his 2013 letter to shareholders, Warren Buffett described what his will says about the cash left to his wife: put 10% in short-term government bonds and 90% in a very low-cost S&P 500 index fund. He added that he expected that mix to beat what most investors who hire expensive managers would get.
+Warren Buffett is 95. He handed the Berkshire Hathaway chief executive job to Greg Abel on January 1. And the instructions in his will for the money his wife will inherit have been public since his 2013 shareholder letter: 10% in short-term government bonds, 90% in a very low-cost S&P 500 index fund. He named Vanguard's.
 
-Buffett handed the chief executive job at Berkshire Hathaway to Greg Abel at the start of 2026, but the instruction hasn't changed. It's worth understanding, because it's about as far from "stock tips" as investment advice gets.
+Read that again and notice what isn't in it. No gold. No annuity. No "private real estate opportunity." No financial advisor. No individual stocks, not even Berkshire. The richest investor in history, planning for the person he loves most, chose the two most boring products in existence and told the trustee not to touch them.
 
-## What the instruction actually says
+We think that's the whole story, and it's the reason every ad aimed at retirees quotes Buffett in the first line and then sells you the opposite in the second.
 
-Three things, and none of them is a prediction about the market:
+## What he's actually saying
 
-1. **Don't pick individual stocks.** Buffett has said for years that he doesn't think the average person can do it well, and that includes most professionals.
-2. **Keep costs near zero.** An S&P 500 index fund from a large provider charges a few hundredths of a percent a year. A managed fund can charge 1% or more, every year, whether it wins or loses.
-3. **Hold enough safe money that you never have to sell stocks at a bad time.** That's the job of the 10%.
+"I do not think the average person can pick stocks." That's Buffett at the 2021 shareholder meeting, and he's said versions of it for 30 years. Not the average person can't be bothered. The average person *can't*, and neither can most of the professionals charging 1% a year to try.
 
-> **What to do:** Pull up the expense ratio on whatever funds you own. If any charge more than about 0.5% a year and you can't say what you're getting for it, that's the first thing to fix. Fees are the one part of investing that's fully under your control.
+An S&P 500 index fund costs about 0.03% a year. A managed fund typically costs 1% or more. On $500,000 that's $150 a year versus $5,000, every year, for a product that on average does worse. Buffett once bet a million dollars that an index fund would beat a basket of hedge funds over ten years. He won by a mile.
 
-## Why 90/10 is the wrong split for most retirees
+> **What to do:** Look up the expense ratio on every fund you own. Anything over 0.5% needs a reason. If the reason is "my guy picked it," that's the fee talking, not the fund.
 
-Buffett's wife will inherit a fortune. If stocks fell by half the year after she got it, her spending wouldn't change. The 90% stock allocation is fine for someone who will never need to sell in a downturn.
+## The name-droppers
 
-Most retirees are in a different position. They're drawing on their savings every month, so a bad first few years of retirement, with withdrawals coming out while the balance is down, can permanently shrink what the portfolio supports. Bonds and cash are what let you leave the stocks alone until they recover.
+Watch for it this fall. The gold IRA ad that opens with "Even Warren Buffett is holding cash." The annuity seminar with a Buffett quote on the slide. The newsletter promising "the next Berkshire."
 
-A common starting point for someone living off their savings is 40% to 60% in stocks and the rest in bonds and cash, with two to three years of planned withdrawals kept somewhere that can't drop. The right number depends on how much of your spending is already covered by Social Security and any pension. The more of your basic bills those guaranteed sources pay, the more risk the rest of your money can take.
+Buffett has called gold a lump that "will never produce anything." He has never bought an annuity. He has said, repeatedly, that people who trade in and out of the market are "gambling." Anyone who invokes him to sell you a product with a commission is counting on you not having read what he actually wrote. Now you have.
 
-> **What to do:** Add up your essential monthly expenses. Subtract Social Security and pension income. Multiply the gap by 24 or 36. That's the amount that belongs in bonds, CDs, or a money market fund, not in stocks, no matter what any billionaire's will says.
+## The one number to change
 
-## What is worth copying exactly
+The 90/10 split is right for Buffett's wife because she'll never need to sell in a downturn. A retiree pulling money out every month is in a different spot. If stocks drop 30% in your second year of retirement and you're selling to pay bills, that loss never comes back.
 
-- **One broad fund instead of many.** A single total-market or S&P 500 index fund plus a bond fund is a complete portfolio. More funds usually means more overlap and more fees, not more safety.
-- **Government bonds, short-term.** Buffett didn't say corporate bonds or long-term bonds. Short-term Treasuries and CDs don't pay the most, but they don't lose value when rates rise, which is the point of holding them.
-- **Set it and don't tinker.** The instruction is designed to be followed by a trustee who won't be watching the news. That's a feature.
+So keep his structure and change the ratio. Two to three years of the withdrawals you plan to take belong in his 10% bucket: Treasury bills, CDs, a money market fund. For most retirees that lands the stock share somewhere between 40% and 70%, depending on how much of your bills Social Security already covers. The bigger your guaranteed income, the closer to Buffett you can get.
 
-## What it is not
+> **What to do:** Essential monthly bills minus Social Security and pension equals your monthly gap. Multiply by 30. That's the minimum in the safe bucket. Everything else can follow Buffett.
 
-Buffett's plan is not a recommendation to buy anything at a particular time, and it says nothing about gold, annuities, real estate, or any product with a salesperson attached. If someone quotes Buffett to you while selling you something, the quote is doing work the product can't.
+## Why this matters more this year
 
-> **What to do:** If you'd like a second opinion on your own mix, look for a fee-only fiduciary advisor, one who charges by the hour or a flat fee and is legally required to act in your interest. A single review session is often enough.
+The 2025 tax law added trillions to the deficit and moved Social Security's trust fund depletion date closer, and the marketing machine has responded by telling retirees the sky is falling and only gold, or crypto, or a "guaranteed" annuity can save them. Buffett's answer to a scary decade was the same as his answer to a calm one: own the whole American economy for almost nothing, keep some cash so you never panic-sell, and don't let anyone talk you out of it.
+
+That advice cost him nothing to give and costs you nothing to take. That's how you know it's real.

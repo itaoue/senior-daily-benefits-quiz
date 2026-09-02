@@ -93,6 +93,16 @@ SCENES = {
         "A wooden desk with a printed stock chart showing a sharp red decline, a coffee mug, reading glasses and a hand resting on the paper, muted morning light, no face.",
     "should-you-pay-off-the-mortgage-before-you-retire":
         "A house key and a mortgage statement on a kitchen counter in front of a window showing a modest suburban home, warm evening light, no people.",
+    "trump-promised-not-to-touch-social-security-169-billion":
+        "The White House north facade seen through the iron fence at dusk, a Social Security style benefit envelope held up in the foreground by a hand, no face, moody light.",
+    "trump-bump-cola-2027-dont-thank-him":
+        "A grocery store receipt and a Social Security benefit envelope on a kitchen table beside a carton of eggs and a gallon of milk, price tag out of focus, morning light, no people.",
+    "bessent-fort-knox-gold-dollar-what-it-means-for-savings":
+        "A heavy steel bank vault door slightly open with stacked gold bars glinting inside, and a single crumpled dollar bill on the floor in front of it, dramatic low light, no people.",
+    "elon-musk-two-stocks-retirees-should-not-copy":
+        "A close-up of a smartphone screen showing a rising green stock chart, lying on a wooden table next to a retiree's reading glasses and a cup of coffee, no faces, soft window light.",
+    "mark-cuban-vs-health-insurers-your-401k-and-your-claims":
+        "An orange prescription bottle and an insurance denial letter with a red stamp on a hospital bedside table, an IV pole blurred in the background, no people.",
 }
 
 # Fallback scenes by topic keyword for articles not listed above.

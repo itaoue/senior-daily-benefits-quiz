@@ -1,51 +1,49 @@
 ---
-title: The national debt just passed $40 trillion and long-term interest rates hit a 19-year high. Here's what that changes for someone living on a fixed income
+title: Trump called himself the "king of debt." The bill just hit $40 trillion, interest now costs more than Medicare, and retirees are the ones being handed the check
 slug: national-debt-40-trillion-what-it-means-for-retirees
 date: 2026-08-10
 topic: Retirement Planning
-summary: Interest on the federal debt now costs more than Medicare. The 30-year Treasury yield touched 5.34% in August, the highest since 2007. Politicians will argue about whose fault it is. For a retiree the practical questions are narrower: what it does to savings rates, bond funds, mortgages, and the programs you depend on.
+summary: The national debt crossed $40 trillion on August 19. The 2025 tax law added $3.4 trillion to it by the Congressional Budget Office's count, cut Medicaid by a trillion, and put Medicare on the hook for automatic cuts. The 30-year Treasury yield hit a 19-year high the same week. Here is who pays, and what a person on a fixed income can do about it.
 image: images/articles/national-debt-40-trillion-what-it-means-for-retirees.jpg
 sponsor: heloc, auto_insurance
 sources:
   - U.S. Treasury, Fiscal Data, Debt to the penny|https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny
-  - Congressional Budget Office, The budget and economic outlook, 2026 to 2036|https://www.cbo.gov/topics/budget
+  - Congressional Budget Office, cost estimate of the One Big Beautiful Bill Act|https://www.cbo.gov/publication/61570
+  - Congressional Budget Office, Budget and economic outlook 2026 to 2036|https://www.cbo.gov/topics/budget
   - TreasuryDirect, Treasury securities and savings bonds|https://www.treasurydirect.gov/
-  - Social Security Administration, 2026 Trustees Report summary|https://www.ssa.gov/oact/trsum/
 ---
-On August 19 the federal debt crossed $40 trillion, according to the Treasury's own daily tally. It passed $30 trillion in early 2022. The same week, the yield on the 30-year Treasury bond briefly reached 5.34%, a level not seen since 2007, as investors demanded more to lend the government money for three decades.
+Donald Trump once described himself as "the king of debt." He said it approvingly. On August 19, the federal debt passed $40 trillion according to the Treasury's own daily count, up from $30 trillion in early 2022. The same week, investors demanded 5.34% to lend the government money for 30 years, the highest since 2007.
 
-Whether you blame tax cuts, spending, or both, the effect on a household budget is the same. Here's where it shows up.
+Both parties built this debt. But the largest single addition in years has a name and a signature. The Congressional Budget Office estimates the 2025 tax law adds $3.4 trillion to deficits over a decade, more than $4 trillion with interest. It paid for that partly by cutting Medicaid by about $1 trillion. And it did it while the president was promising seniors he'd never touch their benefits.
 
-## Where the money goes
+## Where the money is going
 
-Interest is now one of the largest items in the federal budget. In the first seven months of the 2026 fiscal year the Treasury paid about $628 billion in net interest, more than it spent on Medicare. The Congressional Budget Office projects interest costs of roughly $1 trillion this year, doubling within a decade.
+Through the first seven months of this fiscal year the Treasury paid $628 billion in net interest. That's more than it spent on Medicare. The CBO projects interest at about $1 trillion for the year and $2.1 trillion within a decade.
 
-Every dollar of interest is a dollar not available for anything else, which is the pressure behind proposals to trim Medicare payments, change Social Security, or raise taxes. None of that is decided. But it's the backdrop for every budget fight for the rest of your retirement.
+Every one of those dollars is a dollar that isn't paying for anything. And when Washington goes looking for the money, it looks at the biggest line items: Social Security, Medicare, Medicaid. That's not a prediction. It's the budget math the CBO already published.
 
-> **What to do:** Treat Social Security and Medicare as stable for anyone already collecting, and plan for smaller cost-of-living adjustments and higher Medicare premiums than the past few years, rather than for benefit cuts. That's the direction the pressure points.
+## The bills seniors are already getting
 
-## Higher rates: good news for savers
+- **Medicaid.** About 13 million Americans are on both Medicare and Medicaid, mostly low-income older people and people with disabilities. Medicaid is what pays for most nursing home care in this country. A trillion dollars in cuts lands on them and on the rural hospitals and nursing homes that depend on that money.
+- **Medicare.** Under the budget rules the bill triggered, Medicare faces automatic across-the-board cuts of roughly $500 billion over ten years unless Congress votes to waive them. Congress usually does. Usually.
+- **Social Security.** The tax cuts reduced the income tax that some retirees pay on benefits, which flows into the trust fund. The Social Security actuary put the cost at $169 billion and moved the fund's depletion date to late 2032.
 
-The one group that benefits from the government paying more to borrow is anyone lending to it. Treasury bills, notes, CDs, and money market funds all pay more when Treasury yields rise.
+> **What to do:** Assume smaller cost-of-living adjustments, higher Medicare premiums, and more pressure on Medicaid-funded care for the rest of the decade. Plan around that instead of around the campaign promise.
 
-A retiree with a cash reserve can now earn a real return on it for the first time in 15 years. A one-year Treasury bill or a one-year CD from an online bank has been paying well above inflation. Series I savings bonds adjust with inflation directly.
+## The one silver lining, if you take it
 
-> **What to do:** If your savings sit in a big-bank account paying under 1%, move the reserve to a high-yield savings account, a Treasury bill ladder, or a CD ladder. This is the simplest way to turn the debt headline into something that helps you.
+When the government pays more to borrow, so does everyone lending to it. That includes you. A one-year Treasury bill, a CD from an online bank, or a money market fund now pays well above inflation for the first time since 2007. Retirees with a cash reserve can finally earn a real return on it.
 
-## Higher rates: bad news for bond funds you already own
+> **What to do:** If your savings sit in a big-bank account paying under 1%, move the reserve to Treasury bills at TreasuryDirect, a high-yield savings account, or a CD ladder. It's the one place the debt headline works in your favor, and it takes fifteen minutes.
 
-Bond prices move opposite to rates. When the 30-year yield rises, the value of existing long-term bonds falls. If you hold a long-term bond fund, you've seen this on your statement. The longer the average maturity of the fund, the bigger the swing.
+## The bill for bond funds you already own
 
-Individual bonds held to maturity pay back their full face value regardless. Bond *funds* never mature, so the loss is real if you sell.
+Rising yields mean falling prices for bonds already issued. If you own a long-term bond fund, your statement has shown it. The longer the fund's average maturity, the bigger the drop. Individual Treasuries held to maturity pay back in full; funds never mature.
 
-> **What to do:** Check the "duration" figure on any bond fund you own. Duration of 2 means roughly a 2% price drop for each 1-point rise in rates. Duration of 12 means a 12% drop. For money you might need within five years, short-term bond funds or individual Treasuries are a better fit than long-term funds.
+> **What to do:** Check the "duration" on any bond fund. A duration of 12 loses roughly 12% for every one-point rise in rates. Money you'll need within five years belongs in short-term funds or individual Treasuries.
 
-## Mortgages, HELOCs, and car loans
+## What the debt is not
 
-Mortgage rates follow the 10-year Treasury, which has also climbed. If you have a fixed-rate mortgage from before 2022, keep it; you're borrowing at a rate that no longer exists. Home equity lines of credit are variable, so the payment rises with rates. If you're carrying a balance on one, it's now among the most expensive debt many retirees hold after credit cards.
+It is not a reason to buy gold from a TV ad, crypto from a "patriot" newsletter, or an annuity from a seminar. Those pitches are louder than ever because the fear is real. The dollar survived a larger debt burden after World War II. Problems this size play out over decades as slower growth and gradual inflation, not overnight collapse. Inflation-linked Treasury bonds and I bonds are the boring, correct hedge.
 
-## The dollar and inflation
-
-A common sales pitch this year: the debt will destroy the dollar, so buy gold, or crypto, or a "debt-proof" annuity. The debt is a real problem. The dollar has survived larger debt-to-GDP ratios, notably after World War II, and remains the currency the world runs on. Big structural problems tend to play out over decades through slower growth and gradual inflation, not overnight collapse. A diversified portfolio with an inflation-linked component (I bonds, TIPS) is the ordinary answer. Anything sold on fear is worth a second look at the fees.
-
-> **What to do:** Once a year, ask three questions. Is my cash earning close to the Treasury bill rate? Is my bond money short enough in maturity to sleep through rate moves? Is any variable-rate debt paid off or shrinking? Those three answers matter more to your retirement than the total on the national debt clock.
+The king of debt won't be paying this bill. The people with the least room to absorb it, retirees on fixed incomes, will pay it first, in premiums and COLAs and closed nursing homes. The least you can do is make sure your own cash is earning what the government is paying.

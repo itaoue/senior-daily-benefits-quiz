@@ -1,48 +1,50 @@
 ---
-title: Buffett is sitting on nearly $400 billion in cash. Other billionaires call cash the worst asset you can own. Here's how much a retiree actually needs
+title: Larry Fink says keeping your savings in the bank is "one of the worst decisions of a lifetime." He runs the world's largest fund company. Consider the source
 slug: how-much-cash-should-a-retiree-hold
 date: 2026-08-07
 topic: Retirement Planning
-summary: Berkshire Hathaway's cash pile hit a record this year while Ray Dalio and Larry Fink were warning that money in the bank is guaranteed to lose ground to inflation. Both sides are right about different things. The question for a retiree isn't whether to hold cash, but how much and where.
+summary: The BlackRock chief and hedge-fund billionaire Ray Dalio spent the summer telling ordinary people that cash is trash. Warren Buffett, meanwhile, was sitting on nearly $400 billion of it. One of these men makes money when you buy his funds. Here's how much cash a retiree really needs and where the "cash is trash" crowd is quietly right.
 image: images/articles/how-much-cash-should-a-retiree-hold.jpg
 sponsor: balance_transfer, home_warranty
 sources:
-  - Berkshire Hathaway, quarterly reports (cash and Treasury bill holdings)|https://www.berkshirehathaway.com/reports.html
+  - Berkshire Hathaway, quarterly reports|https://www.berkshirehathaway.com/reports.html
   - Federal Reserve Bank of Minneapolis, inflation calculator|https://www.minneapolisfed.org/about-us/monetary-policy/inflation-calculator
   - FDIC, deposit insurance FAQs|https://www.fdic.gov/resources/deposit-insurance/faq/
-  - TreasuryDirect, Treasury bills and Series I savings bonds|https://www.treasurydirect.gov/
+  - TreasuryDirect, Treasury bills and I bonds|https://www.treasurydirect.gov/
 ---
-Two headlines ran within weeks of each other this summer. Berkshire Hathaway reported a record cash position of about $397 billion, most of it in short-term Treasury bills. And two of the best-known names in finance, Ray Dalio and Larry Fink, said in separate interviews that holding cash is one of the worst financial decisions a person can make.
+Larry Fink runs BlackRock, which manages more than $12 trillion, most of it in funds that earn fees only when your money is in them, not in a savings account. So when Fink says that leaving money in the bank is one of the worst financial decisions of your life, it's worth remembering who benefits if you agree.
 
-They aren't contradicting each other. Berkshire holds cash because it's waiting for something to buy. Dalio and Fink are talking about money that sits in a low-interest account for decades. A retiree's situation is different from both.
+Ray Dalio, who built the world's largest hedge fund, said something similar this summer: cash is the one asset "guaranteed" to lose. And at the same time, Warren Buffett's Berkshire Hathaway reported a record $397 billion in cash and Treasury bills, roughly a third of the entire company.
 
-## Why cash loses
+So which billionaire is right? The annoying answer is all of them, about different things. The useful answer is that a retiree needs a specific amount of cash, in a specific place, and the people telling you cash is trash are not talking about you.
 
-The Minneapolis Fed's calculator makes the point quickly: what $100 bought in 1970 costs about $850 today. Money that earns nothing loses roughly a third of its buying power every 15 years at ordinary inflation rates. Even a savings account paying 0.5% barely slows that down. That's the "worst asset" argument, and over a long horizon it's correct.
+## Where Fink and Dalio are right
 
-## Why a retiree still needs it
+Money earning nothing loses about a third of its buying power every 15 years. The Minneapolis Fed's calculator says $100 in 1971 needs to be about $815 today to buy the same things. If your life savings sit in a checking account for 20 years, that's a real loss, and no billionaire needed to tell you.
 
-You're not investing for 40 years. You're paying bills next month. Cash does three jobs that nothing else does:
+But that's not the decision a retiree is making. The decision is whether to hold two or three years of spending somewhere safe while the rest works. On that question, Buffett's $397 billion is the better guide.
 
-1. **It covers spending without selling investments.** If the market drops 25% the year you retire and you have to sell stocks to pay the mortgage, that loss is locked in forever. Cash lets you wait.
-2. **It absorbs the unexpected.** A roof, a car, a dental implant, a family emergency. A retiree without a cushion ends up on a credit card at 24%.
-3. **It lets you sleep.** People who hold no cash tend to sell stocks at exactly the wrong moment. The cushion is what stops that.
+## Why a retiree needs cash that Fink doesn't
 
-> **What to do:** Keep two buckets. An emergency fund of three to six months of expenses, and a spending reserve of one to three years of the withdrawals you plan to take from investments. Together that's typically 10% to 20% of a retiree's savings. That is not "too much cash." It's the price of never being a forced seller.
+Fink and Dalio can ride out a 30% drop. Their spending doesn't depend on selling anything this year. Yours might. A retiree who has to sell stocks to pay the mortgage the year the market drops locks in that loss forever. The cash reserve is what makes you not that person.
 
-## Where to keep it so it isn't dead money
+Three jobs only cash can do: cover next year's bills without selling anything, absorb the roof and the root canal, and keep you from panic-selling. Every retiree who "held on" through 2008 and 2020 had one thing in common. They didn't need the money that year.
 
-The difference between the wrong place and the right place is worth thousands a year on a $100,000 reserve.
+> **What to do:** Hold two buckets. Three to six months of expenses as an emergency fund, and one to three years of the withdrawals you plan to take from investments. For most retirees that's 10% to 20% of savings in cash. Fink will call that a mistake. Fink isn't paying your bills.
 
-- **High-yield savings and money market accounts** at online banks and credit unions have paid several percent in recent years, while many big-bank savings accounts pay almost nothing. Both are FDIC or NCUA insured up to $250,000 per depositor per bank.
-- **Treasury bills** bought directly at TreasuryDirect or through a brokerage. Backed by the government, exempt from state income tax, and available in terms from four weeks to a year. This is what Berkshire owns.
-- **CD ladders.** Split the reserve across CDs maturing every 6 or 12 months. You lock a rate for each rung and always have one coming due.
-- **Series I savings bonds** for money you won't need for at least a year. The rate tracks inflation directly, which is exactly the problem cash has.
+## Where the cash goes is the actual decision
 
-> **What to do:** Look at your last bank statement. If the interest line on your savings is a few dollars on a large balance, move the money. Switching to a high-yield account takes 15 minutes online, and the old account can stay open.
+The real crime isn't holding cash. It's holding it at a big bank paying 0.1% while the same money could earn several percent with zero added risk. Here's what the billionaires' own money is in:
 
-## What not to do with it
+- **Treasury bills.** This is Berkshire's $339 billion. Backed by the federal government, exempt from state income tax, terms from four weeks to a year. Buy at TreasuryDirect or through any brokerage.
+- **High-yield savings and money market accounts** at online banks and credit unions. Same FDIC or NCUA insurance as the branch downtown, at ten to forty times the interest.
+- **CD ladders**, so something matures every six or twelve months and you're never locked in completely.
+- **Series I savings bonds** for money you won't need for a year. The rate is tied to inflation, which is the exact problem Dalio is describing.
 
-Don't let the "cash is trash" argument push your reserve into stocks or into products sold as cash substitutes. A fund that promises a higher yield than Treasury bills with no risk is taking a risk it isn't telling you about. Structured notes, non-traded REITs, and some annuities get pitched to retirees as "safe income." They're not where your reserve belongs.
+> **What to do:** Read the interest line on your last savings statement. If it's a few dollars on a large balance, your bank is doing to you what Fink says the mattress does. Move it this week. Fifteen minutes online.
 
-And don't hold more than you need. Beyond the two buckets above, cash is where Dalio and Fink are right. That money should be working somewhere.
+## The part they're not saying
+
+Fink's argument is that your money should be in the market. It should, eventually, mostly. But the products BlackRock and the rest of Wall Street are pushing at retirees this year go well beyond an index fund: private credit funds, "alternative" ETFs, structured products with yields that look like cash and risks that don't. When someone tells you cash is trash and then hands you a brochure, the brochure is the point.
+
+Keep Buffett's cash. Put it where Buffett puts it. Let everything else follow Fink, but only into things you can explain in one sentence.

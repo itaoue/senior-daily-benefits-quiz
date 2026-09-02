@@ -1,48 +1,48 @@
 ---
-title: A market drop in your first years of retirement hurts more than the same drop ten years later. Here's why, and how to protect against it
+title: Robert Kiyosaki has predicted a crash almost every year since 2008. He's been wrong every time but one thing. Here's the one thing
 slug: market-drop-early-in-retirement-sequence-risk
 date: 2026-08-12
 topic: Retirement Planning
-summary: Robert Kiyosaki is the latest to warn that baby boomers are about to be hit by a crash. Predictions like that come and go. The math underneath them is real: when you're withdrawing from savings, the order of good and bad years matters as much as the average return. Planners call it sequence risk, and it's manageable.
+summary: The "Rich Dad Poor Dad" author says baby boomers are about to be wiped out. He said that in 2011, 2013, 2016, 2018, 2020, 2021, 2022, 2023, and 2025. Selling fear to retirees is his business model, and the products he steers people toward are the ones we'd warn you about. But buried in the noise is a real risk that most retirement plans ignore.
 image: images/articles/market-drop-early-in-retirement-sequence-risk.jpg
 sponsor: debt_settlement, home_security
 sources:
-  - U.S. Securities and Exchange Commission, Investor.gov, Managing your retirement withdrawals|https://www.investor.gov/additional-resources/retirement-toolkit
+  - U.S. Securities and Exchange Commission, Investor.gov, Retirement toolkit|https://www.investor.gov/additional-resources/retirement-toolkit
   - FINRA, Retirement income planning|https://www.finra.org/investors/learn-to-invest/types-investments/retirement
   - Social Security Administration, When to start receiving retirement benefits|https://www.ssa.gov/pubs/EN-05-10147.pdf
 ---
-Every year someone with a large following predicts a crash that will wipe out retirees. Robert Kiyosaki's version made the rounds this summer. He's been forecasting the same thing, on and off, since at least 2008. The market has gone up most years since.
+Robert Kiyosaki became famous with a book about a rich dad who may not have existed. He stayed famous by predicting the collapse of the stock market, the dollar, and the retirement of an entire generation, repeatedly, publicly, and for at least 15 years. The S&P 500 has roughly quadrupled over that stretch. Anyone who followed his advice to get out and buy gold, silver, and bitcoin at each warning would have missed most of it.
 
-But there is one thing the doom predictions get right, and it's worth understanding on its own terms. A downturn in the first few years after you stop working does more damage than an identical downturn later. That's not a forecast. It's arithmetic.
+This summer's version is that boomers are being "set up" for a crash. We'll say plainly what the financial press won't: Kiyosaki sells fear, the fear sells his books and seminars, and the assets he pushes are the ones with the highest markups and the loudest ads aimed at people over 60. Treat him the way you'd treat a psychic.
 
-## Two retirees, same average return, very different outcomes
+And yet. Underneath the noise is a real thing, and it's the one part of his pitch worth keeping.
 
-Imagine two people who each retire with $500,000 and withdraw $25,000 a year, raising it with inflation. Over 20 years both portfolios average exactly the same return.
+## The thing he's right about
 
-The first person's bad years come early: the market falls 20% in year one and 15% in year two, then recovers. The second person gets the same bad years, but in years 18 and 19.
+A market drop in your first few years of retirement does more damage than the same drop later. Not because the market is worse then. Because you're withdrawing money at the bottom, and the money you take out never gets to recover.
 
-The second person ends up comfortably ahead, often by hundreds of thousands of dollars. The first person may run short. The reason is that early withdrawals during a downturn are taken from a shrunken balance, so there's less left to grow when the recovery comes. The same dollars withdrawn late in retirement come from a balance that already had years of compounding behind it.
+Two people retire with $500,000 and withdraw $25,000 a year. Both average the same return over 20 years. One gets the bad years first: down 20%, then down 15%, then recovery. The other gets the same bad years at the end. The second person ends up hundreds of thousands of dollars ahead and the first may run short. Planners call it sequence-of-returns risk. It's arithmetic, not prophecy.
 
-This is sequence-of-returns risk. It's the reason "the market averages 10% a year" is not a plan.
+> **What to do:** If you're within three years of retiring or already retired, and more than 70% of your savings is in stocks, you have this risk right now. The fix is not gold. It's below.
 
-> **What to do:** Find out your own exposure. If more than about 70% of your savings is in stocks and you're within three years of retiring or already retired, the next section applies to you directly.
+## Five things that actually work
 
-## Five ways to take the sting out
+**1. Two to three years of spending outside the market.** Cash, Treasury bills, CDs. When stocks fall, you spend this instead of selling. This one move removes most of the risk, because the damage comes from selling low, not from the drop.
 
-**1. Hold a spending reserve outside the market.** Two to three years of planned withdrawals in cash, Treasury bills, or CDs. When stocks fall, you spend the reserve instead of selling. This single move neutralizes most of the risk, because the damage comes from selling low, not from the drop itself.
+**2. Let Social Security carry the early years.** Every year you delay claiming between 62 and 70 raises the check about 7% to 8% for life. The less you need from the portfolio in years one through five, the less a bad sequence can hurt.
 
-**2. Let Social Security carry the early years.** Each year you delay claiming between 62 and 70 raises the benefit about 7% to 8% for life. Retirees who claim later are less dependent on the portfolio in exactly the years it's most vulnerable. If you can live on savings plus part-time work for a while, that's often the better order.
+**3. Flex the withdrawals.** Skip the inflation raise after a losing year. Trim by 5% to 10% if the balance falls below a line you set now. Plans with that rule survive bad sequences far more often than rigid ones.
 
-**3. Flex the withdrawals.** A rigid "4% plus inflation every year" rule ignores what the market did. Plans that skip the inflation raise after a losing year, or trim withdrawals by 5% to 10% when the balance falls below a set level, survive bad sequences far more often. Most retirees do this instinctively; writing it down makes it a plan.
+**4. Rebalance on a calendar, not on a feeling.** Once or twice a year, sell what's up and buy what's down. Decide in advance, when you're calm.
 
-**4. Rebalance on a schedule, not on a feeling.** After a drop, rebalancing means selling some bonds to buy stocks while they're cheap. After a run-up, it means the reverse. Once or twice a year is enough. The point is that the decision is made in advance, when you're calm.
+**5. Cover the essentials with guaranteed income.** Social Security, a pension, and for some people a plain immediate annuity for the gap. If rent, food, and insurance are paid no matter what, a crash is an inconvenience.
 
-**5. Keep the essentials covered by guaranteed income.** Social Security, a pension, and for some people a simple immediate annuity covering the gap. If rent, food, utilities, and insurance are paid no matter what stocks do, a bad sequence becomes an inconvenience instead of a crisis.
+> **What to do:** Essential monthly bills minus guaranteed monthly income equals what your portfolio must produce in a bad year. Multiply by 24. Make sure that amount is somewhere that can't fall.
 
-> **What to do:** Write your essential monthly expenses on one line and your guaranteed monthly income on the next. The difference is the amount your portfolio has to produce in a bad year. Make sure that amount, times 24, is sitting somewhere that can't fall.
+## What Kiyosaki wants you to do instead
 
-## What not to do
+Sell stocks. Buy gold, silver, and bitcoin. He's said so for years. Gold pays nothing and costs money to store. Silver is more volatile than the stock market he's warning you about. Bitcoin fell more than 70% in 2022. None of them produce the monthly income a retiree lives on, and all three are sold to seniors at markups the SEC and CFTC have been warning about for a decade.
 
-Don't sell everything because a famous person predicted a crash. Getting out is easy; getting back in is the part nobody times well, and missing a handful of the market's best days over a decade cuts returns dramatically. Don't pile into gold, crypto, or a product with a "guaranteed" return either. Those are bets on a different sequence, not protection from any sequence.
+Getting out of the market is easy. Getting back in is the part nobody times, and missing a handful of the best days over a decade cuts returns roughly in half. The retiree who does fine through the next downturn won't be the one who saw it coming. It'll be the one with two years of bills in Treasury bills, a Social Security check that covers the rent, and no reason to check the balance every morning.
 
-The retiree who does well through a downturn usually isn't the one who saw it coming. It's the one who had two years of spending set aside, a benefit check that covered the bills, and no reason to look at the balance every day.
+Kiyosaki will predict a crash again next year. Eventually he'll be right, the way a stopped clock is. Be ready for it by then, and be ready without him.

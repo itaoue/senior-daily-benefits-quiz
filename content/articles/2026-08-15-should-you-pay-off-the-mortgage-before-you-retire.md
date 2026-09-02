@@ -1,49 +1,51 @@
 ---
-title: Suze Orman says retire without a mortgage. Here's when she's right, when she isn't, and how to decide with your own numbers
+title: Suze Orman says don't retire with a mortgage. Rocket Mortgage is spending millions telling you to borrow against your house instead. One of them is on your side
 slug: should-you-pay-off-the-mortgage-before-you-retire
 date: 2026-08-15
 topic: Home, Utilities & Phone
-summary: About four in ten homeowners over 65 still carry a mortgage, more than double the share a generation ago. Paying it off before you retire lowers the income you need every month for the rest of your life. Whether it's worth draining savings to do it depends on the rate, the balance, and where the money would come from.
+summary: Four in ten homeowners over 65 still have a mortgage, and the lending industry would like that number higher. Orman's rule, retire without a house payment, is the rare piece of celebrity money advice we'd put on the fridge. Here's why it's right, the one way of following it that backfires, and the home-equity pitch to hang up on.
 image: images/articles/should-you-pay-off-the-mortgage-before-you-retire.jpg
 sponsor: heloc, roof, title_lock
 sources:
   - Harvard Joint Center for Housing Studies, Housing America's Older Adults 2023|https://www.jchs.harvard.edu/housing-americas-older-adults-2023
   - Consumer Financial Protection Bureau, Mortgages and older adults|https://www.consumerfinance.gov/consumer-tools/mortgages/
-  - Internal Revenue Service, Publication 936, Home mortgage interest deduction|https://www.irs.gov/publications/p936
+  - Consumer Financial Protection Bureau, Reverse mortgages|https://www.consumerfinance.gov/consumer-tools/reverse-mortgages/
 ---
-Suze Orman's rule is blunt: don't retire until the mortgage is gone. Her reasoning is that retirement planning obsesses over the portfolio when the biggest fixed bill most people have is the house payment, and removing it does more for security than any investment return.
+Suze Orman's rule is blunt and she's been repeating it for 20 years: don't retire until the mortgage is gone. Retirement planning, she says, obsesses over the portfolio while ignoring the biggest bill most people have.
 
-She's right more often than not. But "pay it off" can mean very different things depending on where the money comes from, and one version of it can leave you worse off.
+She's right, and we'll go further. In a year when the largest lenders in the country are running ad campaigns urging older homeowners to borrow *against* their houses, to "wipe out" credit card debt with a home equity loan or a cash-out refinance, her advice is the thing standing between a lot of retirees and a foreclosure notice.
 
-## The case for paying it off
+## Why the house payment is the whole game
 
-A $1,400 mortgage payment means you need $16,800 a year of income that you wouldn't otherwise need. At a 4% withdrawal rate, that's the equivalent of having $420,000 more in savings. For a retiree whose Social Security and pension nearly cover the bills, eliminating the payment can be the difference between drawing on savings every month and hardly touching them.
+A $1,400 mortgage payment is $16,800 a year you have to produce, forever, from savings that shrink or a benefit check that barely keeps up with prices. At a 4% withdrawal rate, that payment is the equivalent of needing $420,000 more in the bank.
 
-There are quieter benefits too. Lower required income can mean less of your Social Security is taxed and lower Medicare premiums. And a paid-off home is the asset you can borrow against later if you ever need long-term care.
+Take it away and a retiree whose Social Security and pension nearly cover the bills stops drawing down savings at all. Lower required income also means less of your Social Security is taxed and lower Medicare premiums. And a paid-off house is the one asset that can fund long-term care later without a monthly bill now.
 
-## The case for keeping it
+Harvard's housing center puts the share of homeowners 65 and older with a mortgage at about four in ten, more than double a generation ago. That's not because retirees got reckless. It's because lenders got better at selling them debt.
 
-- **A low fixed rate.** If you locked in 3% before 2022, you're borrowing at a rate that safe investments now beat. Paying off a 3% loan with money earning 4.5% in Treasury bills is a small step backward, though the peace-of-mind argument still counts for something.
-- **Where the money would come from.** Pulling $200,000 out of a traditional IRA to clear the mortgage adds $200,000 to your taxable income in one year. That can push you into a higher bracket, make more of your Social Security taxable, and trigger Medicare premium surcharges two years later. The tax bill can eat a third of the withdrawal.
-- **Liquidity.** Once the money is in the house, getting it back means a loan or a sale. If paying off the mortgage leaves you with a thin cash reserve, one bad year forces you to borrow at today's rates.
+> **What to do:** Find the payoff date on your mortgage statement and write it next to your planned retirement date. If the first is later than the second, that gap is the problem to solve, and there's still time.
 
-> **What to do:** Compare two numbers: your mortgage interest rate and what your safe money earns after tax. If the mortgage rate is higher, paying it down beats saving. If it's lower, paying it down is still reasonable for the security, but not at the cost of a big taxable withdrawal or an empty reserve.
+## The pitch to hang up on
 
-## The middle paths
+Rocket Mortgage and its competitors have been advertising home equity loans and cash-out refinances as the way to "consolidate" high-interest credit card debt. The math in the ad is real: 8% beats 24%. What the ad leaves out is that a credit card company that doesn't get paid sends letters. A mortgage lender that doesn't get paid takes the house.
 
-Most people don't have to choose between "pay it off in one shot" and "carry it to 90."
+Turning $30,000 of unsecured debt into debt secured by the home you plan to die in is the single worst trade an older homeowner can make, and it's being marketed as responsible. The reverse mortgage ads that follow, promising to "pay off your mortgage" with a loan that grows every month and comes due when you leave the house, are the same product in a different wrapper.
 
-1. **Add to the principal every month while you're still working.** Even $300 extra on a typical loan removes years from the term with no tax consequences.
-2. **Spread a payoff across several tax years.** Taking $50,000 a year from an IRA for four years keeps each year's income in a lower bracket than $200,000 in one.
-3. **Use taxable savings first**, then Roth money, before touching a traditional IRA. Selling long-held investments in a taxable account often costs far less tax than an IRA withdrawal of the same size.
-4. **Recast rather than refinance.** After a large principal payment, many lenders will recalculate the monthly payment on the remaining balance for a small fee, lowering the payment without a new loan.
+> **What to do:** If credit card debt is the problem, the fixes are a balance-transfer card, a nonprofit credit counseling plan, or in serious cases debt settlement or bankruptcy. All of them keep your house out of it. None of them is advertised during the evening news, which is how you know.
 
-> **What to do:** Ask your lender for a payoff quote and an amortization schedule. Then ask your tax preparer what an IRA withdrawal of that size would cost. The comparison usually settles the question in ten minutes.
+## The one way Orman's rule backfires
 
-## Two things to be careful with
+Pulling $200,000 out of a traditional IRA to pay off the mortgage in one shot adds $200,000 to your taxable income that year. That can push you into a higher bracket, make more of your Social Security taxable, and trigger Medicare premium surcharges two years later. A third of the withdrawal can disappear in tax, and you've emptied your reserve to do it.
 
-**Reverse mortgages** get sold as the way to "pay off your mortgage in retirement." What they actually do is replace your mortgage with a different loan that grows every month and comes due when you leave the house. They have real uses, but they're not a payoff.
+Orman is right about the destination. The route matters.
 
-**HELOCs and cash-out refinances** to "consolidate" credit card debt turn unsecured debt into debt secured by your house. If you can't pay, a credit card company sends letters. A mortgage lender forecloses.
+## The routes that work
 
-Orman's rule works because it forces the question early, while you still have a paycheck to answer it with. If the mortgage will still be there at retirement, the useful version of her advice is: know exactly how many years are left, and plan the income to cover it.
+1. **Extra principal while you're still working.** $300 a month on a typical loan cuts years off with no tax cost.
+2. **Spread a payoff across tax years.** $50,000 a year for four years keeps each year in a lower bracket than $200,000 at once.
+3. **Taxable savings first, then Roth, then traditional IRA last.** Selling long-held investments in a taxable account usually costs far less than an IRA withdrawal of the same size.
+4. **Recast, don't refinance.** After a big principal payment, most lenders will recalculate the monthly payment for a small fee, with no new loan.
+
+> **What to do:** Ask the lender for a payoff quote. Ask your tax preparer what an IRA withdrawal of that size costs. Compare. Then pick a route from the list and start this month.
+
+Orman's rule works because it forces the question while you still have a paycheck to answer it with. The lenders' pitch works because it lets you avoid the question until the house is on the line. Pick the woman on television over the company on television. She's not the one who gets paid when you sign.
