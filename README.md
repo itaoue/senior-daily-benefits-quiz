@@ -79,3 +79,15 @@ To preview locally: `python tools/build_articles.py && python src/main.py`
 - `BIGMAILER_API_KEY` – required for quiz email capture
 - `BIGMAILER_BRAND_ID`, `BIGMAILER_LIST_ID` – optional overrides
 - `SECRET_KEY` – Flask session secret
+
+## Newsletter
+
+Each issue is a JSON file in `content/newsletters/` (subject, greeting, story slugs,
+sponsor keys, quiz, roundup). Build the email HTML + plain-text with:
+
+    python tools/build_newsletter.py content/newsletters/2026-09-08.json
+
+Output lands in `dist/newsletters/<date>.html`. Paste the HTML into BigMailer
+(replace `{{unsubscribe_link}}` / `{{web_version_link}}` with BigMailer's merge tags
+if they differ). Every link carries `utm_campaign=<date>` so you can see which
+story and sponsor slot drove clicks.
