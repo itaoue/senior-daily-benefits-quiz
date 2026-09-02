@@ -4,7 +4,7 @@ import requests
 import logging
 from datetime import datetime
 
-from src import leads
+from src import leads, sheets
 
 quiz_bp = Blueprint('quiz', __name__)
 log = logging.getLogger("sdb.quiz")
@@ -67,8 +67,7 @@ def submit_email():
     status, message = add_to_bigmailer(email)
 
     # 2. Lead record (never let a DB problem break the user's submission)
-    try:
-        leads.insert_lead({
+    rec = {
             "email": email,
             "source": source,
             "answers": answers,
@@ -83,9 +82,13 @@ def submit_email():
             "utm_term": track.get("utm_term", ""),
             "bigmailer_status": status,
             "bigmailer_message": message,
-        })
+    }
+    try:
+        leads.insert_lead(rec)
     except Exception as e:  # noqa: BLE001
         log.exception("lead insert failed: %s", e)
+    # 3. Google Sheets mirror (background, optional)
+    sheets.push_lead(rec)
 
     if status == 200:
         return jsonify({'success': True, 'message': 'Email successfully added to mailing list', 'email': email}), 200
@@ -116,6 +119,7 @@ def health_check():
     try:
         info['leads'] = leads.count()
         info['database'] = 'postgres' if os.environ.get('DATABASE_URL') else 'sqlite-temp'
+        info['sheets'] = 'on' if sheets.enabled() else 'off'
     except Exception as e:  # noqa: BLE001
         info['database'] = f'error: {e.__class__.__name__}'
     return jsonify(info), 200
