@@ -269,76 +269,31 @@ def nice_date(iso):
     return datetime.date.fromisoformat(iso).strftime("%B %-d, %Y")
 
 # ---------------------------------------------------------------------------
-CSS = """
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;color:#2d3436;line-height:1.6;background:#fff}
-a{color:#047857}
-.header{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:10}
-.header-content{max-width:1100px;margin:0 auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.logo{font-size:1.5rem;font-weight:700;color:#1f2937;text-decoration:none;letter-spacing:-.01em}.logo span{font-weight:400;color:#059669}
-.nav a{color:#4b5563;text-decoration:none;font-weight:500;margin-left:20px;font-size:1rem}
-.nav a.nav-cta{background:#ea580c;color:#fff;padding:10px 18px;border-radius:8px}
-.nav a.nav-cta:hover{background:#dc2626}
-.band{background:linear-gradient(to bottom right,#f0fdf4,#eff6ff);padding:56px 20px 40px}
-.wrap{max-width:720px;margin:0 auto}
-.topic{display:inline-block;background:#dcfce7;color:#166534;border-radius:9999px;padding:6px 14px;font-size:.95rem;font-weight:600;margin-bottom:18px}
-h1{font-size:2.5rem;line-height:1.15;color:#1f2937;font-weight:700;margin-bottom:16px}
-.summary{font-size:1.3rem;color:#4b5563;margin-bottom:18px}
-.meta{font-size:1rem;color:#6b7280}
-.article{padding:40px 20px 24px;font-size:1.2rem;line-height:1.7}
-.article p{margin-bottom:22px}
-.article h2{font-size:1.65rem;color:#1f2937;margin:40px 0 14px;line-height:1.25}
-.article h3{font-size:1.3rem;color:#1f2937;margin:28px 0 10px}
-.article ul{margin:0 0 22px 26px}
-.article li{margin-bottom:8px}
-.callout{background:#fff7ed;border-left:6px solid #ea580c;padding:20px 24px;border-radius:0 12px 12px 0;margin:28px 0}
-.callout p{margin:0;font-size:1.15rem}
-.callout strong{color:#9a3412}
-.partner{margin:36px 0;border:2px solid #bfdbfe;background:#eff6ff;border-radius:16px;padding:26px 28px}
-.partner .kicker{font-size:.9rem;color:#1d4ed8;font-weight:600;margin-bottom:8px}
-.partner h3{font-size:1.4rem;color:#1f2937;margin:0 0 10px}
-.partner p{margin:0 0 18px;font-size:1.1rem}
-.btn{display:inline-block;background:#ea580c;color:#fff;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:8px;font-size:1.1rem;box-shadow:0 10px 25px rgba(0,0,0,.1)}
-.btn:hover{background:#dc2626}
-.quiz-cta{background:linear-gradient(to bottom right,#f0fdf4,#eff6ff);border-radius:16px;padding:36px 32px;text-align:center;margin:44px 0 20px}
-.quiz-cta h2{font-size:1.9rem;margin:0 0 10px;color:#1f2937}
-.quiz-cta p{font-size:1.15rem;color:#4b5563;margin-bottom:22px}
-.quiz-cta small{display:block;margin-top:14px;color:#6b7280}
-.sources{font-size:1rem;color:#6b7280;border-top:1px solid #e5e7eb;padding-top:18px;margin-top:8px}
-.sources ul{margin:8px 0 0 20px}
-.disclosure{font-size:.95rem;color:#6b7280;margin-top:20px}
-.list{max-width:900px;margin:0 auto;padding:40px 20px}
-.card{display:block;text-decoration:none;color:inherit;padding:26px 0;border-bottom:1px solid #e5e7eb}
-.card:first-child{padding-top:0}
-.card h2{font-size:1.6rem;color:#1f2937;margin:6px 0 8px;line-height:1.25}
-.card:hover h2{color:#047857}
-.card p{font-size:1.15rem;color:#4b5563}
-.card .meta{margin-top:8px}
-.footer{background:#1f2937;color:#d1d5db;padding:48px 20px 24px;margin-top:48px}
-.footer-content{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px}
-.footer h3{color:#fff;font-size:1.1rem;margin-bottom:14px}
-.footer ul{list-style:none}.footer li{margin-bottom:8px}
-.footer a{color:#d1d5db;text-decoration:none}.footer a:hover{color:#fff}
-.footer-bottom{max-width:1100px;margin:36px auto 0;border-top:1px solid #374151;padding-top:20px;font-size:.9rem;color:#9ca3af;text-align:center}
-@media(max-width:640px){h1{font-size:1.9rem}.article{font-size:1.1rem}.nav a{margin-left:12px}.nav a:not(.nav-cta){display:none}}
-"""
+FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+         '<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">'
+         '<link rel="stylesheet" href="/site.css">')
 
-HEADER = """<header class="header"><div class="header-content">
-  <a class="logo" href="/">Senior Daily <span>Benefits</span></a>
-  <nav class="nav"><a href="/articles/">Articles</a><a href="/about.html">About</a><a class="nav-cta" href="/#quiz">Take the free quiz</a></nav>
+HEADER = """<div class="topbar"><span>ℹ Not affiliated with the U.S. Government or any federal agency</span><a href="/#newsletter">Get the free daily benefits email →</a></div>
+<header class="site-header"><div class="container header-inner">
+  <a href="/" class="brand"><span class="brand-mark">SDB</span><span class="brand-text"><span class="brand-name">Senior Daily Benefits</span><span class="brand-domain">seniordailybenefits.com</span></span></a>
+  <nav class="nav"><a href="/#topics">Topics</a><a href="/articles/">Articles</a><a href="/#how">How It Works</a><a href="/#faq">FAQs</a></nav>
+  <div class="header-cta"><a href="/#quiz" class="btn btn-outline">Check My Benefits</a><a href="/#newsletter" class="btn btn-orange">✉ Free Newsletter</a></div>
+  <a href="/#quiz" class="btn btn-orange menu-btn" style="padding:.5rem 1rem">Quiz</a>
 </div></header>"""
 
-FOOTER = """<footer class="footer"><div class="footer-content">
-  <div><h3 style="font-size:1.3rem">Senior Daily <span style="font-weight:400;color:#6ee7b7">Benefits</span></h3><p>Helping seniors discover the benefits they deserve. Take our free quiz and unlock thousands in potential savings.</p></div>
-  <div><h3>Quick Links</h3><ul><li><a href="/">Take Quiz</a></li><li><a href="/articles/">Articles</a></li><li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact Support</a></li></ul></div>
-  <div><h3>Legal</h3><ul><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/terms-conditions.html">Terms &amp; Conditions</a></li></ul></div>
-  <div><h3>Contact Info</h3><ul><li>📧 support@seniordailybenefits.com</li><li>⏰ Mon-Fri: 9 AM - 6 PM EST</li></ul></div>
-</div><div class="footer-bottom">&copy; {year} Senior Daily Benefits. All rights reserved. | This website is for informational purposes only and does not constitute financial, legal, or medical advice.</div></footer>"""
+FOOTER = """<footer class="site-footer"><div class="container footer-grid">
+  <div class="footer-brand"><a href="/" class="brand"><span class="brand-mark gold">SDB</span><span class="brand-text"><span class="brand-name">Senior Daily Benefits</span><span class="brand-domain">seniordailybenefits.com</span></span></a>
+  <p>Helping Americans 60+ find and claim the benefits, discounts, and programs they've already earned. Plain English, no jargon.</p></div>
+  <div><h4>Topics</h4><ul><li><a href="/articles/">🏥 Medicare &amp; Health</a></li><li><a href="/articles/">💰 Social Security</a></li><li><a href="/articles/">📋 Taxes &amp; Retirement</a></li><li><a href="/articles/">🏠 Home &amp; Utilities</a></li><li><a href="/articles/">🛒 Senior Discounts</a></li><li><a href="/articles/">🛡️ Scam Alerts</a></li></ul></div>
+  <div><h4>Quick links</h4><ul><li><a href="/#quiz">Benefits quiz</a></li><li><a href="/#newsletter">Newsletter</a></li><li><a href="/about.html">About us</a></li><li><a href="/contact.html">Contact</a></li></ul>
+  <h4>Official resources</h4><ul><li><a href="https://www.ssa.gov" target="_blank" rel="noopener">SSA.gov ↗</a></li><li><a href="https://www.medicare.gov" target="_blank" rel="noopener">Medicare.gov ↗</a></li></ul></div>
+</div><div class="footer-bottom"><div class="container"><p>© {year} Senior Daily Benefits. Not affiliated with the U.S. Government or any federal agency. This website is for informational purposes only and does not constitute financial, legal, or medical advice. We may earn a commission from partner links.</p>
+<div><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-conditions.html">Terms &amp; Conditions</a><a href="/contact.html">Contact Us</a></div></div></div></footer>"""
 
 QUIZ_CTA = """<div class="quiz-cta">
   <h2>Are you claiming every benefit you're entitled to?</h2>
   <p>Most seniors miss at least one program worth hundreds a year. Our 60-second quiz shows you which ones apply to you.</p>
-  <a class="btn" href="/#quiz">Start the free quiz</a>
+  <a class="btn btn-orange btn-lg" href="/#quiz">Start the free quiz →</a>
   <small>100% free · No credit card · 2 minutes</small>
 </div>"""
 
@@ -354,7 +309,7 @@ def page(title, desc, body, canonical):
 <title>{html.escape(title)} | Senior Daily Benefits</title>
 <meta name="description" content="{html.escape(desc, quote=True)}">
 <link rel="canonical" href="{canonical}"><link rel="icon" href="/favicon.ico">
-<style>{CSS}</style></head><body>
+{FONTS}</head><body>
 {HEADER}
 {body}
 {FOOTER.format(year=datetime.date.today().year)}
@@ -382,13 +337,13 @@ def build_article(meta, body_md):
             label, _, url = line.partition("|")
             items.append(f'<li><a href="{url.strip()}" target="_blank" rel="noopener">{html.escape(label.strip())}</a></li>')
         sources = '<div class="sources"><strong>Sources</strong><ul>' + "".join(items) + "</ul></div>"
-    body = f"""<section class="band"><div class="wrap">
-  <span class="topic">{html.escape(meta.get("topic","Benefits"))}</span>
+    body = f"""<section class="article-band"><div class="container">
+  <span class="topic-chip">{html.escape(meta.get("topic","Benefits"))}</span>
   <h1>{html.escape(meta["title"])}</h1>
   <p class="summary">{html.escape(meta["summary"])}</p>
   <p class="meta">Updated {nice_date(meta["date"])}</p>
 </div></section>
-<article class="article"><div class="wrap">
+<article class="article"><div class="container">
 {body_html}
 {QUIZ_CTA}
 {sources}
@@ -398,14 +353,15 @@ def build_article(meta, body_md):
 
 def build_index(articles):
     cards = "".join(
-        f'<a class="card" href="/articles/{m["slug"]}.html"><span class="topic">{html.escape(m.get("topic","Benefits"))}</span>'
-        f'<h2>{html.escape(m["title"])}</h2><p>{html.escape(m["summary"])}</p><p class="meta">{nice_date(m["date"])}</p></a>'
+        f'<a class="postrow" href="/articles/{m["slug"]}.html"><span class="topic-chip">{html.escape(m.get("topic","Benefits"))}</span>'
+        f'<h2>{html.escape(m["title"])}</h2><p>{html.escape(m["summary"])}</p><time>{nice_date(m["date"])}</time></a>'
         for m in articles)
-    body = f"""<section class="band"><div class="wrap">
+    body = f"""<section class="article-band"><div class="container">
   <h1>Money news that matters after 60</h1>
   <p class="summary">Plain-English updates on Social Security, Medicare, taxes, and the discounts and programs most seniors never hear about.</p>
 </div></section>
-<div class="list">{cards}</div>"""
+<div class="list">{cards}</div>
+<div class="container" style="max-width:900px;padding-bottom:2rem">{QUIZ_CTA}</div>"""
     return page("Articles", "Plain-English updates on Social Security, Medicare, taxes and senior benefits.", body, f"{SITE}/articles/")
 
 def main():
@@ -418,6 +374,11 @@ def main():
         print("built", meta["slug"])
     articles.sort(key=lambda m: m["date"], reverse=True)
     (OUT / "index.html").write_text(build_index(articles), encoding="utf-8")
+    import json
+    (OUT / "latest.json").write_text(json.dumps([
+        {"slug": m["slug"], "title": m["title"], "summary": m["summary"],
+         "topic": m.get("topic", "Benefits"), "date": m["date"], "date_nice": nice_date(m["date"])}
+        for m in articles[:6]], ensure_ascii=False), encoding="utf-8")
     print(f"index: {len(articles)} articles")
 
 if __name__ == "__main__":
