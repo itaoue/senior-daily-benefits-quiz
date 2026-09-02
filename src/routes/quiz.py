@@ -1,4 +1,5 @@
 from flask import Blueprint, jsonify, request
+import os
 import requests
 import json
 from datetime import datetime
@@ -6,9 +7,9 @@ from datetime import datetime
 quiz_bp = Blueprint('quiz', __name__)
 
 # BigMailer API 配置
-BIGMAILER_API_KEY = "2041083a-9301-4535-84ca-0bf7221d37b6"
-BIGMAILER_BRAND_ID = "5d542e26-bc9f-4939-96b4-6e130bc0a971"
-BIGMAILER_LIST_ID = "f2685361-d605-47e5-bdfe-f3d2b0a65cfe"
+BIGMAILER_API_KEY = os.environ.get("BIGMAILER_API_KEY", "")
+BIGMAILER_BRAND_ID = os.environ.get("BIGMAILER_BRAND_ID", "5d542e26-bc9f-4939-96b4-6e130bc0a971")
+BIGMAILER_LIST_ID = os.environ.get("BIGMAILER_LIST_ID", "f2685361-d605-47e5-bdfe-f3d2b0a65cfe")
 BIGMAILER_BASE_URL = "https://api.bigmailer.io/v1"
 
 @quiz_bp.route('/submit-email', methods=['POST'])
