@@ -102,7 +102,7 @@ SCENES = {
     "elon-musk-two-stocks-retirees-should-not-copy":
         "A close-up of a smartphone screen showing a rising green stock chart, lying on a wooden table next to a retiree's reading glasses and a cup of coffee, no faces, soft window light.",
     "mark-cuban-vs-health-insurers-your-401k-and-your-claims":
-        "An orange prescription bottle and an insurance denial letter with a red stamp on a hospital bedside table, an IV pole blurred in the background, no people.",
+        "An orange prescription bottle with a blank white label and a plain letter stamped with a large red DENIED mark on a hospital bedside table, the letterhead completely blank with no company name or logo anywhere, an IV pole blurred in the background, no people.",
 }
 
 # Fallback scenes by topic keyword for articles not listed above.
