@@ -301,7 +301,7 @@ def sponsor_block(name):
     s = SPONSORS.get(name)
     if not s: return ""
     return (f'<div class="partner"><div class="kicker">{s["kicker"]}</div><h3>{s["title"]}</h3>'
-            f'<p>{s["body"]}</p><a class="btn" href="{s["url"]}" rel="sponsored nofollow noopener" target="_blank">{s["cta"]}</a></div>')
+            f'<p>{s["body"]}</p><a class="btn btn-orange btn-lg" href="{s["url"]}" rel="sponsored nofollow noopener" target="_blank">{s["cta"]}</a></div>')
 
 def page(title, desc, body, canonical):
     return f"""<!DOCTYPE html>
