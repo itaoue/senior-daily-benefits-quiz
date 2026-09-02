@@ -115,6 +115,7 @@ fetch('/articles/latest.json').then(r => r.json()).then(list => {
   if (!list.length) { grid.innerHTML = '<p class="muted">New articles coming soon.</p>'; return; }
   grid.innerHTML = list.slice(0, 3).map(a => `
     <a class="post reveal" href="/articles/${a.slug}.html">
+      <img class="thumb" src="${a.image}" alt="" width="1200" height="630">
       <span class="tag">${a.topic}</span>
       <h3>${a.title}</h3>
       <p>${a.summary}</p>

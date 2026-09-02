@@ -1,10 +1,10 @@
 ---
 title: Your Medicare Advantage plan is leaving your county. Here's what you're entitled to, and the deadline
 slug: medicare-advantage-plan-leaving-county-what-to-do
-date: 2026-09-10
+date: 2026-08-24
 topic: Medicare & Health
 summary: Insurers have been dropping counties and whole states. If yours is one of them, you get a special window, and a rare chance to buy a Medigap policy no matter your health.
-sponsor: hearing, walkin_shower
+sponsor: hearing, home_security
 sources:
   - Medicare.gov, Special Enrollment Periods|https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods
   - Medicare.gov, Guaranteed issue rights for Medigap|https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/guaranteed-issue

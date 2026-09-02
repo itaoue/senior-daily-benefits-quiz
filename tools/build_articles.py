@@ -26,6 +26,17 @@ CONTENT = ROOT / "content" / "articles"
 OUT = ROOT / "src" / "static" / "articles"
 SITE = "https://seniordailybenefits.com"
 
+# Topic -> fallback banner (src/static/images/topics/*.svg). Articles may set `image:` in
+# front matter to a path under src/static (e.g. images/2026-09-medicare.jpg) to use a photo.
+TOPIC_ART = {"social security": "social-security", "medicare": "medicare", "tax": "taxes",
+             "home": "home", "discount": "discounts", "scam": "scams"}
+def article_image(meta):
+    if meta.get("image"): return "/" + meta["image"].lstrip("/")
+    t = meta.get("topic", "").lower()
+    for k, v in TOPIC_ART.items():
+        if k in t: return f"/images/topics/{v}.svg"
+    return "/images/topics/general.svg"
+
 # ---- affiliate / partner blocks. Edit copy + links here only. -------------
 SPONSORS = {
     # Future Savings Today (affiliate ID TQ39S5C8). Copy is written to be
@@ -303,11 +314,12 @@ def sponsor_block(name):
     return (f'<div class="partner"><div class="kicker">{s["kicker"]}</div><h3>{s["title"]}</h3>'
             f'<p>{s["body"]}</p><a class="btn btn-orange btn-lg" href="{s["url"]}" rel="sponsored nofollow noopener" target="_blank">{s["cta"]}</a></div>')
 
-def page(title, desc, body, canonical):
+def page(title, desc, body, canonical, og=SITE + "/images/topics/general.svg"):
     return f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{html.escape(title)} | Senior Daily Benefits</title>
 <meta name="description" content="{html.escape(desc, quote=True)}">
+<meta property="og:title" content="{html.escape(title, quote=True)}"><meta property="og:description" content="{html.escape(desc, quote=True)}"><meta property="og:image" content="{og}">
 <link rel="canonical" href="{canonical}"><link rel="icon" href="/favicon.ico">
 {FONTS}</head><body>
 {HEADER}
@@ -343,18 +355,19 @@ def build_article(meta, body_md):
   <p class="summary">{html.escape(meta["summary"])}</p>
   <p class="meta">Updated {nice_date(meta["date"])}</p>
 </div></section>
+<div class="container" style="max-width:820px;padding-top:2rem"><img class="hero-img" src="{article_image(meta)}" alt="" width="1200" height="630"></div>
 <article class="article"><div class="container">
 {body_html}
 {QUIZ_CTA}
 {sources}
 <p class="disclosure">{DISCLOSURE if sp else ""} This article is for general information and is not financial, legal, or tax advice.</p>
 </div></article>"""
-    return page(meta["title"], meta["summary"], body, f"{SITE}/articles/{meta['slug']}.html")
+    return page(meta["title"], meta["summary"], body, f"{SITE}/articles/{meta['slug']}.html", SITE + article_image(meta))
 
 def build_index(articles):
     cards = "".join(
-        f'<a class="postrow" href="/articles/{m["slug"]}.html"><span class="topic-chip">{html.escape(m.get("topic","Benefits"))}</span>'
-        f'<h2>{html.escape(m["title"])}</h2><p>{html.escape(m["summary"])}</p><time>{nice_date(m["date"])}</time></a>'
+        f'<a class="postrow" href="/articles/{m["slug"]}.html"><img class="thumb" src="{article_image(m)}" alt="" width="1200" height="630"><div><span class="topic-chip">{html.escape(m.get("topic","Benefits"))}</span>'
+        f'<h2>{html.escape(m["title"])}</h2><p>{html.escape(m["summary"])}</p><time>{nice_date(m["date"])}</time></div></a>'
         for m in articles)
     body = f"""<section class="article-band"><div class="container">
   <h1>Money news that matters after 60</h1>
@@ -376,7 +389,7 @@ def main():
     (OUT / "index.html").write_text(build_index(articles), encoding="utf-8")
     import json
     (OUT / "latest.json").write_text(json.dumps([
-        {"slug": m["slug"], "title": m["title"], "summary": m["summary"],
+        {"slug": m["slug"], "title": m["title"], "summary": m["summary"], "image": article_image(m),
          "topic": m.get("topic", "Benefits"), "date": m["date"], "date_nice": nice_date(m["date"])}
         for m in articles[:6]], ensure_ascii=False), encoding="utf-8")
     print(f"index: {len(articles)} articles")

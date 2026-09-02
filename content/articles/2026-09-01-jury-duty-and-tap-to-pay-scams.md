@@ -1,7 +1,7 @@
 ---
 title: Two scams draining seniors' accounts right now: the "jury duty warrant" call and tap-to-pay theft
 slug: jury-duty-scam-tap-to-pay-theft-seniors
-date: 2026-09-12
+date: 2026-09-01
 topic: Scam Alerts
 summary: One arrives as a phone call from a "deputy." The other happens in a crowded store without a word being spoken. Here's how each works and the two-minute fix for both.
 sponsor: adblock, home_security

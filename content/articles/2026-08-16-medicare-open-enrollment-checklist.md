@@ -1,10 +1,10 @@
 ---
 title: Medicare Open Enrollment starts October 15. Check these 5 things before your plan renews itself
 slug: medicare-open-enrollment-2026-checklist
-date: 2026-09-03
+date: 2026-08-16
 topic: Medicare & Health
 summary: Most people let their plan roll over without looking. That's how a drug that cost $12 last year ends up costing $80 in January. Here's the 20-minute check.
-sponsor: hearing, aarp
+sponsor: hearing, home_warranty
 sources:
   - Medicare.gov, Joining a plan|https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan
   - Medicare.gov, Extra Help with drug costs|https://www.medicare.gov/basics/costs/help/drug-costs

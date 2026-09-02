@@ -1,10 +1,10 @@
 ---
 title: Thinking about downsizing? Seven costs that eat the money you thought you'd free up
 slug: downsizing-in-retirement-hidden-costs
-date: 2026-09-11
+date: 2026-08-29
 topic: Home, Utilities & Phone
 summary: Selling the big house and buying something smaller sounds like an easy way to unlock cash. It can be, but only if you price in the seven costs most people discover after they've signed.
-sponsor: roof, home_warranty, title_lock
+sponsor: roof, home_warranty, timeshare_exit
 sources:
   - IRS, Topic 701, Sale of your home|https://www.irs.gov/taxtopics/tc701
   - IRS, Publication 523, Selling your home|https://www.irs.gov/publications/p523

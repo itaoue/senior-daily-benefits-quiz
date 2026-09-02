@@ -23,7 +23,7 @@ web-safe fallbacks for Georgia/Arial, bulletproof buttons, no external CSS.
 """
 import sys, json, pathlib, html, re, datetime
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
-from build_articles import SPONSORS, parse, SITE, CONTENT, nice_date
+from build_articles import SPONSORS, parse, SITE, CONTENT, nice_date, article_image
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "dist" / "newsletters"
@@ -56,6 +56,7 @@ def para(t, size=18, color=INK, extra=""):
 
 def story_block(meta, section, why, url):
     return f'''{section_label(section)}
+<a href="{url}"><img src="{SITE}{article_image(meta)}" width="544" alt="" style="display:block;width:100%;max-width:544px;height:auto;border-radius:10px;margin:0 0 14px"></a>
 <h2 style="margin:0 0 12px;font-family:{SERIF};font-size:26px;line-height:1.2;color:{NAVY}"><a href="{url}" style="color:{NAVY};text-decoration:none">{esc(meta["title"])}</a></h2>
 {para(esc(meta["summary"]))}
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:{CREAM};border-left:5px solid {AMBER};padding:14px 18px;font-family:{SANS};font-size:16px;line-height:1.5;color:{INK}"><strong style="color:{NAVY}">Why it matters:</strong> {why}</td></tr></table>

@@ -1,10 +1,10 @@
 ---
 title: Got a Social Security overpayment letter? Here's the 30-day plan that keeps half your check from disappearing
 slug: social-security-overpayment-letter-what-to-do
-date: 2026-09-04
+date: 2026-08-17
 topic: Social Security
 summary: The agency can now hold back 50% of your benefit to recover money it says it overpaid you, even when the mistake was theirs. You have options, but the clock starts the day the letter arrives.
-sponsor: tax_relief, debt_settlement, balance_transfer
+sponsor: tax_relief, aarp
 sources:
   - Social Security Administration, Overpayments|https://www.ssa.gov/manage-benefits/overpayments
   - Social Security Administration, Form SSA-632 Request for Waiver|https://www.ssa.gov/forms/ssa-632.html
@@ -13,7 +13,7 @@ sources:
 ---
 An overpayment notice is one of the most alarming letters Social Security sends. It says the agency paid you more than it should have, often for years, and it wants the money back. Sometimes the amount is a few hundred dollars. Sometimes it's tens of thousands.
 
-Here is what changed in 2025: for new overpayments, the default recovery rate for retirement and disability benefits is now **50% of your monthly check** until the balance is repaid. For years it was 10%. If you don't respond, the withholding starts automatically, typically about 30 days after the notice date.
+Here is what changed in 2025: for new overpayments, the default recovery rate for retirement and disability benefits is now **50% of your monthly check** until the balance is repaid. For years it was 10%. If you don't respond, the withholding starts automatically 90 days after the notice date. Filing a waiver, appeal, or rate-change request within 30 days pauses collection while it is reviewed.
 
 You have three separate tools, and you can use more than one at the same time.
 

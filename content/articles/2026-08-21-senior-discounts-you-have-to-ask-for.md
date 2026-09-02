@@ -1,10 +1,10 @@
 ---
 title: 17 senior discounts nobody advertises, and the one sentence that unlocks them
 slug: senior-discounts-you-have-to-ask-for
-date: 2026-09-08
+date: 2026-08-21
 topic: Senior Discounts
 summary: Stores, pharmacies, airlines, and rail lines all offer discounts for people over 55, 60, or 65. Almost none of them are posted. Here's the list, by day of the week, and what to say at the register.
-sponsor: aarp, auto_insurance, windows
+sponsor: aarp, adblock, home_warranty
 sources:
   - Amtrak, Senior discount|https://www.amtrak.com/senior-discount
   - AARP, Member benefits|https://www.aarp.org/membership/benefits/

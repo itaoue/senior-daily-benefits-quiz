@@ -292,3 +292,10 @@ input:focus{outline:none;border-color:var(--navy)}
 .legal{font-size:1.1rem}
 .legal h2{font-size:1.4rem}
 @media (max-width:800px){.contact-grid{grid-template-columns:1fr}}
+
+/* article images */
+.hero-img{width:100%;height:auto;border-radius:1rem;box-shadow:0 14px 34px rgba(27,46,90,.18);display:block}
+.post .thumb{width:100%;height:auto;border-radius:.7rem;margin-bottom:1rem;display:block}
+.postrow{display:grid;grid-template-columns:220px 1fr;gap:1.4rem;align-items:start}
+.postrow .thumb{width:100%;height:auto;border-radius:.6rem;display:block}
+@media (max-width:640px){.postrow{grid-template-columns:1fr}}

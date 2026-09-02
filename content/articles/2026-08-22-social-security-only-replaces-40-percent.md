@@ -1,7 +1,7 @@
 ---
 title: Social Security replaces about 40% of your paycheck. Here's what to do if it's most of your plan
 slug: social-security-40-percent-replacement-what-to-do
-date: 2026-09-09
+date: 2026-08-22
 topic: Social Security
 summary: Nearly half of Americans expect Social Security to cover retirement. It was designed to cover less than half of it. Three moves close the gap, none of which require a windfall.
 sponsor: heloc, aarp

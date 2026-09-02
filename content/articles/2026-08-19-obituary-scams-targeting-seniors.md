@@ -1,7 +1,7 @@
 ---
 title: Scammers are reading the obituaries. Here's how they use them, and the three habits that stop them cold
 slug: obituary-scams-grandparent-scams-seniors
-date: 2026-09-05
+date: 2026-08-19
 topic: Scam Alerts
 summary: Widows and widowers are the most targeted group in America, and artificial intelligence has made the old cons faster and more convincing. The defense is simple, but it has to be automatic.
 sponsor: adblock, title_lock, home_security
