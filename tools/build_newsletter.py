@@ -1,25 +1,33 @@
 #!/usr/bin/env python3
 """
-Build a Senior Daily Benefits email newsletter (Moneywise-style layout).
+Build a Senior Daily Benefits email newsletter in the Moneywise Digest layout.
 
 Usage:
-    python tools/build_newsletter.py content/newsletters/2026-09-08.json
+    python tools/build_newsletter.py content/newsletters/2026-09-03.json
 
-Issue JSON keys:
-    date          YYYY-MM-DD
-    subject       email subject line
-    preheader     short preview text
-    greeting      opening paragraph (HTML allowed)
-    headline      {"title","stat","text","slug"}   the "Behind the headline" box
-    stories       [ {"slug","section","why"} ... ] slugs from content/articles, in order
-    sponsors      ["key", ...]  keys from SPONSORS in build_articles.py; first goes
-                  after story 1, second after story 2, etc.
-    quiz          {"q","options":[..],"answer":"B","explain":"..."}
-    roundup       [ {"tag","text","url"} ... ]  short one-liners
-Output: dist/newsletters/<date>.html (plus a plain-text .txt)
+Issue JSON keys (all strings may contain simple inline HTML):
+    date            YYYY-MM-DD
+    subject         email subject line
+    preheader       preview text shown next to the subject in the inbox
+    together_with   (optional) SPONSORS key shown under the masthead ("together with ...")
+    greeting        opening paragraph; starts with "<strong>Good morning</strong>." etc.
+    today           (optional) list of 3 one-line teasers for "On The Money Today"; defaults
+                    to story titles
+    headline        {"kicker","title","stat","text","slug"}  the "Behind the headline" block
+    stories         [ {"slug","kicker","why","cta"} ... ]  slugs from content/articles, in order
+    sponsors        ["key", ...]  SPONSORS keys; sponsor i goes after story i (keep to 1 or 2)
+    quiz            {"q","options":[..],"answer":"B) ...","explain":"..."}
+    roundup         [ {"tag","text","url"} ... ]  "Also making the rounds today"
+    signoff         (optional) closing line
+    byline          (optional) "Today's newsletter was written by ..."
+    postal_address  REQUIRED by CAN-SPAM before sending; a placeholder is used if missing
+Output: dist/newsletters/<date>.html and .txt
 
-Email-client rules baked in: 600px table layout, inline styles only,
-web-safe fallbacks for Georgia/Arial, bulletproof buttons, no external CSS.
+Layout notes (mirrors the Moneywise Digest template): white background, one 600px
+column, 35px side padding, uppercase section kickers, headline as an underlined
+link, full-width image, plain paragraphs, an inline "Why it matters:" line, a
+small solid button, thin dividers between sections, quiet gray footer.
+Email-client rules: table layout, inline styles, web-safe font stack, no external CSS.
 """
 import sys, json, pathlib, html, re, datetime
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
@@ -28,135 +36,190 @@ from build_articles import SPONSORS, parse, SITE, CONTENT, nice_date, article_im
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "dist" / "newsletters"
 
-NAVY, NAVY_D, AMBER, ORANGE, CREAM, INK, MUTED = "#1B2E5A", "#0F1E3D", "#D4A017", "#D4521A", "#F8F4E8", "#2C2C2C", "#5F6470"
+NAVY, AMBER, ORANGE, INK, GRAY, RULE = "#1B2E5A", "#D4A017", "#D4521A", "#000000", "#374151", "#E5E7EB"
+LINK = NAVY                     # Moneywise uses its brand purple for links + buttons; ours is navy
+SANS = "'Work Sans','Lucida Grande',Verdana,Arial,sans-serif"
 SERIF = "Georgia,'Times New Roman',serif"
-SANS = "Arial,Helvetica,sans-serif"
 UTM = "?utm_source=newsletter&utm_medium=email&utm_campaign={date}&utm_content={slot}"
-
-# BigMailer merge tags (edit if your ESP uses different ones)
-UNSUB = "{{unsubscribe_link}}"
+UNSUB = "{{unsubscribe_link}}"      # BigMailer merge tags
 WEBVIEW = "{{web_version_link}}"
+PREFS = "{{preferences_link}}"
 
 def esc(s): return html.escape(s, quote=False)
 
-def button(label, url, color=ORANGE, big=True):
-    pad = "16px 34px" if big else "12px 24px"
-    size = "18px" if big else "16px"
-    return f'''<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:18px 0 6px"><tr>
-<td align="center" bgcolor="{color}" style="border-radius:6px;mso-padding-alt:{pad}">
-<a href="{url}" target="_blank" style="display:inline-block;padding:{pad};font-family:{SANS};font-size:{size};font-weight:bold;color:#ffffff;text-decoration:none;border-radius:6px;letter-spacing:.2px">{esc(label)} &rarr;</a>
-</td></tr></table>'''
+# Display names for the "In partnership with" kicker (SPONSORS entries only carry copy + URL).
+PARTNER_NAMES = {
+    "aarp": "AARP", "tax_relief": "TRA Tax Relief", "hearing": "our hearing partner", "walkin_shower": "HomeBuddy",
+    "home_warranty": "Home Warranty", "title_lock": "Home Title Lock", "home_security": "Guardlane",
+    "timeshare_exit": "Stonegate", "pillow": "Derila", "insoles": "Akusoli", "skincare": "Beverly Hills MD",
+    "detox_tea": "Lulutox", "adblock": "Total Adblock", "auto_insurance": "our auto insurance partner",
+    "balance_transfer": "our card partner", "cashback_card": "our card partner", "debt_settlement": "our debt relief partner",
+    "heloc": "our home equity partner", "windows": "our window partner", "roof": "our roofing partner",
+    "gutters": "our gutter partner", "solar_exit": "our solar partner",
+}
+def partner_name(key): return PARTNER_NAMES.get(key, "our partner")
 
-def section_label(text):
-    return f'''<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-<td style="padding:34px 0 10px;border-top:2px solid {CREAM}"><span style="display:inline-block;width:32px;height:3px;background:{AMBER};vertical-align:middle;margin-right:10px"></span><span style="font-family:{SANS};font-size:12px;font-weight:bold;letter-spacing:2px;color:{AMBER};text-transform:uppercase;vertical-align:middle">{esc(text)}</span></td></tr></table>'''
 
-def para(t, size=18, color=INK, extra=""):
-    return f'<p style="margin:0 0 16px;font-family:{SANS};font-size:{size}px;line-height:1.55;color:{color};{extra}">{t}</p>'
+# ---------------------------------------------------------------- atoms
+def p(t, size=16, color=INK, weight=400, margin="0 0 16px", extra=""):
+    return (f'<p style="margin:{margin};font-family:{SANS};font-size:{size}px;line-height:{round(size*1.5)}px;'
+            f'font-weight:{weight};color:{color};{extra}">{t}</p>')
 
-def story_block(meta, section, why, url):
-    return f'''{section_label(section)}
-<a href="{url}"><img src="{SITE}{article_image(meta)}" width="544" alt="" style="display:block;width:100%;max-width:544px;height:auto;border-radius:10px;margin:0 0 14px"></a>
-<h2 style="margin:0 0 12px;font-family:{SERIF};font-size:26px;line-height:1.2;color:{NAVY}"><a href="{url}" style="color:{NAVY};text-decoration:none">{esc(meta["title"])}</a></h2>
-{para(esc(meta["summary"]))}
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:{CREAM};border-left:5px solid {AMBER};padding:14px 18px;font-family:{SANS};font-size:16px;line-height:1.5;color:{INK}"><strong style="color:{NAVY}">Why it matters:</strong> {why}</td></tr></table>
-{button("Read the full guide", url)}'''
+def kicker(text):
+    return (f'<p style="margin:0 0 14px;font-family:{SANS};font-size:15px;line-height:20px;font-weight:600;'
+            f'letter-spacing:.3px;color:{INK};text-transform:uppercase">{esc(text)}</p>')
 
-def sponsor_block(key, date):
+def headline(text, url, size=22):
+    return (f'<h3 style="margin:0 0 14px;font-family:{SANS};font-size:{size}px;line-height:{round(size*1.3)}px;font-weight:600;color:{LINK}">'
+            f'<a href="{url}" target="_blank" style="color:{LINK};text-decoration:underline">{esc(text)}</a></h3>')
+
+def image(src, url=None):
+    img = f'<img src="{src}" alt="" width="530" style="display:block;width:100%;max-width:530px;height:auto;border:0">'
+    if url: img = f'<a href="{url}" target="_blank">{img}</a>'
+    return f'<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin:0 0 16px"><tr><td>{img}</td></tr></table>'
+
+def button(label, url):
+    return (f'<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 8px"><tr>'
+            f'<td bgcolor="{LINK}" style="border-radius:4px"><a href="{url}" target="_blank" style="background-color:{LINK};border-radius:4px;'
+            f'color:#FFFFFF;display:inline-block;font-family:{SANS};font-size:14px;font-weight:500;line-height:16px;padding:9px 15px;'
+            f'text-decoration:none">{esc(label)}</a></td></tr></table>')
+
+def divider():
+    return f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:26px 0 30px"><tr><td style="border-top:1px solid {RULE};font-size:0;line-height:0">&nbsp;</td></tr></table>'
+
+def why(text):
+    return p(f'<strong>Why it matters:</strong> {text}')
+
+# ---------------------------------------------------------------- blocks
+def story_block(meta, s, url):
+    return "".join([
+        kicker(s.get("kicker", meta.get("topic", "Retirement"))),
+        headline(meta["title"], url),
+        image(SITE + article_image(meta), url),
+        p(esc(meta["summary"])),
+        why(s["why"]) if s.get("why") else "",
+        button(s.get("cta", "Read The Story"), url),
+    ])
+
+def sponsor_block(key):
     s = SPONSORS[key]
-    url = s["url"]
-    return f'''<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:34px 0 6px"><tr>
-<td style="background:{CREAM};border:2px solid {AMBER};border-radius:10px;padding:26px 28px">
-<p style="margin:0 0 8px;font-family:{SANS};font-size:12px;font-weight:bold;letter-spacing:2px;color:{AMBER};text-transform:uppercase">In partnership with our sponsor</p>
-<h3 style="margin:0 0 10px;font-family:{SERIF};font-size:24px;line-height:1.2;color:{NAVY}">{esc(s["title"])}</h3>
-{para(esc(s["body"]), 17)}
-{button(s["cta"], url)}
-<p style="margin:10px 0 0;font-family:{SANS};font-size:12px;color:{MUTED}">Sponsored. Senior Daily Benefits may earn a commission if you sign up. That never changes what we recommend.</p>
-</td></tr></table>'''
+    return "".join([
+        kicker(f"In partnership with {partner_name(key)}"),
+        headline(s["title"], s["url"]),
+        p(esc(s["body"])),
+        button(s["cta"], s["url"]),
+        p("Sponsored. Senior Daily Benefits may earn a commission if you sign up. That never changes what we recommend.", 12, GRAY, margin="8px 0 0"),
+    ])
 
 def build(issue):
     date = issue["date"]; nice = nice_date(date)
     arts = {}
-    for p in CONTENT.glob("*.md"):
-        m, body = parse(p); arts[m["slug"]] = m
+    for path in CONTENT.glob("*.md"):
+        m, _ = parse(path); arts[m["slug"]] = m
     def link(slug, slot): return f"{SITE}/articles/{slug}.html" + UTM.format(date=date, slot=slot)
 
     stories = issue["stories"]; sponsors = issue.get("sponsors", [])
-    # --- body pieces --------------------------------------------------------
     parts = []
-    # greeting + "On the money today"
-    parts.append(para(issue["greeting"]))
-    bullets = "".join(f'<li style="margin:0 0 8px">{esc(arts[s["slug"]]["title"])}</li>' for s in stories)
-    parts.append(f'''<p style="margin:14px 0 8px;font-family:{SANS};font-size:18px;font-weight:bold;color:{NAVY}">In today's brief:</p>
-<ul style="margin:0 0 6px 22px;padding:0;font-family:{SANS};font-size:17px;line-height:1.5;color:{INK}">{bullets}</ul>
-{para("Let's get into it.")}''')
-    # behind the headline
-    h = issue["headline"]
-    parts.append(f'''{section_label("Behind the headline")}
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:{NAVY};border-radius:10px;padding:26px 28px;text-align:center">
-<div style="font-family:{SERIF};font-size:44px;font-weight:bold;color:{AMBER};line-height:1.05">{esc(h["stat"])}</div>
-<div style="font-family:{SANS};font-size:17px;color:#BFD0F5;margin-top:8px;line-height:1.45">{esc(h["title"])}</div>
-</td></tr></table>
-{para(h["text"] + f' <a href="{link(h["slug"], "headline")}" style="color:{ORANGE};font-weight:bold">Read the story &rarr;</a>', 17)}''')
-    # stories with sponsors interleaved
+
+    # masthead ---------------------------------------------------------------
+    tw = issue.get("together_with")
+    together = (f'<p style="margin:14px 0 0;font-family:{SANS};font-size:15px;color:{GRAY}"><em>together with</em> '
+                f'<a href="{SPONSORS[tw]["url"]}" target="_blank" style="color:{NAVY};font-weight:700;text-decoration:none">{esc(partner_name(tw))}</a></p>') if tw else ""
+    parts.append(f'''<p style="margin:0 0 22px;font-family:{SANS};font-size:12px"><a href="{WEBVIEW}" style="color:{GRAY};text-decoration:underline">Read online</a></p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:0 0 26px">
+<span style="font-family:{SERIF};font-size:34px;font-weight:bold;color:{NAVY};letter-spacing:-.5px">Senior Daily</span> <span style="font-family:{SERIF};font-size:34px;font-style:italic;color:{AMBER}">Brief</span>
+{together}
+</td></tr></table>''')
+
+    # greeting + On The Money Today --------------------------------------------
+    parts.append(p(issue["greeting"]))
+    today = issue.get("today") or [arts[s["slug"]]["title"] for s in stories]
+    bullets = "".join(f'<li style="margin:0 0 10px;padding-left:4px">{t}</li>' for t in today)
+    parts.append(p("<strong>On The Money Today:</strong>", margin="0 0 12px"))
+    parts.append(f'<ul style="margin:0 0 16px 22px;padding:0;font-family:{SANS};font-size:16px;line-height:24px;color:{INK}">{bullets}</ul>')
+    parts.append(p("Let's get into it."))
+    parts.append(divider())
+
+    # behind the headline ------------------------------------------------------
+    h = issue.get("headline")
+    if h:
+        hurl = link(h["slug"], "headline")
+        stat = (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 16px"><tr><td style="background:#F2F5F9;border-radius:6px;padding:26px 24px;text-align:center">'
+                f'<div style="font-family:{SANS};font-size:44px;font-weight:700;color:{NAVY};line-height:48px">{esc(h["stat"])}</div>'
+                f'<div style="font-family:{SANS};font-size:15px;color:{GRAY};margin-top:8px;line-height:22px">{esc(h.get("stat_label",""))}</div></td></tr></table>') if h.get("stat") else ""
+        parts.append("".join([kicker(h.get("kicker", "Behind the headline")), headline(h["title"], hurl), stat,
+                              p(h["text"] + f' <a href="{hurl}" target="_blank" style="color:{LINK}">Keep reading.</a>'), divider()]))
+
+    # stories, sponsors interleaved ---------------------------------------------
     for i, s in enumerate(stories):
-        parts.append(story_block(arts[s["slug"]], s["section"], s["why"], link(s["slug"], f"story{i+1}")))
+        parts.append(story_block(arts[s["slug"]], s, link(s["slug"], f"story{i+1}")))
+        parts.append(divider())
         if i < len(sponsors):
-            parts.append(sponsor_block(sponsors[i], date))
-    # quiz
+            parts.append(sponsor_block(sponsors[i])); parts.append(divider())
+
+    # Money IQ -------------------------------------------------------------------
     q = issue.get("quiz")
     if q:
-        opts = "".join(f'<li style="margin:0 0 6px">{esc(o)}</li>' for o in q["options"])
-        parts.append(f'''{section_label("Money IQ")}
-{para(f'<strong style="color:{NAVY}">{esc(q["q"])}</strong>')}
-<ol type="A" style="margin:0 0 10px 24px;padding:0;font-family:{SANS};font-size:17px;line-height:1.5;color:{INK}">{opts}</ol>
-{para(f'<em>Answer at the bottom of this email.</em>', 15, MUTED)}''')
-    # roundup
+        letters = "ABCD"
+        opts = "".join(p(f"{letters[i]}) {esc(o)}", margin="0 0 6px") for i, o in enumerate(q["options"]))
+        parts.append("".join([kicker("Money IQ"), p(f'<strong>{esc(q["q"])}</strong>'), opts,
+                              p("<em>Answer at the bottom of this email.</em>", 14, GRAY, margin="10px 0 0"), divider()]))
+
+    # roundup ----------------------------------------------------------------------
     if issue.get("roundup"):
-        items = "".join(f'<p style="margin:0 0 12px;font-family:{SANS};font-size:16px;line-height:1.5;color:{INK}"><strong style="color:{NAVY};letter-spacing:1px;font-size:13px">{esc(r["tag"]).upper()}:</strong> <a href="{r["url"]}" style="color:{INK}">{esc(r["text"])}</a></p>' for r in issue["roundup"])
-        parts.append(section_label("Also making the rounds") + items)
-    # quiz CTA
-    parts.append(f'''<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:34px 0 0"><tr><td style="background:{NAVY_D};border-radius:10px;padding:28px;text-align:center">
-<h3 style="margin:0 0 8px;font-family:{SERIF};font-size:24px;color:#ffffff">Are you claiming every benefit you've earned?</h3>
-<p style="margin:0 0 4px;font-family:{SANS};font-size:16px;color:#BFD0F5">Our free 60-second quiz shows which programs and discounts apply to you.</p>
-<div style="text-align:center">{button("Take the free quiz", SITE + "/#quiz" + UTM.format(date=date, slot="quizcta"))}</div>
-</td></tr></table>''')
+        items = "".join(p(f'<strong>{esc(r["tag"]).upper()}:</strong> <a href="{r["url"]}" target="_blank" style="color:{LINK}">{esc(r["text"])}</a>', margin="0 0 14px") for r in issue["roundup"])
+        parts.append(kicker("Also making the rounds today") + items + divider())
+
+    # Money IQ answer --------------------------------------------------------------
     if q:
-        parts.append(f'''{section_label("Money IQ answer")}
-{para(f'<strong style="color:{NAVY}">{esc(q["answer"])}.</strong> {esc(q["explain"])}', 16)}''')
+        parts.append("".join([kicker("Money IQ answer: how did you do?"),
+                              p(f'<strong>The answer is {esc(q["answer"])}</strong> &mdash; {esc(q["explain"])}'), divider()]))
+
+    # quiz CTA + sign-off ------------------------------------------------------------
+    parts.append("".join([
+        p("<strong>Are you claiming every benefit you've earned?</strong> Our free 60-second quiz shows which programs and discounts apply to you."),
+        button("Take The Free Quiz", SITE + "/#quiz" + UTM.format(date=date, slot="quizcta")),
+        p(issue.get("signoff", "See you soon with another quick roundup of the money news that matters."), margin="20px 0 6px"),
+        p("Hit REPLY if there's a topic you want us to dig into. We read every one.", 15, GRAY),
+    ]))
 
     body_html = "\n".join(parts)
-    # --- shell --------------------------------------------------------------
+    byline = issue.get("byline", "Today's newsletter was written and edited by the Senior Daily Benefits team.")
+    address = issue.get("postal_address") or "[POSTAL ADDRESS REQUIRED BY CAN-SPAM: add postal_address to the issue JSON]"
+
     doc = f'''<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="x-apple-disable-message-reformatting">
-<title>{esc(issue["subject"])}</title></head>
-<body style="margin:0;padding:0;background:#EDE8D5">
-<div style="display:none;max-height:0;overflow:hidden;font-size:1px;color:#EDE8D5">{esc(issue["preheader"])}&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#EDE8D5"><tr><td align="center" style="padding:22px 10px">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:100%;background:#ffffff;border-radius:12px;overflow:hidden">
-<tr><td style="background:{NAVY_D};padding:10px 28px;font-family:{SANS};font-size:12px;color:#9DB4E8">Not affiliated with the U.S. Government &nbsp;|&nbsp; <a href="{WEBVIEW}" style="color:#9DB4E8">View in browser</a></td></tr>
-<tr><td style="padding:24px 28px 18px;border-bottom:3px solid {AMBER}">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-<td><span style="display:inline-block;background:{NAVY};color:#fff;font-family:{SERIF};font-weight:bold;font-size:14px;padding:9px 8px;border-radius:6px;vertical-align:middle">SDB</span> <span style="font-family:{SERIF};font-size:22px;font-weight:bold;color:{NAVY};vertical-align:middle;margin-left:6px">Senior Daily Benefits</span></td>
-<td align="right" style="font-family:{SANS};font-size:13px;color:{MUTED}">{esc(nice)}</td></tr></table></td></tr>
-<tr><td style="padding:26px 28px 10px">
+<title>{esc(issue["subject"])}</title>
+<style>@media screen and (max-width:640px){{.wrap{{width:100%!important}} .pad{{padding:0 16px!important}}}}</style></head>
+<body style="margin:0;padding:0;background:#FFFFFF">
+<div style="display:none;max-height:0;overflow:hidden;font-size:1px;color:#FFFFFF">{esc(issue["preheader"])}&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF"><tr><td align="center" style="padding:28px 0 40px">
+<table role="presentation" class="wrap" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:100%;background:#FFFFFF">
+<tr><td class="pad" style="padding:0 35px">
 {body_html}
 </td></tr>
-<tr><td style="background:{NAVY_D};padding:26px 28px;font-family:{SANS};font-size:13px;line-height:1.6;color:#9DB4E8">
-<p style="margin:0 0 10px"><strong style="color:#ffffff">Senior Daily Benefits</strong> &middot; Plain-English money news for Americans 60+.</p>
-<p style="margin:0 0 10px">You're receiving this because you took our benefits quiz or subscribed at seniordailybenefits.com. This email is for general information and is not financial, legal, or medical advice. We may earn a commission from partner links; sponsored content is labeled.</p>
-<p style="margin:0"><a href="{SITE}/privacy-policy.html" style="color:#9DB4E8">Privacy</a> &nbsp;|&nbsp; <a href="{SITE}/contact.html" style="color:#9DB4E8">Contact</a> &nbsp;|&nbsp; <a href="{UNSUB}" style="color:#9DB4E8">Unsubscribe</a></p>
+<tr><td class="pad" style="padding:8px 35px 0">
+{p(byline, 12, GRAY, margin="0 0 14px")}
+{p("<em>The content provided by Senior Daily Benefits is information to help readers become financially literate. It is neither investment, tax, legal, nor medical advice, and it is not a recommendation to buy or sell any product, enter into any loan, insurance, or investment, or adopt any strategy. Decisions should be made only with guidance from a qualified professional. We may earn a commission from partner links; sponsored content is labeled. Senior Daily Benefits is not affiliated with the U.S. Government or any federal agency.</em>", 12, GRAY)}
+{p(f'<a href="{PREFS}" style="color:{GRAY};text-decoration:underline">Update your email preferences</a> or <a href="{UNSUB}" style="color:{GRAY};text-decoration:underline">unsubscribe here</a>', 12, GRAY)}
+{p(esc(address), 12, GRAY)}
+{p(f'&copy; {datetime.date.today().year} Senior Daily Benefits &middot; <a href="{SITE}/privacy-policy.html" style="color:{GRAY}">Privacy</a> &middot; <a href="{SITE}/terms-conditions.html" style="color:{GRAY}">Terms</a>', 12, GRAY, margin="0")}
 </td></tr>
 </table></td></tr></table></body></html>'''
 
-    # plain text version
-    txt = [f"SENIOR DAILY BENEFITS — {nice}", "", re.sub(r"<[^>]+>", "", issue["greeting"]), ""]
+    # plain text -----------------------------------------------------------------
+    strip = lambda s: re.sub(r"<[^>]+>", "", s)
+    txt = [f"SENIOR DAILY BRIEF - {nice}", "", strip(issue["greeting"]), "", "ON THE MONEY TODAY:"] + [f"* {strip(t)}" for t in today] + [""]
+    if h: txt += [h.get("kicker", "BEHIND THE HEADLINE").upper(), h["title"], strip(h["text"]), link(h["slug"], "headline"), ""]
     for i, s in enumerate(stories):
         m = arts[s["slug"]]
-        txt += [m["title"].upper(), m["summary"], "Why it matters: " + re.sub(r"<[^>]+>", "", s["why"]), link(s["slug"], f"story{i+1}"), ""]
+        txt += [s.get("kicker", "").upper(), m["title"], m["summary"], ("Why it matters: " + strip(s["why"])) if s.get("why") else "", link(s["slug"], f"story{i+1}"), ""]
         if i < len(sponsors):
-            sp = SPONSORS[sponsors[i]]; txt += ["[SPONSOR] " + sp["title"], sp["body"], sp["url"], ""]
-    txt += ["Take the free benefits quiz: " + SITE + "/#quiz", "", "Unsubscribe: " + UNSUB]
+            sp = SPONSORS[sponsors[i]]; txt += ["[SPONSORED] " + sp["title"], sp["body"], sp["url"], ""]
+    if q: txt += ["MONEY IQ: " + q["q"]] + [f"{'ABCD'[i]}) {o}" for i, o in enumerate(q["options"])] + [""]
+    if issue.get("roundup"): txt += ["ALSO MAKING THE ROUNDS TODAY:"] + [f"{r['tag'].upper()}: {r['text']} {r['url']}" for r in issue["roundup"]] + [""]
+    if q: txt += [f"MONEY IQ ANSWER: {q['answer']} - {q['explain']}", ""]
+    txt += ["Take the free benefits quiz: " + SITE + "/#quiz", "", strip(byline), "", "Unsubscribe: " + UNSUB, address]
     return doc, "\n".join(txt)
 
 def main():
@@ -166,6 +229,8 @@ def main():
     (OUT / f"{issue['date']}.html").write_text(doc, encoding="utf-8")
     (OUT / f"{issue['date']}.txt").write_text(txt, encoding="utf-8")
     print("built", OUT / f"{issue['date']}.html")
+    if not issue.get("postal_address"):
+        print("WARNING: no postal_address in issue JSON; CAN-SPAM requires one before sending")
 
 if __name__ == "__main__":
     main()
