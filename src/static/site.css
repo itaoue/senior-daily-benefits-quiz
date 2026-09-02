@@ -1,11 +1,11 @@
 /* Senior Daily Benefits — editorial design system
    Navy #1B2E5A | Amber #D4A017 | Orange CTA #D4521A | Cream #F8F4E8
-   Playfair Display (headings) + Source Sans 3 (body) */
+   Work Sans for headings and body */
 :root{
   --navy:#1B2E5A;--navy-dark:#0F1E3D;--navy-light:#2A4080;
   --amber:#D4A017;--orange:#D4521A;--orange-hover:#B8421A;
   --cream:#F8F4E8;--cream-dark:#EDE8D5;--ink:#2C2C2C;--muted:#5F6470;--line:#E5E1D6;
-  --display:'Playfair Display',Georgia,serif;--body:'Source Sans 3','Source Sans Pro',Segoe UI,sans-serif;
+  --display:'Work Sans','Lucida Grande',Verdana,Arial,sans-serif;--body:'Work Sans','Lucida Grande',Verdana,Arial,sans-serif;
   --r:.5rem;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -13,7 +13,7 @@ html{scroll-behavior:smooth}
 body{font-family:var(--body);font-size:19px;line-height:1.6;color:var(--ink);background:#fff}
 img{max-width:100%;display:block}
 a{color:var(--navy)}
-h1,h2,h3,h4{font-family:var(--display);color:var(--navy);line-height:1.15}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;letter-spacing:-.01em;color:var(--navy);line-height:1.2}
 h1{font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:800;margin-bottom:1.2rem}
 h1 em{font-style:italic;color:var(--orange)}
 h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:700;margin-bottom:.9rem}
