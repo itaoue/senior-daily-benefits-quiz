@@ -9,13 +9,14 @@ Issue JSON keys (all strings may contain simple inline HTML):
     date            YYYY-MM-DD
     subject         email subject line
     preheader       preview text shown next to the subject in the inbox
-    together_with   (optional) SPONSORS key shown under the masthead ("together with ...")
     greeting        opening paragraph; starts with "<strong>Good morning</strong>." etc.
     today           (optional) list of 3 one-line teasers for "On The Money Today"; defaults
                     to story titles
     headline        {"kicker","title","stat","text","slug"}  the "Behind the headline" block
     stories         [ {"slug","kicker","why","cta"} ... ]  slugs from content/articles, in order
-    sponsors        ["key", ...]  SPONSORS keys; sponsor i goes after story i (keep to 1 or 2)
+    sponsors        ["key", ...]  SPONSORS keys; sponsor i goes after story i (keep to 1 or 2).
+                    The first one is the issue partner: it also appears under the masthead as
+                    "together with <partner>", matching its "In partnership with" block.
     quiz            {"q","options":[..],"answer":"B) ...","explain":"..."}
     roundup         [ {"tag","text","url"} ... ]  "Also making the rounds today"
     signoff         (optional) closing line
@@ -122,7 +123,7 @@ def build(issue):
     parts = []
 
     # masthead ---------------------------------------------------------------
-    tw = issue.get("together_with")
+    tw = sponsors[0] if sponsors else None   # masthead partner == first in-body partner block
     together = (f'<p style="margin:14px 0 0;font-family:{SANS};font-size:15px;color:{GRAY}"><em>together with</em> '
                 f'<a href="{SPONSORS[tw]["url"]}" target="_blank" style="color:{NAVY};font-weight:700;text-decoration:none">{esc(partner_name(tw))}</a></p>') if tw else ""
     parts.append(f'''<p style="margin:0 0 22px;font-family:{SANS};font-size:12px"><a href="{WEBVIEW}" style="color:{GRAY};text-decoration:underline">Read online</a></p>

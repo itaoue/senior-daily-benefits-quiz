@@ -2,7 +2,6 @@
   "date": "2026-09-03",
   "subject": "Trump said he'd never touch Social Security",
   "preheader": "His own actuary says the bill cost it $169 billion. Plus: Buffett's will, and the drug-plan subsidy that just died.",
-  "together_with": "aarp",
   "greeting": "<strong>Good morning.</strong> Promises are easy to make and hard to audit. Today's issue checks three of them against the numbers: a president's pledge on Social Security, a billionaire's instructions for his own family, and a Medicare subsidy that was always going to expire, whatever you were told.",
   "today": [
     "Trump promised not to touch Social Security, and the agency's own actuary says his bill cost it $169 billion",
@@ -37,20 +36,43 @@
       "cta": "Get Ahead Of It"
     }
   ],
-  "sponsors": ["hearing"],
+  "sponsors": [
+    "aarp"
+  ],
   "quiz": {
     "q": "Early estimates put the 2027 Social Security cost-of-living adjustment at roughly what percentage?",
-    "options": ["1.8%", "2.8%", "3.6%", "5.1%"],
+    "options": [
+      "1.8%",
+      "2.8%",
+      "3.6%",
+      "5.1%"
+    ],
     "answer": "C) 3.6%",
     "explain": "The Senior Citizens League's August estimate is about 3.6%, which would be the largest COLA since 2023. This year's was 2.8%. The official number arrives with the September inflation report in mid-October, and most of it goes out on the January payment, minus whatever Medicare Part B adds."
   },
   "roundup": [
-    { "tag": "Investing", "text": "Ray Dalio says cash is the one asset guaranteed to lose you money. He's right, and most retirees are holding it in the worst possible place.", "url": "https://seniordailybenefits.com/articles/how-much-cash-should-a-retiree-hold.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-03&utm_content=roundup1" },
-    { "tag": "Retirement", "text": "Dave Ramsey warns nearly half of Americans are making one big Social Security mistake. Here are his three steps to fix it.", "url": "https://seniordailybenefits.com/articles/social-security-40-percent-replacement-what-to-do.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-03&utm_content=roundup2" },
-    { "tag": "Investing", "text": "Elon Musk says he doesn't buy stocks, then named two that will be 'pretty valuable.' You probably already own both.", "url": "https://seniordailybenefits.com/articles/elon-musk-two-stocks-retirees-should-not-copy.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-03&utm_content=roundup3" },
-    { "tag": "Medicare", "text": "Mark Cuban says your 401(k) is funding the health care problem. Here's what's actually in your fund, and how to beat a denial when it's your claim.", "url": "https://seniordailybenefits.com/articles/mark-cuban-vs-health-insurers-your-401k-and-your-claims.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-03&utm_content=roundup4" }
+    {
+      "tag": "Investing",
+      "text": "Ray Dalio says cash is the one asset guaranteed to lose you money. He's right, and most retirees are holding it in the worst possible place.",
+      "url": "https://seniordailybenefits.com/articles/how-much-cash-should-a-retiree-hold.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-03&utm_content=roundup1"
+    },
+    {
+      "tag": "Retirement",
+      "text": "Dave Ramsey warns nearly half of Americans are making one big Social Security mistake. Here are his three steps to fix it.",
+      "url": "https://seniordailybenefits.com/articles/social-security-40-percent-replacement-what-to-do.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-03&utm_content=roundup2"
+    },
+    {
+      "tag": "Investing",
+      "text": "Elon Musk says he doesn't buy stocks, then named two that will be 'pretty valuable.' You probably already own both.",
+      "url": "https://seniordailybenefits.com/articles/elon-musk-two-stocks-retirees-should-not-copy.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-03&utm_content=roundup3"
+    },
+    {
+      "tag": "Medicare",
+      "text": "Mark Cuban says your 401(k) is funding the health care problem. Here's what's actually in your fund, and how to beat a denial when it's your claim.",
+      "url": "https://seniordailybenefits.com/articles/mark-cuban-vs-health-insurers-your-401k-and-your-claims.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-03&utm_content=roundup4"
+    }
   ],
   "signoff": "See you soon with another quick roundup of the money news that matters after 60.",
   "byline": "Today's newsletter was written and edited by the Senior Daily Benefits team.",
-  "postal_address": ""
+  "postal_address": "499 Evernia Street, Apt 303, West Palm Beach, FL 33401"
 }
