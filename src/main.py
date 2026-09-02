@@ -10,7 +10,7 @@ from src.routes.user import user_bp
 from src.routes.quiz import quiz_bp
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
-app.config['SECRET_KEY'] = 'asdf#FGSgvasgf$5$WGT'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', os.urandom(24).hex())
 
 # 启用CORS支持
 CORS(app)
@@ -32,7 +32,11 @@ def serve(path):
     if static_folder_path is None:
             return "Static folder not configured", 404
 
-    if path != "" and os.path.exists(os.path.join(static_folder_path, path)):
+    full_path = os.path.join(static_folder_path, path)
+    if path != "" and os.path.isdir(full_path):
+        # e.g. /articles or /articles/ -> articles/index.html
+        return send_from_directory(full_path, 'index.html')
+    if path != "" and os.path.exists(full_path):
         return send_from_directory(static_folder_path, path)
     else:
         index_path = os.path.join(static_folder_path, 'index.html')
