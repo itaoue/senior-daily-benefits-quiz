@@ -38,7 +38,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "dist" / "newsletters"
 
 NAVY, AMBER, ORANGE, INK, GRAY, RULE = "#1B2E5A", "#D4A017", "#D4521A", "#000000", "#374151", "#E5E7EB"
-LINK = NAVY                     # Moneywise uses its brand purple for links + buttons; ours is navy
+LINK = "#3139E3"                # link + button color (Moneywise uses one brand color for both)
 SANS = "'Work Sans','Lucida Grande',Verdana,Arial,sans-serif"
 SERIF = "Georgia,'Times New Roman',serif"
 UTM = "?utm_source=newsletter&utm_medium=email&utm_campaign={date}&utm_content={slot}"
@@ -128,7 +128,7 @@ def build(issue):
                 f'<a href="{SPONSORS[tw]["url"]}" target="_blank" style="color:{NAVY};font-weight:700;text-decoration:none">{esc(partner_name(tw))}</a></p>') if tw else ""
     parts.append(f'''<p style="margin:0 0 22px;font-family:{SANS};font-size:12px"><a href="{WEBVIEW}" style="color:{GRAY};text-decoration:underline">Read online</a></p>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:0 0 26px">
-<span style="font-family:{SERIF};font-size:34px;font-weight:bold;color:{NAVY};letter-spacing:-.5px">Senior Daily</span> <span style="font-family:{SERIF};font-size:34px;font-style:italic;color:{AMBER}">Brief</span>
+<span style="font-family:{SERIF};font-size:32px;font-weight:bold;color:{NAVY};letter-spacing:-.5px">Senior Daily</span> <span style="font-family:{SERIF};font-size:32px;font-style:italic;color:{AMBER}">Benefits</span>
 {together}
 </td></tr></table>''')
 
@@ -210,7 +210,7 @@ def build(issue):
 
     # plain text -----------------------------------------------------------------
     strip = lambda s: re.sub(r"<[^>]+>", "", s)
-    txt = [f"SENIOR DAILY BRIEF - {nice}", "", strip(issue["greeting"]), "", "ON THE MONEY TODAY:"] + [f"* {strip(t)}" for t in today] + [""]
+    txt = [f"SENIOR DAILY BENEFITS - {nice}", "", strip(issue["greeting"]), "", "ON THE MONEY TODAY:"] + [f"* {strip(t)}" for t in today] + [""]
     if h: txt += [h.get("kicker", "BEHIND THE HEADLINE").upper(), h["title"], strip(h["text"]), link(h["slug"], "headline"), ""]
     for i, s in enumerate(stories):
         m = arts[s["slug"]]
