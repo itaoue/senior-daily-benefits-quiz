@@ -28,7 +28,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 FROM_NAME_DEFAULT = "Senior Daily Benefits"
 
 AC_TAGS = {"*|UNSUB|*": "%UNSUBSCRIBELINK%", "*|VIEW|*": "%WEBCOPY%"}
-ROBLY_TAGS = {"*|UNSUB|*": "{{unsubscribe_link}}", "*|VIEW|*": "{{view_in_browser}}"}  # verify in Robly's merge-tag list
+# Robly merge tags are --TAG-- and the unsubscribe/web-copy links are inserted from the editor's
+# Special Links menu, so the export leaves visible placeholders to replace there.
+ROBLY_TAGS = {"*|UNSUB|*": "#ROBLY-INSERT-UNSUBSCRIBE-LINK", "*|VIEW|*": "#ROBLY-INSERT-VIEW-IN-BROWSER-LINK"}
 
 
 def load_issue(date):
@@ -167,7 +169,9 @@ def rb_push(a, issue, html, text):
     out = ROOT / "dist" / "newsletters" / f"{a.date}-robly.html"
     out.write_text(html, encoding="utf-8")
     print(f"Robly's public API does not create campaigns from custom HTML; wrote {out}\n"
-          "Paste it into Robly: Campaigns -> Create -> Import HTML, then set subject/list there.")
+          "In Robly: Campaigns -> Create -> Import HTML, paste the file, then use Special Links -> Unsubscribe "
+          "on the 'Unsubscribe here' text and Special Links -> View in browser on 'Read online' "
+          "(they point at #ROBLY-INSERT-... placeholders until you do).")
 
 
 def main():
