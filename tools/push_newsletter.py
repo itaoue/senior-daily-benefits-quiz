@@ -16,6 +16,7 @@ tags; this script swaps them per ESP:
 
 Environment (put these in ~/.zshrc):
     BIGMAILER_API_KEY, BIGMAILER_BRAND_ID (optional), BIGMAILER_LIST_ID (optional)
+    second BigMailer account (--bm-account icloud): BIGMAILER_ICLOUD_API_KEY, BIGMAILER_ICLOUD_BRAND_ID, BIGMAILER_ICLOUD_LIST_ID
     AC_API_URL, AC_API_KEY, AC_FROM_NAME, AC_FROM_EMAIL
     ROBLY_API_ID, ROBLY_API_KEY
 Nothing is ever sent from here; you send or schedule inside the ESP.
@@ -56,11 +57,23 @@ def need(name):
 # ------------------------------------------------------------------ BigMailer
 BM = "https://api.bigmailer.io/v1"
 
+BM_ACCOUNT = "default"   # set by --bm-account; "default" -> BIGMAILER_API_KEY, "icloud" -> BIGMAILER_ICLOUD_API_KEY
+
+def bm_key():
+    return need("BIGMAILER_API_KEY" if BM_ACCOUNT == "default" else f"BIGMAILER_{BM_ACCOUNT.upper()}_API_KEY")
+
 def bm_headers():
-    return {"X-API-Key": need("BIGMAILER_API_KEY"), "accept": "application/json", "content-type": "application/json"}
+    return {"X-API-Key": bm_key(), "accept": "application/json", "content-type": "application/json"}
+
+def bm_brands(a):
+    r = requests.get(f"{BM}/brands?limit=50", headers=bm_headers(), timeout=30); r.raise_for_status()
+    for b in r.json().get("data", []):
+        print(f"  {b['id']}  {b['name']}  from: {b.get('from_name')} <{b.get('from_email')}>")
 
 def bm_brand(a):
-    return a.brand_id or os.environ.get("BIGMAILER_BRAND_ID") or "5d542e26-bc9f-4939-96b4-6e130bc0a971"
+    if a.brand_id: return a.brand_id
+    if BM_ACCOUNT == "default": return os.environ.get("BIGMAILER_BRAND_ID") or "5d542e26-bc9f-4939-96b4-6e130bc0a971"
+    return need(f"BIGMAILER_{BM_ACCOUNT.upper()}_BRAND_ID")
 
 def bm_lists(a):
     r = requests.get(f"{BM}/brands/{bm_brand(a)}/lists?limit=100", headers=bm_headers(), timeout=30)
@@ -70,7 +83,7 @@ def bm_lists(a):
 
 def bm_push(a, issue, html, text):
     brand = bm_brand(a)
-    list_id = a.list_id or os.environ.get("BIGMAILER_LIST_ID") or "f2685361-d605-47e5-bdfe-f3d2b0a65cfe"
+    list_id = a.list_id or (os.environ.get("BIGMAILER_LIST_ID") or "f2685361-d605-47e5-bdfe-f3d2b0a65cfe" if BM_ACCOUNT == "default" else need(f"BIGMAILER_{BM_ACCOUNT.upper()}_LIST_ID"))
     b = requests.get(f"{BM}/brands/{brand}", headers=bm_headers(), timeout=30).json()
     from_name = os.environ.get("BM_FROM_NAME") or b.get("from_name") or FROM_NAME_DEFAULT
     from_email = os.environ.get("BM_FROM_EMAIL") or b.get("from_email")
@@ -165,9 +178,14 @@ def main():
     ap.add_argument("--list", dest="list_name")
     ap.add_argument("--list-id")
     ap.add_argument("--brand-id")
+    ap.add_argument("--bm-account", default="default", help="BigMailer account: default | icloud (reads BIGMAILER_ICLOUD_API_KEY)")
+    ap.add_argument("--brands", action="store_true", help="BigMailer: print brands and exit")
     ap.add_argument("--name")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
+    global BM_ACCOUNT; BM_ACCOUNT = a.bm_account
+    if a.brands and a.esp == "bigmailer":
+        bm_brands(a); return
     if a.lists:
         {"bigmailer": bm_lists, "activecampaign": ac_lists, "robly": rb_lists}[a.esp](a); return
     if not a.date:
