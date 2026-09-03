@@ -125,7 +125,7 @@ def build(issue):
     # masthead ---------------------------------------------------------------
     tw = sponsors[0] if sponsors else None   # masthead partner == first in-body partner block
     together = (f'<p style="margin:14px 0 0;font-family:{SANS};font-size:15px;color:{GRAY}"><em>together with</em> '
-                f'<a href="{SPONSORS[tw]["url"]}" target="_blank" style="color:{NAVY};font-weight:700;text-decoration:none">{esc(partner_name(tw))}</a></p>') if tw else ""
+                f'<a href="{SPONSORS[tw]["url"]}" target="_blank" style="color:{LINK};font-weight:700;text-decoration:none">{esc(partner_name(tw))}</a></p>') if tw else ""
     parts.append(f'''<p style="margin:0 0 22px;font-family:{SANS};font-size:12px"><a href="{WEBVIEW}" style="color:{GRAY};text-decoration:underline">Read online</a></p>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:0 0 26px">
 <span style="font-family:{SERIF};font-size:32px;font-weight:bold;color:{NAVY};letter-spacing:-.5px">Senior Daily</span> <span style="font-family:{SERIF};font-size:32px;font-style:italic;color:{AMBER}">Benefits</span>
