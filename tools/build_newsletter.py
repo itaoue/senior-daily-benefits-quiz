@@ -54,8 +54,8 @@ PARTNER_NAMES = {
     "home_warranty": "Home Warranty", "title_lock": "Home Title Lock", "home_security": "Guardlane",
     "timeshare_exit": "Stonegate", "pillow": "Derila", "insoles": "Akusoli", "skincare": "Beverly Hills MD",
     "detox_tea": "Lulutox", "adblock": "Total Adblock", "auto_insurance": "Insurvo",
-    "balance_transfer": "our card partner", "cashback_card": "our card partner", "debt_settlement": "our debt relief partner",
-    "heloc": "our home equity partner", "windows": "our window partner", "roof": "our roofing partner",
+    "balance_transfer": "our card partner", "cashback_card": "our card partner", "debt_settlement": "National Debt Relief",
+    "heloc": "Quicken Loans", "windows": "our window partner", "roof": "our roofing partner",
     "gutters": "our gutter partner", "solar_exit": "our solar partner",
 }
 def partner_name(key): return PARTNER_NAMES.get(key, "our partner")

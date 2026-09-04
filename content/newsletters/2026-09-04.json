@@ -1,12 +1,12 @@
 {
   "date": "2026-09-04",
   "subject": "The \"Trump Bump\" has a catch",
-  "preheader": "Next year's Social Security raise is the biggest in years. Here's who's really paying for it. Plus: Kiyosaki's crash call, and Suze Orman on your mortgage.",
-  "greeting": "<strong>Good morning.</strong> Three pieces of advice made the rounds this week, each with a famous name attached. Today we check what's underneath them: a raise that's really a refund, a crash warning with a real number inside it, and a rule about your mortgage that holds up better than most.",
+  "preheader": "Next year's Social Security raise is the biggest in years. Here's who's really paying for it. Plus: Kiyosaki's crash call, and the RMD move to make before 73.",
+  "greeting": "<strong>Good morning.</strong> Two pieces of advice made the rounds this week with famous names attached, and a third comes from the IRS with no name at all. Today we check what's underneath them: a raise that's really a refund, a crash warning with a real number inside it, and a withdrawal deadline that punishes the people who wait.",
   "today": [
     "They're calling next year's Social Security raise the \"Trump Bump.\" It's the biggest in years because prices are",
     "Robert Kiyosaki says boomers are being set up for a crash. His timing is vague, but the math he's pointing at is real",
-    "Suze Orman says don't retire with a mortgage. The lenders spending millions to tell you otherwise are not on your side"
+    "Required minimum distributions start at 73. The moves that actually matter happen in your 60s, and most retirees skip them"
   ],
   "headline": {
     "kicker": "Behind the headline",
@@ -30,24 +30,48 @@
       "cta": "Weigh The Risk"
     },
     {
-      "slug": "should-you-pay-off-the-mortgage-before-you-retire",
+      "slug": "required-minimum-distributions-before-73-checklist",
       "kicker": "Must read",
-      "why": "About four in ten homeowners over 65 still carry a mortgage. A $1,400 payment is the equivalent of needing $420,000 more in savings, and the home equity pitches on TV turn credit card debt into debt secured by your house.",
-      "cta": "Run Your Numbers"
+      "why": "At 73 the IRS makes you withdraw about 3.8% of every pre-tax account, taxed as income, and the percentage climbs every year after. Roth conversions and early withdrawals in your 60s shrink that bill for good, but only before the deadline. Missing an RMD costs 25% of the amount you should have taken.",
+      "cta": "See The Checklist"
     }
   ],
-  "sponsors": ["title_lock"],
+  "sponsors": [
+    "debt_settlement",
+    "heloc"
+  ],
   "quiz": {
     "q": "If you claim Social Security before full retirement age and keep working, at what point does the earnings limit stop reducing your check?",
-    "options": ["Age 65", "Full retirement age (66 to 67)", "Age 70", "It never stops"],
+    "options": [
+      "Age 65",
+      "Full retirement age (66 to 67)",
+      "Age 70",
+      "It never stops"
+    ],
     "answer": "B) Full retirement age",
     "explain": "The retirement earnings test only applies before full retirement age, 67 for anyone born in 1960 or later. In 2026 the limit is $24,480 a year, with $1 withheld for every $2 above it. At full retirement age the limit disappears, and Social Security recalculates your benefit to credit the months it withheld."
   },
   "roundup": [
-    { "tag": "Social Security", "text": "Some people get two Social Security-related payments in October. Here's the calendar and why it isn't a mistake.", "url": "https://seniordailybenefits.com/articles/social-security-october-2026-payment-calendar.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-04&utm_content=roundup1" },
-    { "tag": "Retirement", "text": "The Treasury Secretary went on Fox to reassure you the gold is still in Fort Knox, then admitted it doesn't back your dollar. Neither half is the point.", "url": "https://seniordailybenefits.com/articles/bessent-fort-knox-gold-dollar-what-it-means-for-savings.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-04&utm_content=roundup2" },
-    { "tag": "Retirement", "text": "The national debt just passed $40 trillion and long-term rates hit a 19-year high. Here's what that changes for a fixed income.", "url": "https://seniordailybenefits.com/articles/national-debt-40-trillion-what-it-means-for-retirees.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-04&utm_content=roundup3" },
-    { "tag": "Social Security", "text": "Still working and collecting? The 2026 earnings limits, and why the withheld money isn't really lost.", "url": "https://seniordailybenefits.com/articles/working-while-collecting-social-security-2026-earnings-test.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-04&utm_content=roundup4" }
+    {
+      "tag": "Social Security",
+      "text": "Some people get two Social Security-related payments in October. Here's the calendar and why it isn't a mistake.",
+      "url": "https://seniordailybenefits.com/articles/social-security-october-2026-payment-calendar.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-04&utm_content=roundup1"
+    },
+    {
+      "tag": "Retirement",
+      "text": "The Treasury Secretary went on Fox to reassure you the gold is still in Fort Knox, then admitted it doesn't back your dollar. Neither half is the point.",
+      "url": "https://seniordailybenefits.com/articles/bessent-fort-knox-gold-dollar-what-it-means-for-savings.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-04&utm_content=roundup2"
+    },
+    {
+      "tag": "Retirement",
+      "text": "The national debt just passed $40 trillion and long-term rates hit a 19-year high. Here's what that changes for a fixed income.",
+      "url": "https://seniordailybenefits.com/articles/national-debt-40-trillion-what-it-means-for-retirees.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-04&utm_content=roundup3"
+    },
+    {
+      "tag": "Social Security",
+      "text": "Still working and collecting? The 2026 earnings limits, and why the withheld money isn't really lost.",
+      "url": "https://seniordailybenefits.com/articles/working-while-collecting-social-security-2026-earnings-test.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-04&utm_content=roundup4"
+    }
   ],
   "signoff": "See you soon with another quick roundup of the money news that matters after 60.",
   "byline": "Today's newsletter was written and edited by the Senior Daily Benefits team.",
