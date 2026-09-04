@@ -94,7 +94,7 @@ def bm_push(a, issue, html, text):
     payload = {
         "name": a.name or f"Senior Daily Benefits {a.date}",
         "subject": issue["subject"],
-        "preview": issue.get("preheader", ""),
+        "preview": (lambda s: s if len(s) <= 150 else s[:150].rsplit(" ", 1)[0].rstrip(".,;:") + "…")(issue.get("preheader", "")),  # BigMailer caps preview at 150 chars
         "from": {"name": from_name, "email": from_email},
         "reply_to": {"name": from_name, "email": os.environ.get("BM_REPLY_TO") or from_email},
         "html": html, "text": text,
