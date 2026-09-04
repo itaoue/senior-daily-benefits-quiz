@@ -291,7 +291,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="
 HEADER = """<div class="topbar"><span>Free daily money email for readers 60+</span><a href="/#subscribe">Subscribe →</a></div>
 <header class="site-header"><div class="container header-inner">
   <a href="/" class="brand"><span class="brand-mark">SDB</span><span class="brand-text"><span class="brand-name">Senior Daily Benefits</span><span class="brand-domain">seniordailybenefits.com</span></span></a>
-  <nav class="nav"><a href="/#latest">Latest</a><a href="/#lane-investing">Investing</a><a href="/#lane-retirement">Retirement</a><a href="/#lane-economy">Economy</a><a href="/articles/">All articles</a><a href="/newsletters/">Issues</a></nav>
+  <nav class="nav"><a href="/#latest">Latest</a><a href="/#lane-investing">Investing</a><a href="/#lane-retirement">Retirement</a><a href="/#lane-economy">Economy</a><a href="/articles/">All articles</a></nav>
   <div class="header-cta"><a href="/#subscribe" class="btn btn-orange">✉ Subscribe free</a></div>
   <a href="/#subscribe" class="btn btn-orange menu-btn" style="padding:.5rem 1rem">Subscribe</a>
 </div></header>"""
@@ -301,7 +301,7 @@ FOOTER = """<footer class="site-footer"><div class="container footer-grid">
   <p>A free daily email and website about money after 60: investing, insurance, mortgages, taxes, household cash flow, retirement planning, and the economy. Plain English, primary sources, opinions labeled.</p>
   <form class="footer-form" onsubmit="subscribe(event, 'footer')"><input type="email" required placeholder="your@email.com" autocomplete="email" aria-label="Email address"><button class="btn btn-orange" type="submit">Subscribe</button></form></div>
   <div><h4>Topics</h4><ul><li><a href="/#lane-economy">Economy, markets &amp; policy</a></li><li><a href="/#lane-investing">Investing</a></li><li><a href="/#lane-insurance">Insurance &amp; Medicare</a></li><li><a href="/#lane-taxes">Taxes</a></li><li><a href="/#lane-mortgages">Home &amp; mortgages</a></li><li><a href="/#lane-cashflow">Household cash flow</a></li><li><a href="/#lane-retirement">Retirement planning</a></li></ul></div>
-  <div><h4>Newsletter</h4><ul><li><a href="/newsletters/">Issue archive</a></li><li><a href="/articles/">All articles</a></li><li><a href="/about.html">About us</a></li><li><a href="/contact.html">Contact</a></li></ul>
+  <div><h4>More</h4><ul><li><a href="/articles/">All articles</a></li><li><a href="/about.html">About us</a></li><li><a href="/contact.html">Contact</a></li></ul>
   <h4>Official resources</h4><ul><li><a href="https://www.ssa.gov" target="_blank" rel="noopener">SSA.gov ↗</a></li><li><a href="https://www.medicare.gov" target="_blank" rel="noopener">Medicare.gov ↗</a></li><li><a href="https://www.irs.gov" target="_blank" rel="noopener">IRS.gov ↗</a></li></ul></div>
 </div><div class="footer-bottom"><div class="container"><p>© {year} Senior Daily Benefits. For general information only; not financial, legal, tax, or medical advice. We may earn a commission from partner links, and sponsored content is labeled.</p>
 <div><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-conditions.html">Terms &amp; Conditions</a><a href="/contact.html">Contact Us</a></div></div></div></footer>
@@ -420,13 +420,9 @@ def main():
          "topic": m.get("topic", "Benefits"), "date": m["date"], "date_nice": nice_date(m["date"])}
         for m in articles[:6]], ensure_ascii=False), encoding="utf-8")
     print(f"index: {len(articles)} articles")
-    from build_home import build_home, build_newsletter_archive
-    try:
-        latest_issue = build_newsletter_archive()
-    except Exception as e:  # noqa: BLE001
-        print(f"newsletter archive skipped: {e}"); latest_issue = "/newsletters/"
-    (ROOT / "src" / "static" / "index.html").write_text(build_home(articles, latest_issue), encoding="utf-8")
-    print("homepage built; latest issue", latest_issue)
+    from build_home import build_home
+    (ROOT / "src" / "static" / "index.html").write_text(build_home(articles), encoding="utf-8")
+    print("homepage built")
     # stamp the stylesheet/script version into the hand-written static pages
     for name in ("about.html", "contact.html", "privacy-policy.html", "terms-conditions.html", "quiz.html"):
         sp = ROOT / "src" / "static" / name

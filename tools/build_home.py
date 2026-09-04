@@ -1,9 +1,8 @@
 """
-Homepage (newsletter layout) and newsletter web archive.
+Homepage (newsletter layout).
 Called from build_articles.main(); not run directly.
 
     build_home(articles, latest_issue_url) -> HTML for src/static/index.html
-    build_newsletter_archive()             -> writes src/static/newsletters/*.html + index, returns newest URL
 """
 import datetime, html, json, pathlib, sys
 
@@ -51,7 +50,7 @@ def lane_of(meta):
     return "retirement"
 
 
-def build_home(articles, latest_issue_url):
+def build_home(articles):
     from build_articles import SITE, CSS_VERSION, HEADER, FOOTER, article_image, nice_date
     esc = lambda s: html.escape(s or "")
 
@@ -85,39 +84,7 @@ def build_home(articles, latest_issue_url):
         "{{FEATURE_TOPIC}}": esc(feature.get("topic", "Benefits")), "{{FEATURE_TITLE}}": esc(feature["title"]),
         "{{FEATURE_SUMMARY}}": esc(feature["summary"]), "{{FEATURE_DATE}}": nice_date(feature["date"]),
         "{{LATEST_CARDS}}": latest_cards, "{{NAME_CARDS}}": name_cards, "{{LANES}}": lanes_html,
-        "{{LATEST_ISSUE_URL}}": latest_issue_url,
     }
     for k, v in subs.items():
         tpl = tpl.replace(k, v)
     return tpl
-
-
-def build_newsletter_archive():
-    """Web copies of every built issue dated today or earlier. Returns the newest issue's URL."""
-    from build_articles import SITE, page, nice_date
-    import build_newsletter as bn
-    dest = ROOT / "src" / "static" / "newsletters"
-    dest.mkdir(parents=True, exist_ok=True)
-    today = datetime.date.today().isoformat()
-    issues = []
-    for p in sorted((ROOT / "content" / "newsletters").glob("*.json")):
-        issue = json.loads(p.read_text(encoding="utf-8"))
-        if issue["date"] > today:
-            continue
-        doc, _ = bn.build(issue)
-        doc = (doc.replace('href="*|VIEW|*"', f'href="/newsletters/{issue["date"]}.html"')
-                  .replace('href="*|UNSUB|*"', 'href="/privacy-policy.html"')
-                  .replace("*|ESP|*", "web"))
-        (dest / f"{issue['date']}.html").write_text(doc, encoding="utf-8")
-        issues.append(issue)
-    issues.sort(key=lambda i: i["date"], reverse=True)
-    rows = "".join(
-        f'<a href="/newsletters/{i["date"]}.html"><time>{nice_date(i["date"])}</time><h3>{html.escape(i["subject"])}</h3>'
-        f'<p class="muted">{html.escape(i.get("preheader", ""))}</p></a>' for i in issues)
-    body = ('<article class="article-page"><div class="container" style="max-width:820px;padding-top:2.5rem">'
-            '<span class="topic-chip">Newsletter</span><h1>Issue archive</h1>'
-            '<p class="summary">Every issue of the Senior Daily Benefits email, newest first. '
-            '<a href="/#subscribe">Subscribe free</a> to get the next one.</p>'
-            f'<div class="issue-list">{rows or "<p class=muted>No issues yet.</p>"}</div></div></article>')
-    (dest / "index.html").write_text(page("Newsletter archive", "Every issue of the Senior Daily Benefits email.", body, f"{SITE}/newsletters/"), encoding="utf-8")
-    return f"/newsletters/{issues[0]['date']}.html" if issues else "/newsletters/"
