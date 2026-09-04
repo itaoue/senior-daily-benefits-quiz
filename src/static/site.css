@@ -321,3 +321,15 @@ input:focus{outline:none;border-color:var(--navy)}
 .comment-form .hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 .comment-note{margin:.8rem 0 0;font-weight:600;color:var(--navy)}
 @media (max-width:640px){.comment-grid{grid-template-columns:1fr}}
+
+/* ── Newsletter poll results ────────────────────────────────────── */
+.poll-results{margin-top:1.5rem}
+.poll-row{display:grid;grid-template-columns:1fr 3fr auto;gap:.8rem;align-items:center;padding:.7rem .9rem;border-radius:var(--r);border:1px solid var(--line);margin-bottom:.6rem;background:#fff}
+.poll-row.poll-mine{border-color:var(--amber);background:var(--cream)}
+.poll-label{font-weight:600;color:var(--navy);white-space:nowrap}
+.poll-hearts{letter-spacing:-.1em;margin-right:.2rem}
+.poll-you{font-size:.75rem;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.06em;margin-left:.4rem}
+.poll-bar{height:14px;background:#EEF1F6;border-radius:7px;overflow:hidden}
+.poll-fill{height:100%;background:var(--amber);border-radius:7px}
+.poll-pct{font-weight:700;color:var(--navy);min-width:3ch;text-align:right}
+@media (max-width:640px){.poll-row{grid-template-columns:1fr auto}.poll-bar{grid-column:1/-1}}

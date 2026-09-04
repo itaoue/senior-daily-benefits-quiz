@@ -176,12 +176,26 @@ def build(issue):
         parts.append("".join([kicker("Money IQ answer: how did you do?"),
                               p(f'<strong>The answer is {esc(q["answer"])}</strong> &mdash; {esc(q["explain"])}'), divider()]))
 
+    # feedback poll (one-click links -> /poll/<date>/<choice>) --------------------------
+    def poll_link(choice): return f"{SITE}/poll/{date}/{choice}?esp=*|ESP|*" + UTM.format(date=date, slot="poll").replace("?", "&", 1)
+    def poll_row(choice, hearts, label):
+        return (f'<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 10px"><tr>'
+                f'<td style="border:1px solid #D1D5DB;border-radius:8px;padding:12px 16px;width:420px;max-width:100%">'
+                f'<a href="{poll_link(choice)}" target="_blank" style="display:block;font-family:{SANS};font-size:17px;line-height:22px;color:{INK};text-decoration:none">'
+                f'<span style="letter-spacing:-1px">{hearts}</span>&nbsp; {label}</a></td></tr></table>')
+    parts.append("".join([
+        p("<strong>That's a wrap for today! Before you go, we'd love to know what you thought of today's newsletter.</strong> Hit REPLY if you have more to share &mdash; we read every one.", 18, margin="0 0 16px"),
+        poll_row(5, "&#128155;&#128155;&#128155;&#128155;&#128155;", "Nailed it"),
+        poll_row(3, "&#128155;&#128155;&#128155;", "Good"),
+        poll_row(1, "&#128155;", "Could do better"),
+        divider(),
+    ]))
+
     # quiz CTA + sign-off ------------------------------------------------------------
     parts.append("".join([
         p("<strong>Are you claiming every benefit you've earned?</strong> Our free 60-second quiz shows which programs and discounts apply to you."),
         button("Take The Free Quiz", SITE + "/#quiz" + UTM.format(date=date, slot="quizcta")),
         p(issue.get("signoff", "See you soon with another quick roundup of the money news that matters."), margin="20px 0 6px"),
-        p("Hit REPLY if there's a topic you want us to dig into. We read every one.", 15, GRAY),
     ]))
 
     body_html = "\n".join(parts)

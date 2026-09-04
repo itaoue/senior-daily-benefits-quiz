@@ -27,10 +27,11 @@ import requests
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 FROM_NAME_DEFAULT = "Senior Daily Benefits"
 
-AC_TAGS = {"*|UNSUB|*": "%UNSUBSCRIBELINK%", "*|VIEW|*": "%WEBCOPY%"}
+AC_TAGS = {"*|UNSUB|*": "%UNSUBSCRIBELINK%", "*|VIEW|*": "%WEBCOPY%", "*|ESP|*": "activecampaign"}
 # Robly merge tags are --TAG-- and the unsubscribe/web-copy links are inserted from the editor's
 # Special Links menu, so the export leaves visible placeholders to replace there.
-ROBLY_TAGS = {"*|UNSUB|*": "#ROBLY-INSERT-UNSUBSCRIBE-LINK", "*|VIEW|*": "#ROBLY-INSERT-VIEW-IN-BROWSER-LINK"}
+ROBLY_TAGS = {"*|UNSUB|*": "#ROBLY-INSERT-UNSUBSCRIBE-LINK", "*|VIEW|*": "#ROBLY-INSERT-VIEW-IN-BROWSER-LINK", "*|ESP|*": "robly"}
+BM_TAGS = {"*|ESP|*": "bigmailer"}
 
 
 def load_issue(date):
@@ -84,6 +85,7 @@ def bm_lists(a):
         print(f"  {l['id']}  {l['name']}  ({l.get('num_contacts', '?')} contacts)")
 
 def bm_push(a, issue, html, text):
+    html, text = swap(html, BM_TAGS), swap(text, BM_TAGS)
     brand = bm_brand(a)
     list_id = a.list_id or (os.environ.get("BIGMAILER_LIST_ID") or "f2685361-d605-47e5-bdfe-f3d2b0a65cfe" if BM_ACCOUNT == "default" else need(f"BIGMAILER_{BM_ACCOUNT.upper()}_LIST_ID"))
     b = requests.get(f"{BM}/brands/{brand}", headers=bm_headers(), timeout=30).json()
