@@ -288,12 +288,12 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="
          '<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">'
          '<link rel="stylesheet" href="/site.css?v=' + CSS_VERSION + '">')
 
-HEADER = """<div class="topbar"><span>ℹ Not affiliated with the U.S. Government or any federal agency</span><a href="/#newsletter">Get the free daily benefits email →</a></div>
+HEADER = """<div class="topbar"><span>ℹ Not affiliated with the U.S. Government or any federal agency</span><a href="/#subscribe">Get the free daily money email →</a></div>
 <header class="site-header"><div class="container header-inner">
   <a href="/" class="brand"><span class="brand-mark">SDB</span><span class="brand-text"><span class="brand-name">Senior Daily Benefits</span><span class="brand-domain">seniordailybenefits.com</span></span></a>
-  <nav class="nav"><a href="/#topics">Topics</a><a href="/articles/">Articles</a><a href="/#how">How It Works</a><a href="/#faq">FAQs</a></nav>
-  <div class="header-cta"><a href="/#quiz" class="btn btn-outline">Check My Benefits</a><a href="/#newsletter" class="btn btn-orange">✉ Free Newsletter</a></div>
-  <a href="/#quiz" class="btn btn-orange menu-btn" style="padding:.5rem 1rem">Quiz</a>
+  <nav class="nav"><a href="/#latest">Latest</a><a href="/#lane-investing">Investing</a><a href="/#lane-retirement">Retirement</a><a href="/#lane-economy">Economy</a><a href="/articles/">All articles</a><a href="/newsletters/">Issues</a></nav>
+  <div class="header-cta"><a href="/#subscribe" class="btn btn-orange">✉ Subscribe free</a></div>
+  <a href="/#subscribe" class="btn btn-orange menu-btn" style="padding:.5rem 1rem">Subscribe</a>
 </div></header>"""
 
 FOOTER = """<footer class="site-footer"><div class="container footer-grid">
@@ -418,6 +418,13 @@ def main():
          "topic": m.get("topic", "Benefits"), "date": m["date"], "date_nice": nice_date(m["date"])}
         for m in articles[:6]], ensure_ascii=False), encoding="utf-8")
     print(f"index: {len(articles)} articles")
+    from build_home import build_home, build_newsletter_archive
+    try:
+        latest_issue = build_newsletter_archive()
+    except Exception as e:  # noqa: BLE001
+        print(f"newsletter archive skipped: {e}"); latest_issue = "/newsletters/"
+    (ROOT / "src" / "static" / "index.html").write_text(build_home(articles, latest_issue), encoding="utf-8")
+    print("homepage built; latest issue", latest_issue)
 
 if __name__ == "__main__":
     main()
