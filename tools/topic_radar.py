@@ -38,7 +38,7 @@ CELEBS = [
     "O'Leary", "Tony Robbins", "Robbins", "Schwab", "Bloomberg", "Pelosi", "Sanders", "Warren", "Ocasio", "Newsom",
     "DeSantis", "Biden", "Obama", "Clinton", "Harris", "Schumer", "Johnson", "Hegseth", "RFK", "Kennedy", "Oz",
     "Dr. Oz", "Oprah", "Shaq", "Jeff Bezos", "Barbara Corcoran", "Corcoran", "Ackman", "Griffin", "Icahn", "Gundlach",
-    "Yellen", "Lutnick", "Bessent", "Dolly Parton", "Rowe", "Arnold Schwarzenegger", "Schwarzenegger",
+    "Yellen", "Lutnick", "Dolly Parton", "Rowe", "Mellody Hobson", "Hobson", "Suze", "Corcoran", "Arnold Schwarzenegger", "Schwarzenegger",
 ]
 SENIOR_KW = {
     "social security": 4, "medicare": 4, "medicaid": 2, "retire": 3, "retirement": 3, "retirees": 3, "seniors": 3,
