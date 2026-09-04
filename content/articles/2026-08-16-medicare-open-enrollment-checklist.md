@@ -5,7 +5,7 @@ date: 2026-08-16
 topic: Medicare & Health
 summary: Most people let their plan roll over without looking. That's how a drug that cost $12 last year ends up costing $80 in January. Here's the 20-minute check.
 image: images/articles/medicare-open-enrollment-2026-checklist.jpg
-sponsor: home_warranty
+sponsor: home_warranty, fb_retirement_cuts
 sources:
   - Medicare.gov, Joining a plan|https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan
   - Medicare.gov, Extra Help with drug costs|https://www.medicare.gov/basics/costs/help/drug-costs
