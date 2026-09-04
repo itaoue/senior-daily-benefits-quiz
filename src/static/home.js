@@ -1,3 +1,4 @@
+if (!window.__sdbHome) { window.__sdbHome = true;
 /* Senior Daily Benefits — homepage: newsletter signup + attribution capture */
 function captureTrack() {
   try {
@@ -11,6 +12,7 @@ function captureTrack() {
     }
     return t;
   } catch (e) { return {}; }
+window.subscribe = subscribe;
 }
 const TRACK = captureTrack();
 
@@ -36,4 +38,8 @@ function subscribe(event, source) {
       } else { alert('Error: ' + (data.error || 'Please try again.')); button.textContent = original; button.disabled = false; }
     })
     .catch(() => { alert('Network error. Please try again.'); button.textContent = original; button.disabled = false; });
+window.subscribe = subscribe;
+}
+
+window.subscribe = subscribe;
 }

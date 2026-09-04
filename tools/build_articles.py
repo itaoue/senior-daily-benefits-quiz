@@ -288,7 +288,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="
          '<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">'
          '<link rel="stylesheet" href="/site.css?v=' + CSS_VERSION + '">')
 
-HEADER = """<div class="topbar"><span>ℹ Not affiliated with the U.S. Government or any federal agency</span><a href="/#subscribe">Get the free daily money email →</a></div>
+HEADER = """<div class="topbar"><span>Free daily money email for readers 60+</span><a href="/#subscribe">Subscribe →</a></div>
 <header class="site-header"><div class="container header-inner">
   <a href="/" class="brand"><span class="brand-mark">SDB</span><span class="brand-text"><span class="brand-name">Senior Daily Benefits</span><span class="brand-domain">seniordailybenefits.com</span></span></a>
   <nav class="nav"><a href="/#latest">Latest</a><a href="/#lane-investing">Investing</a><a href="/#lane-retirement">Retirement</a><a href="/#lane-economy">Economy</a><a href="/articles/">All articles</a><a href="/newsletters/">Issues</a></nav>
@@ -298,12 +298,14 @@ HEADER = """<div class="topbar"><span>ℹ Not affiliated with the U.S. Governmen
 
 FOOTER = """<footer class="site-footer"><div class="container footer-grid">
   <div class="footer-brand"><a href="/" class="brand"><span class="brand-mark gold">SDB</span><span class="brand-text"><span class="brand-name">Senior Daily Benefits</span><span class="brand-domain">seniordailybenefits.com</span></span></a>
-  <p>Helping Americans 60+ find and claim the benefits, discounts, and programs they've already earned. Plain English, no jargon.</p></div>
-  <div><h4>Topics</h4><ul><li><a href="/articles/">🏥 Medicare &amp; Health</a></li><li><a href="/articles/">💰 Social Security</a></li><li><a href="/articles/">📋 Taxes &amp; Retirement</a></li><li><a href="/articles/">🏠 Home &amp; Utilities</a></li><li><a href="/articles/">🛒 Senior Discounts</a></li><li><a href="/articles/">🛡️ Scam Alerts</a></li></ul></div>
-  <div><h4>Quick links</h4><ul><li><a href="/#quiz">Benefits quiz</a></li><li><a href="/#newsletter">Newsletter</a></li><li><a href="/about.html">About us</a></li><li><a href="/contact.html">Contact</a></li></ul>
-  <h4>Official resources</h4><ul><li><a href="https://www.ssa.gov" target="_blank" rel="noopener">SSA.gov ↗</a></li><li><a href="https://www.medicare.gov" target="_blank" rel="noopener">Medicare.gov ↗</a></li></ul></div>
-</div><div class="footer-bottom"><div class="container"><p>© {year} Senior Daily Benefits. Not affiliated with the U.S. Government or any federal agency. This website is for informational purposes only and does not constitute financial, legal, or medical advice. We may earn a commission from partner links.</p>
-<div><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-conditions.html">Terms &amp; Conditions</a><a href="/contact.html">Contact Us</a></div></div></div></footer>"""
+  <p>A free daily email and website about money after 60: investing, insurance, mortgages, taxes, household cash flow, retirement planning, and the economy. Plain English, primary sources, opinions labeled.</p>
+  <form class="footer-form" onsubmit="subscribe(event, 'footer')"><input type="email" required placeholder="your@email.com" autocomplete="email" aria-label="Email address"><button class="btn btn-orange" type="submit">Subscribe</button></form></div>
+  <div><h4>Topics</h4><ul><li><a href="/#lane-economy">Economy, markets &amp; policy</a></li><li><a href="/#lane-investing">Investing</a></li><li><a href="/#lane-insurance">Insurance &amp; Medicare</a></li><li><a href="/#lane-taxes">Taxes</a></li><li><a href="/#lane-mortgages">Home &amp; mortgages</a></li><li><a href="/#lane-cashflow">Household cash flow</a></li><li><a href="/#lane-retirement">Retirement planning</a></li></ul></div>
+  <div><h4>Newsletter</h4><ul><li><a href="/newsletters/">Issue archive</a></li><li><a href="/articles/">All articles</a></li><li><a href="/about.html">About us</a></li><li><a href="/contact.html">Contact</a></li></ul>
+  <h4>Official resources</h4><ul><li><a href="https://www.ssa.gov" target="_blank" rel="noopener">SSA.gov ↗</a></li><li><a href="https://www.medicare.gov" target="_blank" rel="noopener">Medicare.gov ↗</a></li><li><a href="https://www.irs.gov" target="_blank" rel="noopener">IRS.gov ↗</a></li></ul></div>
+</div><div class="footer-bottom"><div class="container"><p>© {year} Senior Daily Benefits. For general information only; not financial, legal, tax, or medical advice. We may earn a commission from partner links, and sponsored content is labeled.</p>
+<div><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-conditions.html">Terms &amp; Conditions</a><a href="/contact.html">Contact Us</a></div></div></div></footer>
+<script src="/home.js?v={css}" defer></script>"""
 
 QUIZ_CTA = """<div class="quiz-cta">
   <h2>Are you claiming every benefit you're entitled to?</h2>
@@ -333,7 +335,7 @@ def page(title, desc, body, canonical, og=SITE + "/images/topics/general.svg"):
 {FONTS}</head><body>
 {HEADER}
 {body}
-{FOOTER.format(year=datetime.date.today().year)}
+{FOOTER.format(year=datetime.date.today().year, css=CSS_VERSION)}
 </body></html>"""
 
 def build_article(meta, body_md):
@@ -425,6 +427,11 @@ def main():
         print(f"newsletter archive skipped: {e}"); latest_issue = "/newsletters/"
     (ROOT / "src" / "static" / "index.html").write_text(build_home(articles, latest_issue), encoding="utf-8")
     print("homepage built; latest issue", latest_issue)
+    # stamp the stylesheet/script version into the hand-written static pages
+    for name in ("about.html", "contact.html", "privacy-policy.html", "terms-conditions.html", "quiz.html"):
+        sp = ROOT / "src" / "static" / name
+        if sp.exists():
+            sp.write_text(re.sub(r"(site\.css|home\.js|quiz\.js)\?v=[A-Za-z0-9]*", r"\1?v=" + CSS_VERSION, sp.read_text(encoding="utf-8")), encoding="utf-8")
 
 if __name__ == "__main__":
     main()

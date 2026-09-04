@@ -392,3 +392,38 @@ input:focus{outline:none;border-color:var(--navy)}
 .issue-list time{font-size:.9rem;color:var(--muted)}
 @media (max-width:960px){.home-hero-grid{grid-template-columns:1fr}.strip{grid-template-columns:repeat(3,1fr)}.card-grid,.principles{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.home-hero h1{font-size:2.1rem}.hero-form{flex-direction:column}.strip,.card-grid,.principles{grid-template-columns:1fr}.lane-head{flex-direction:column;align-items:flex-start}}
+
+/* ── Quiz landing page (paid traffic) ─────────────────────────────── */
+body.lp{background:#fff}
+.lp-header{background:#fff;box-shadow:0 1px 0 var(--line)}
+.lp-header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
+.lp-badge{font-size:.85rem;font-weight:700;color:var(--navy);background:var(--cream);border:1px solid #EAD9A6;border-radius:999px;padding:.4rem .9rem;white-space:nowrap}
+.lp-hero{padding:3rem 0 3.5rem;background:linear-gradient(180deg,var(--cream) 0%,#fff 100%)}
+.lp-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:start}
+.lp-copy h1{font-size:2.5rem;line-height:1.15;margin:.5rem 0 1rem}
+.lp-copy h1 em{font-style:italic;color:var(--orange)}
+.lp-copy .lead{font-size:1.12rem;color:#4B5563;margin-bottom:1.2rem}
+.lp-trust{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1.4rem;font-size:.95rem;font-weight:600;color:#4B5563}
+.lp-card{position:sticky;top:1.5rem;border:2px solid #EAD9A6}
+.lp-card-eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:.4rem}
+.lp-card h3{font-size:1.5rem}
+.lp-start{width:100%;justify-content:center;margin-top:1.2rem;font-size:1.15rem;padding:1rem 1.5rem}
+.lp-card .fineprint{margin-top:.8rem}
+.lp-card #quiz-email form{display:flex;flex-direction:column;gap:.8rem;margin-top:1rem}
+.lp-card #quiz-email input{font-family:var(--body);font-size:1.1rem;padding:.9rem 1rem;border:2px solid #E5E7EB;border-radius:var(--r)}
+.lp-what,.lp-how,.lp-faq{padding:3rem 0}
+.lp-how{background:var(--cream)}
+.lp-four{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
+.lp-item{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.4rem}
+.lp-item span{font-size:1.8rem}
+.lp-item h3{font-size:1.1rem;margin:.5rem 0 .3rem}
+.lp-item p{font-size:.95rem;color:#4B5563}
+.lp-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.lp-step{background:#fff;border-radius:1rem;padding:1.5rem;text-align:center}
+.lp-step .step-num{margin:0 auto .7rem}
+.lp-step h3{font-size:1.15rem}
+.lp-step p{font-size:.95rem;color:#4B5563}
+.lp-footer{background:var(--navy-dark);color:#9DB4E8;padding:2rem 0;font-size:.85rem;line-height:1.6}
+.lp-footer a{color:var(--amber);text-decoration:none}
+@media (max-width:960px){.lp-grid{grid-template-columns:1fr}.lp-card{position:static}.lp-four{grid-template-columns:1fr 1fr}.lp-copy h1{font-size:2rem}}
+@media (max-width:640px){.lp-four,.lp-steps{grid-template-columns:1fr}.lp-badge{display:none}}

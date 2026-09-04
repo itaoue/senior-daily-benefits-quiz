@@ -80,7 +80,7 @@ def build_home(articles, latest_issue_url):
                        + "".join(card_sm(m) for m in items) + "</div></div></section>\n")
     subs = {
         "{{SITE}}": SITE, "{{CSS_VERSION}}": CSS_VERSION, "{{OG_IMAGE}}": SITE + article_image(feature),
-        "{{HEADER}}": HEADER, "{{FOOTER}}": FOOTER.format(year=datetime.date.today().year),
+        "{{HEADER}}": HEADER, "{{FOOTER}}": FOOTER.format(year=datetime.date.today().year, css=CSS_VERSION),
         "{{FEATURE_SLUG}}": feature["slug"], "{{FEATURE_IMAGE}}": article_image(feature),
         "{{FEATURE_TOPIC}}": esc(feature.get("topic", "Benefits")), "{{FEATURE_TITLE}}": esc(feature["title"]),
         "{{FEATURE_SUMMARY}}": esc(feature["summary"]), "{{FEATURE_DATE}}": nice_date(feature["date"]),
