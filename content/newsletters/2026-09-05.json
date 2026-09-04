@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-05",
+  "subject": "Mark Cuban says your 401(k) is the problem",
+  "preheader": "He's half right. Plus: Ray Dalio on the one asset guaranteed to lose, and how to beat a denied Medicare claim.",
+  "greeting": "<strong>Good morning.</strong> A billionaire picked a fight with the health insurers this week and told you to check your retirement account. Another one told you your savings account is a mistake. Both are pointing at something real. Today's issue sorts the useful half of each from the half that would cost you money.",
+  "today": [
+    "Mark Cuban says your 401(k) is \"part of the health care problem.\" He's half right, and the wrong half is the half that can help you",
+    "Ray Dalio says cash is the one asset guaranteed to lose you money. He's right, and most retirees hold it in the worst possible place",
+    "A denied Medicare claim is not the last word. The deadlines and steps that get most denials overturned"
+  ],
+  "headline": {
+    "kicker": "Behind the headline",
+    "title": "Insurers count on you not appealing",
+    "stat": "82%",
+    "stat_label": "of Medicare Advantage prior-authorization denials that were appealed got overturned (KFF, 2023 data). Only about one in nine denials is ever appealed.",
+    "text": "A heart transplant patient lost coverage for her anti-rejection drug until a viral post reached Mark Cuban, whose pharmacy now supplies it for about $300. Most people don't get a billionaire. What they do get is an appeals process with deadlines that insurers hope you'll miss.",
+    "slug": "how-to-appeal-a-denied-medicare-claim"
+  },
+  "stories": [
+    {
+      "slug": "mark-cuban-vs-health-insurers-your-401k-and-your-claims",
+      "kicker": "Medicare",
+      "why": "If your 401(k) tracks the S&P 500 you own UnitedHealth, Cigna, CVS and Elevance whether you meant to or not. Selling the fund won't change a single denial. Using Cuban's pharmacy for generics and appealing every no is the fight you can actually win.",
+      "cta": "Pick The Right Fight"
+    },
+    {
+      "slug": "how-much-cash-should-a-retiree-hold",
+      "kicker": "Investing",
+      "why": "What $100 bought in 1970 costs about $850 today. A retiree still needs two to three years of spending in cash, but at 0.1% in a big-bank account it's losing every year. Treasury bills and high-yield accounts pay several percent with the same insurance.",
+      "cta": "Move Your Cash"
+    },
+    {
+      "slug": "how-to-appeal-a-denied-medicare-claim",
+      "kicker": "Must read",
+      "why": "Original Medicare gives you 120 days from the summary notice to ask for a redetermination. Medicare Advantage gives you 60 days, and the plan must answer within 30. A mismatched name or a wrong billing code is behind a large share of denials, and the provider's office can often fix it without an appeal.",
+      "cta": "Fight The Denial"
+    }
+  ],
+  "sponsors": ["aarp", "title_lock"],
+  "quiz": {
+    "q": "If your Medicare Advantage plan denies a service, how long do you have to file an appeal?",
+    "options": ["14 days", "30 days", "60 days", "120 days"],
+    "answer": "C) 60 days",
+    "explain": "Medicare Advantage members have 60 days from the denial notice to request a reconsideration, and the plan must respond within 30 days for a service you haven't received yet (72 hours if your doctor says waiting could harm you). Original Medicare is more generous: 120 days from the date on your Medicare Summary Notice."
+  },
+  "roundup": [
+    { "tag": "Retirement", "text": "Suze Orman says don't retire with a mortgage. Here's when she's right, when she isn't, and how to decide with your own numbers.", "url": "https://seniordailybenefits.com/articles/should-you-pay-off-the-mortgage-before-you-retire.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-05&utm_content=roundup1" },
+    { "tag": "Insurance", "text": "Investors will pay you cash for your life insurance policy. Here's what you give up, and the alternatives to check first.", "url": "https://seniordailybenefits.com/articles/selling-your-life-insurance-policy-life-settlements.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-05&utm_content=roundup2" },
+    { "tag": "Medicare", "text": "Medicare's $2,100 drug cap is still in place for 2026. What it covers, what it doesn't, and the payment plan most people haven't used.", "url": "https://seniordailybenefits.com/articles/medicare-part-d-2100-out-of-pocket-cap-2026.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-05&utm_content=roundup3" },
+    { "tag": "Family", "text": "Your adult child moved back in and isn't paying a share. How to set terms without wrecking the relationship or your retirement.", "url": "https://seniordailybenefits.com/articles/adult-child-moved-back-home-house-rules.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-05&utm_content=roundup4" }
+  ],
+  "signoff": "See you soon with another quick roundup of the money news that matters after 60.",
+  "byline": "Today's newsletter was written and edited by the Senior Daily Benefits team.",
+  "postal_address": "499 Evernia Street, Apt 303, West Palm Beach, FL 33401"
+}

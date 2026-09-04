@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-06",
+  "subject": "Trump's face on a gold coin. Sort of.",
+  "preheader": "The new $1 coin isn't gold, and the ads riding on it are the expensive way in. Plus: Elon Musk's two stocks, and Dave Ramsey's Social Security warning.",
+  "greeting": "<strong>Good morning</strong>, and happy weekend. Three names dominated the money headlines this week, and each one comes with a sales pitch attached that they didn't write. Today we separate what Trump, Musk and Ramsey actually said from what the people quoting them want you to buy.",
+  "today": [
+    "The Treasury's new $1 coin has the president's face and a gold finish. It contains no gold, and the gold-IRA ads riding on it are the expensive way in",
+    "Elon Musk says he doesn't buy stocks, then named two he'd buy. You probably already own both",
+    "Dave Ramsey warns nearly half of Americans are making one big Social Security mistake. Here are his three steps to fix it"
+  ],
+  "headline": {
+    "kicker": "Behind the headline",
+    "title": "The Trump dollar coin, by the numbers",
+    "stat": "$1",
+    "stat_label": "face value of the 250th-anniversary coin going on sale this fall. Metal value: a few cents. Gold content: none.",
+    "text": "Treasury Secretary Scott Bessent unveiled it in July as \"the enduring legacy of liberty.\" Legal scholars say a living person on U.S. money breaks an 1866 law, and a judge declined to rule. For your wallet the only fact that matters is that it's base metal with a gold-colored finish, and the precious-metals dealers know most people won't check.",
+    "slug": "commemorative-coins-gold-iras-what-to-check"
+  },
+  "stories": [
+    {
+      "slug": "commemorative-coins-gold-iras-what-to-check",
+      "kicker": "Scam alert",
+      "why": "State regulators have sued dealers for selling coins into retirement accounts at markups of 100% or more, almost entirely to people over 60. The coins were real. The price was the fraud. If you want gold, a low-cost gold ETF gets you the metal's price with no salesperson.",
+      "cta": "Check Before You Buy"
+    },
+    {
+      "slug": "elon-musk-two-stocks-retirees-should-not-copy",
+      "kicker": "Investing",
+      "why": "Alphabet and Nvidia are two of the largest companies in the S&P 500, so an index fund already holds a big position in both. Musk can watch a bet fall 50% and change nothing about his life. A retiree copying his picks takes his risk without his cushion.",
+      "cta": "See His 2 Picks"
+    },
+    {
+      "slug": "social-security-40-percent-replacement-what-to-do",
+      "kicker": "Must read",
+      "why": "Social Security replaces about 40% of the average worker's pre-retirement income. Ramsey's point is that nearly half of Americans are planning as if it replaces all of it. Three moves close the gap, and none of them requires a windfall.",
+      "cta": "Avoid The Mistake"
+    }
+  ],
+  "sponsors": ["adblock", "home_security"],
+  "quiz": {
+    "q": "In what year did the U.S. dollar stop being backed by gold?",
+    "options": ["1933", "1944", "1971", "1985"],
+    "answer": "C) 1971",
+    "explain": "President Nixon closed the gold window in August 1971, ending the dollar's convertibility to gold. Since then it has been backed by the government's promise and the world's willingness to use it. What $100 bought in 1971 costs about $815 today, which is the real argument for holding inflation-protected savings, not a gold-colored dollar coin."
+  },
+  "roundup": [
+    { "tag": "Social Security", "text": "Trump made two big moves that are speeding up Social Security's shortfall. The retirement fund now hits zero in late 2032, and checks shrink unless Congress acts.", "url": "https://seniordailybenefits.com/articles/social-security-trust-fund-2032-what-it-means.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-06&utm_content=roundup1" },
+    { "tag": "Retirement", "text": "Is $750,000 enough to retire on? Here's what it actually buys alongside Social Security.", "url": "https://seniordailybenefits.com/articles/is-750000-enough-to-retire-with-social-security.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-06&utm_content=roundup2" },
+    { "tag": "Scam alert", "text": "Two scams draining seniors' accounts right now: the \"jury duty warrant\" call and tap-to-pay theft.", "url": "https://seniordailybenefits.com/articles/jury-duty-scam-tap-to-pay-theft-seniors.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-06&utm_content=roundup3" },
+    { "tag": "Home", "text": "Thinking about downsizing? Seven costs that eat the money you thought you'd free up.", "url": "https://seniordailybenefits.com/articles/downsizing-in-retirement-hidden-costs.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-06&utm_content=roundup4" }
+  ],
+  "signoff": "Enjoy the weekend. See you Monday with another quick roundup of the money news that matters after 60.",
+  "byline": "Today's newsletter was written and edited by the Senior Daily Benefits team.",
+  "postal_address": "499 Evernia Street, Apt 303, West Palm Beach, FL 33401"
+}
