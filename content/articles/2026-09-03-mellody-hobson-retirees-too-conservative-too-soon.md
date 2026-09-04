@@ -4,6 +4,8 @@ slug: mellody-hobson-retirees-too-conservative-too-soon
 date: 2026-09-03
 topic: Retirement Planning
 summary: The co-CEO of Ariel Investments told Kiplinger that people "think they are winning by not losing" while their savings quietly fall behind inflation over a retirement that can last 30 years. Here's her argument, the two other mistakes she flags, and the slow, low-drama way she says to correct course.
+image: images/articles/mellody-hobson-retirees-too-conservative-too-soon.jpg
+image_credit: Photo: Joi / Wikimedia Commons, CC BY 2.0
 sponsor: fb_retirement_cuts, home_warranty
 sources:
   - Kiplinger, Mellody Hobson shares the No. 1 mistake derailing retirement savings (Donna Fuscaldo, September 2026)|https://www.kiplinger.com/retirement/retirement-planning/mellody-hobson-shares-the-1-mistake-derailing-retirement-savings

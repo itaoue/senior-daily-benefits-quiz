@@ -4,6 +4,8 @@ slug: dave-ramsey-social-security-keep-the-lights-on
 date: 2026-09-03
 topic: Social Security
 summary: The average retired worker got $2,086 a month from Social Security in July, about $25,000 a year. Ramsey's rule is that it should be an addition to your savings, not the plan. A Money Talks News piece this week checked his claim against the data and found it holds up, with one caveat about his famous 15% rule.
+image: images/articles/dave-ramsey-social-security-keep-the-lights-on.jpg
+image_credit: Photo: Gage Skidmore / Wikimedia Commons, CC BY-SA 2.0
 sponsor: fb_senior_benefits, debt_settlement
 sources:
   - Money Talks News, Sick of hearing Dave Ramsey insist that Social Security will barely keep the lights on? Maybe you should listen (September 2026)|https://www.moneytalksnews.com/sick-of-hearing-dave-ramsey-insist-that-social-security-will-barely-keep-the-lights-on-in-your-retirement-maybe-you-should-listen/
