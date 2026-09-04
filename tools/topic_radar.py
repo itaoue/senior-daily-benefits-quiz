@@ -46,6 +46,14 @@ SENIOR_KW = {
     "annuity": 2, "inflation": 1, "tax": 1, "irs": 2, "scam": 3, "fraud": 2, "part d": 3, "medicare advantage": 4,
     "reverse mortgage": 3, "downsiz": 2, "nursing home": 3, "long-term care": 3, "estate": 1, "inheritance": 2,
     "widow": 2, "survivor": 2, "trust fund": 3, "benefit": 1, "discount": 2, "aarp": 2,
+    # general-interest lanes the site also covers: investing, insurance, mortgages, taxes,
+    # household cash flow, retirement planning
+    "invest": 2, "stock": 1, "bond": 1, "index fund": 2, "dividend": 2, "portfolio": 2, "etf": 1,
+    "insurance": 2, "life insurance": 2, "homeowners": 2, "auto insurance": 2, "premium": 1,
+    "mortgage": 2, "refinance": 2, "home equity": 2, "heloc": 2, "property tax": 3,
+    "tax": 1, "deduction": 2, "tax bill": 2, "capital gains": 2, "withholding": 1,
+    "budget": 2, "cash flow": 2, "bills": 1, "savings account": 2, "high-yield": 2, "emergency fund": 2, "debt": 2,
+    "retirement plan": 2, "nest egg": 3, "withdraw": 2, "4% rule": 3, "claim": 1,
 }
 STOP = {"mortgage rates today", "best savings", "cd rates", "student loan", "credit card offer", "deal", "deals",
         "coupon", "black friday", "amazon", "walmart deal"}
