@@ -331,7 +331,7 @@ def page(title, desc, body, canonical, og=SITE + "/images/topics/general.svg"):
 <title>{html.escape(title)} | Senior Daily Benefits</title>
 <meta name="description" content="{html.escape(desc, quote=True)}">
 <meta property="og:title" content="{html.escape(title, quote=True)}"><meta property="og:description" content="{html.escape(desc, quote=True)}"><meta property="og:image" content="{og}">
-<link rel="canonical" href="{canonical}"><link rel="icon" href="/favicon.ico">
+<link rel="canonical" href="{canonical}"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 {FONTS}</head><body>
 {HEADER}
 {body}
