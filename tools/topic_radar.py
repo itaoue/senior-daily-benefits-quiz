@@ -29,7 +29,7 @@ RSS = {
     "moneytalksnews.com": "https://www.moneytalksnews.com/feed/",
     "kiplinger.com": "https://www.kiplinger.com/feeds/all",
 }
-def gnews(site, q="retirement OR Social Security OR Medicare OR retirees OR seniors"):
+def gnews(site, q="retirement OR Social Security OR Medicare OR retirees OR seniors OR economy OR Fed OR tariffs OR market"):
     return "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": f"site:{site} ({q})", "hl": "en-US", "gl": "US", "ceid": "US:en"})
 
 CELEBS = [
@@ -54,6 +54,12 @@ SENIOR_KW = {
     "tax": 1, "deduction": 2, "tax bill": 2, "capital gains": 2, "withholding": 1,
     "budget": 2, "cash flow": 2, "bills": 1, "savings account": 2, "high-yield": 2, "emergency fund": 2, "debt": 2,
     "retirement plan": 2, "nest egg": 3, "withdraw": 2, "4% rule": 3, "claim": 1,
+    # economy, markets and policy
+    "economy": 2, "recession": 3, "fed": 2, "federal reserve": 3, "interest rate": 3, "rate cut": 3, "rate hike": 3,
+    "tariff": 3, "national debt": 3, "deficit": 2, "treasury": 2, "yield": 1, "market": 1, "stock market": 2,
+    "s&p": 2, "dow": 1, "crash": 2, "bull market": 2, "bear market": 3, "gold": 2, "bitcoin": 1, "crypto": 1,
+    "congress": 2, "senate": 2, "white house": 2, "executive order": 3, "bill": 1, "law": 1, "policy": 2,
+    "jobs report": 2, "unemployment": 2, "cpi": 3, "gas prices": 2, "housing market": 2, "home prices": 2,
 }
 STOP = {"mortgage rates today", "best savings", "cd rates", "student loan", "credit card offer", "deal", "deals",
         "coupon", "black friday", "amazon", "walmart deal"}
