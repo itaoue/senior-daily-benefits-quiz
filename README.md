@@ -91,3 +91,18 @@ Output lands in `dist/newsletters/<date>.html`. Paste the HTML into BigMailer
 (replace `{{unsubscribe_link}}` / `{{web_version_link}}` with BigMailer's merge tags
 if they differ). Every link carries `utm_campaign=<date>` so you can see which
 story and sponsor slot drove clicks.
+
+## Everflow offer catalog
+
+`tools/everflow_offers.py` pulls the offers you can run from an Everflow network
+(affiliate API) into `content/offers/everflow.json` and prints what changed since
+the last pull (new offers, removed offers, payout or status changes). Set
+`EVERFLOW_API_KEY` (Affiliate Portal → Account → API) in `~/.zshrc`, then:
+
+    python tools/everflow_offers.py            # refresh the catalog
+    python tools/everflow_offers.py --all      # include offers that still need approval
+    python tools/everflow_offers.py --diff     # preview changes without overwriting
+    python tools/everflow_offers.py --csv      # also write dist/offers/everflow.csv
+
+Use the catalog's `tracking_url` and description when adding a block to `SPONSORS`
+in `tools/build_articles.py`.
