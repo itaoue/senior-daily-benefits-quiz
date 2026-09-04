@@ -6,7 +6,7 @@ topic: Medicare
 summary: A heart transplant survivor lost coverage for the drug keeping her alive until a viral post and Cuban's own pharmacy stepped in. Now he's telling Americans that if their retirement account holds a broad index fund, they own the insurers he blames, and are part of the problem. He isn't wrong about what's in the fund. Whether you act on it is your call. Either way, know what you own, and know how to beat a denial when it's yours.
 image: images/articles/mark-cuban-vs-health-insurers-your-401k-and-your-claims.jpg
 image_credit: Photo: Gage Skidmore / Wikimedia Commons, CC BY-SA 2.0
-sponsor: hearing, home_warranty
+sponsor: home_warranty
 sources:
   - Semafor, Mark Cuban's next target: insurance companies (April 28, 2026)|https://www.semafor.com/article/04/28/2026/mark-cubans-next-target-insurance-companies
   - Medicare.gov, How do I file an appeal?|https://www.medicare.gov/claims-appeals/how-do-i-file-an-appeal

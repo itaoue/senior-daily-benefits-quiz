@@ -5,7 +5,7 @@ date: 2026-08-24
 topic: Medicare & Health
 summary: Insurers have been dropping counties and whole states. If yours is one of them, you get a special window, and a rare chance to buy a Medigap policy no matter your health.
 image: images/articles/medicare-advantage-plan-leaving-county-what-to-do.jpg
-sponsor: hearing, home_security
+sponsor: home_warranty, home_security
 sources:
   - Medicare.gov, Special Enrollment Periods|https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods
   - Medicare.gov, Guaranteed issue rights for Medigap|https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/guaranteed-issue

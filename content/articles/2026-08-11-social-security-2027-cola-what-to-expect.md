@@ -5,7 +5,7 @@ date: 2026-08-11
 topic: Social Security
 summary: Current estimates put next year's cost-of-living adjustment around 3.6%, well above this year's 2.8%. Before you count the money, know how the number is calculated, when it becomes official, and why the Medicare Part B premium decides how much of it you actually see.
 image: images/articles/social-security-2027-cola-what-to-expect.jpg
-sponsor: cashback_card, auto_insurance
+sponsor: fb_zero_apr_cards, auto_insurance
 sources:
   - Social Security Administration, Cost-of-Living Adjustment (COLA) information|https://www.ssa.gov/cola/
   - Social Security Administration, 2026 COLA fact sheet|https://www.ssa.gov/news/en/cola/factsheets/2026.html

@@ -5,7 +5,7 @@ date: 2026-08-06
 topic: Social Security
 summary: Nearly half of people who take Social Security have worked while collecting it at some point. If you're under full retirement age, wages above a set amount reduce your check for now. Here are the 2026 numbers, what counts as earnings, and what happens to the withheld money later.
 image: images/articles/working-while-collecting-social-security-2026-earnings-test.jpg
-sponsor: balance_transfer, aarp
+sponsor: fb_zero_apr_cards, home_warranty
 sources:
   - Social Security Administration, Receiving benefits while working|https://www.ssa.gov/benefits/retirement/planner/whileworking.html
   - Social Security Administration, How Work Affects Your Benefits (Publication 05-10069)|https://www.ssa.gov/pubs/EN-05-10069.pdf

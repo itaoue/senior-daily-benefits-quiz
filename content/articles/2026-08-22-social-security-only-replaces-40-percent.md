@@ -6,7 +6,7 @@ topic: Social Security
 summary: The mistake isn't how much you're saving, Ramsey says. It's what you're expecting Social Security to cover once the paychecks stop. The program replaces about 40% of the average worker's income, and surveys show close to half of Americans are planning as if it's most of the plan. None of his fixes require a windfall. They require a different starting assumption.
 image: images/articles/social-security-40-percent-replacement-what-to-do.jpg
 image_credit: Photo: Gage Skidmore / Wikimedia Commons, CC BY-SA 2.0
-sponsor: heloc, aarp
+sponsor: heloc, fb_senior_benefits
 sources:
   - Social Security Administration, Understanding the benefits (replacement rates)|https://www.ssa.gov/pubs/EN-05-10024.pdf
   - Social Security Administration, my Social Security account|https://www.ssa.gov/myaccount/

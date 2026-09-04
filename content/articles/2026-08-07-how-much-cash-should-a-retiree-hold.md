@@ -6,7 +6,7 @@ topic: Retirement Planning
 summary: The billionaire investor isn't warning about a risky stock. He's pointing at the savings account almost every retiree has, and the numbers back him up: $100 in 1970 buys what about $12 did then. Berkshire Hathaway's record cash pile isn't a counterargument, and copying it would be a mistake. Here's how much cash you need, and how to stop it from losing.
 image: images/articles/how-much-cash-should-a-retiree-hold.jpg
 image_credit: Photo: Web Summit / Wikimedia Commons, CC BY 2.0
-sponsor: balance_transfer, home_warranty
+sponsor: fb_zero_apr_cards, home_warranty
 sources:
   - Federal Reserve Bank of Minneapolis, inflation calculator|https://www.minneapolisfed.org/about-us/monetary-policy/inflation-calculator
   - Berkshire Hathaway, quarterly reports|https://www.berkshirehathaway.com/reports.html

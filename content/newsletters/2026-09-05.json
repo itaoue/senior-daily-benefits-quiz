@@ -36,18 +36,42 @@
       "cta": "Fight The Denial"
     }
   ],
-  "sponsors": ["aarp", "title_lock"],
+  "sponsors": [
+    "fb_senior_benefits",
+    "title_lock"
+  ],
   "quiz": {
     "q": "If your Medicare Advantage plan denies a service, how long do you have to file an appeal?",
-    "options": ["14 days", "30 days", "60 days", "120 days"],
+    "options": [
+      "14 days",
+      "30 days",
+      "60 days",
+      "120 days"
+    ],
     "answer": "C) 60 days",
     "explain": "Medicare Advantage members have 60 days from the denial notice to request a reconsideration, and the plan must respond within 30 days for a service you haven't received yet (72 hours if your doctor says waiting could harm you). Original Medicare is more generous: 120 days from the date on your Medicare Summary Notice."
   },
   "roundup": [
-    { "tag": "Retirement", "text": "Suze Orman says don't retire with a mortgage. Here's when she's right, when she isn't, and how to decide with your own numbers.", "url": "https://seniordailybenefits.com/articles/should-you-pay-off-the-mortgage-before-you-retire.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-05&utm_content=roundup1" },
-    { "tag": "Insurance", "text": "Investors will pay you cash for your life insurance policy. Here's what you give up, and the alternatives to check first.", "url": "https://seniordailybenefits.com/articles/selling-your-life-insurance-policy-life-settlements.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-05&utm_content=roundup2" },
-    { "tag": "Medicare", "text": "Medicare's $2,100 drug cap is still in place for 2026. What it covers, what it doesn't, and the payment plan most people haven't used.", "url": "https://seniordailybenefits.com/articles/medicare-part-d-2100-out-of-pocket-cap-2026.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-05&utm_content=roundup3" },
-    { "tag": "Family", "text": "Your adult child moved back in and isn't paying a share. How to set terms without wrecking the relationship or your retirement.", "url": "https://seniordailybenefits.com/articles/adult-child-moved-back-home-house-rules.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-05&utm_content=roundup4" }
+    {
+      "tag": "Retirement",
+      "text": "Suze Orman says don't retire with a mortgage. Here's when she's right, when she isn't, and how to decide with your own numbers.",
+      "url": "https://seniordailybenefits.com/articles/should-you-pay-off-the-mortgage-before-you-retire.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-05&utm_content=roundup1"
+    },
+    {
+      "tag": "Insurance",
+      "text": "Investors will pay you cash for your life insurance policy. Here's what you give up, and the alternatives to check first.",
+      "url": "https://seniordailybenefits.com/articles/selling-your-life-insurance-policy-life-settlements.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-05&utm_content=roundup2"
+    },
+    {
+      "tag": "Medicare",
+      "text": "Medicare's $2,100 drug cap is still in place for 2026. What it covers, what it doesn't, and the payment plan most people haven't used.",
+      "url": "https://seniordailybenefits.com/articles/medicare-part-d-2100-out-of-pocket-cap-2026.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-05&utm_content=roundup3"
+    },
+    {
+      "tag": "Family",
+      "text": "Your adult child moved back in and isn't paying a share. How to set terms without wrecking the relationship or your retirement.",
+      "url": "https://seniordailybenefits.com/articles/adult-child-moved-back-home-house-rules.html?utm_source=newsletter&utm_medium=email&utm_campaign=2026-09-05&utm_content=roundup4"
+    }
   ],
   "signoff": "See you soon with another quick roundup of the money news that matters after 60.",
   "byline": "Today's newsletter was written and edited by the Senior Daily Benefits team.",

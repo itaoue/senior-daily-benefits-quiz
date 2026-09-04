@@ -6,7 +6,7 @@ topic: Retirement Planning
 summary: The world's richest man builds companies instead of picking stocks. Asked which two he'd buy anyway, he named Google's parent and Nvidia, because he thinks AI and robotics will soon produce "almost all the value" in the economy. It's a serious thesis from someone in a position to know. It's also a bet, and a retiree's job is to size bets so a wrong one doesn't change your life.
 image: images/articles/elon-musk-two-stocks-retirees-should-not-copy.jpg
 image_credit: Photo: Wcamp9 / Wikimedia Commons, CC BY 4.0
-sponsor: balance_transfer, home_security
+sponsor: fb_zero_apr_cards, home_security
 sources:
   - U.S. Securities and Exchange Commission, Investor.gov, Diversification|https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/diversification
   - FINRA, Concentration risk|https://www.finra.org/investors/insights/concentration-risk

@@ -32,7 +32,7 @@ Email-client rules: table layout, inline styles, web-safe font stack, no externa
 """
 import sys, json, pathlib, html, re, datetime
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
-from build_articles import SPONSORS, parse, SITE, CONTENT, nice_date, article_image
+from build_articles import SPONSORS, parse, SITE, CONTENT, nice_date, article_image, offer_url
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "dist" / "newsletters"
@@ -50,11 +50,12 @@ def esc(s): return html.escape(s, quote=False)
 
 # Display names for the "In partnership with" kicker (SPONSORS entries only carry copy + URL).
 PARTNER_NAMES = {
-    "aarp": "AARP", "tax_relief": "TRA Tax Relief", "hearing": "our hearing partner", "walkin_shower": "HomeBuddy",
+    "tax_relief": "TRA Tax Relief", "walkin_shower": "HomeBuddy",
+    "fb_retirement_cuts": "FinanceBuzz", "fb_budget_cuts": "FinanceBuzz", "fb_senior_benefits": "FinanceBuzz", "fb_zero_apr_cards": "FinanceBuzz",
     "home_warranty": "Home Warranty", "title_lock": "Home Title Lock", "home_security": "Guardlane",
     "timeshare_exit": "Stonegate", "pillow": "Derila", "insoles": "Akusoli", "skincare": "Beverly Hills MD",
     "detox_tea": "Lulutox", "adblock": "Total Adblock", "auto_insurance": "Insurvo",
-    "balance_transfer": "our card partner", "cashback_card": "our card partner", "debt_settlement": "National Debt Relief",
+    "debt_settlement": "National Debt Relief",
     "heloc": "Quicken Loans", "windows": "our window partner", "roof": "our roofing partner",
     "gutters": "our gutter partner", "solar_exit": "our solar partner",
 }
@@ -106,9 +107,9 @@ def sponsor_block(key):
     s = SPONSORS[key]
     return "".join([
         kicker(f"In partnership with {partner_name(key)}"),
-        headline(s["title"], s["url"]),
+        headline(s["title"], offer_url(key, "sdbnewsletter")),
         p(esc(s["body"])),
-        button(s["cta"], s["url"]),
+        button(s["cta"], offer_url(key, "sdbnewsletter")),
         p("Sponsored. Senior Daily Benefits may earn a commission if you sign up. That never changes what we recommend.", 12, GRAY, margin="8px 0 0"),
     ])
 
@@ -125,7 +126,7 @@ def build(issue):
     # masthead ---------------------------------------------------------------
     tw = sponsors[0] if sponsors else None   # masthead partner == first in-body partner block
     together = (f'<p style="margin:14px 0 0;font-family:{SANS};font-size:15px;color:{GRAY}"><em>together with</em> '
-                f'<a href="{SPONSORS[tw]["url"]}" target="_blank" style="color:{LINK};font-weight:700;text-decoration:none">{esc(partner_name(tw))}</a></p>') if tw else ""
+                f'<a href="{offer_url(tw, "sdbnewsletter")}" target="_blank" style="color:{LINK};font-weight:700;text-decoration:none">{esc(partner_name(tw))}</a></p>') if tw else ""
     parts.append(f'''<p style="margin:0 0 22px;font-family:{SANS};font-size:12px"><a href="{WEBVIEW}" style="color:{GRAY};text-decoration:underline">Read online</a></p>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:0 0 26px">
 <span style="font-family:{SERIF};font-size:32px;font-weight:bold;color:{NAVY};letter-spacing:-.5px">Senior Daily</span> <span style="font-family:{SERIF};font-size:32px;font-style:italic;color:{AMBER}">Benefits</span>

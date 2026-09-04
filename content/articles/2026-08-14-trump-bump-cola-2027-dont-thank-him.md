@@ -6,7 +6,7 @@ topic: Social Security
 summary: Next year's cost-of-living adjustment is tracking around 3.6%, the largest since 2023, and it's already been nicknamed after the president. But a COLA is inflation's receipt, not a raise. Retirees get an automatic adjustment built into their checks. The rest of your money, the savings and the CDs and the cash, gets no such protection from the same prices. Here's what the bump is worth and how to shield the rest.
 image: images/articles/trump-bump-cola-2027-dont-thank-him.jpg
 image_credit: Photo: The White House / Wikimedia Commons, public domain
-sponsor: cashback_card, windows
+sponsor: fb_zero_apr_cards, windows
 sources:
   - Social Security Administration, Cost-of-living adjustment information|https://www.ssa.gov/cola/
   - Bureau of Labor Statistics, Consumer Price Index, July 2026|https://www.bls.gov/news.release/pdf/cpi.pdf

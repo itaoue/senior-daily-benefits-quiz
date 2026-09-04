@@ -10,26 +10,62 @@
     "slug": "social-security-overpayment-letter-what-to-do"
   },
   "stories": [
-    { "slug": "social-security-overpayment-letter-what-to-do", "section": "Social Security",
-      "why": "Three separate forms can lower the withholding, waive the debt entirely, or dispute the amount, and they all work better if you file before the first reduced check goes out." },
-    { "slug": "medicare-open-enrollment-2026-checklist", "section": "Medicare",
-      "why": "Plans reprice their drug lists every January. Fifteen minutes on the Medicare Plan Finder is the highest-value chore of the fall for anyone on Part D." },
-    { "slug": "obituary-scams-grandparent-scams-seniors", "section": "Scam alert",
-      "why": "Recently widowed people are the most targeted group in the country, and voice cloning has made the \"grandchild in trouble\" call frighteningly convincing. Three habits stop nearly all of it." },
-    { "slug": "senior-discounts-you-have-to-ask-for", "section": "Must read",
-      "why": "Readers who start asking \"Do you offer a senior discount?\" at every register report $30 to $60 a month in savings within weeks." }
+    {
+      "slug": "social-security-overpayment-letter-what-to-do",
+      "section": "Social Security",
+      "why": "Three separate forms can lower the withholding, waive the debt entirely, or dispute the amount, and they all work better if you file before the first reduced check goes out."
+    },
+    {
+      "slug": "medicare-open-enrollment-2026-checklist",
+      "section": "Medicare",
+      "why": "Plans reprice their drug lists every January. Fifteen minutes on the Medicare Plan Finder is the highest-value chore of the fall for anyone on Part D."
+    },
+    {
+      "slug": "obituary-scams-grandparent-scams-seniors",
+      "section": "Scam alert",
+      "why": "Recently widowed people are the most targeted group in the country, and voice cloning has made the \"grandchild in trouble\" call frighteningly convincing. Three habits stop nearly all of it."
+    },
+    {
+      "slug": "senior-discounts-you-have-to-ask-for",
+      "section": "Must read",
+      "why": "Readers who start asking \"Do you offer a senior discount?\" at every register report $30 to $60 a month in savings within weeks."
+    }
   ],
-  "sponsors": ["tax_relief", "hearing", "adblock", "aarp"],
+  "sponsors": [
+    "tax_relief",
+    "fb_retirement_cuts"
+  ],
   "quiz": {
     "q": "Under current rules, at what age do required minimum distributions start for someone born in 1962?",
-    "options": ["70½", "72", "73", "75"],
+    "options": [
+      "70½",
+      "72",
+      "73",
+      "75"
+    ],
     "answer": "D) 75",
     "explain": "The SECURE 2.0 Act moves the RMD starting age to 75 for anyone born in 1960 or later, beginning in 2033. People born 1951–1959 start at 73."
   },
   "roundup": [
-    { "tag": "Taxes", "text": "The new $6,000 senior deduction applies to 2025 returns filed this coming spring, and it phases out above $75,000 of income for single filers.", "url": "https://seniordailybenefits.com/articles/three-retirement-rules-changed-2026.html" },
-    { "tag": "Medicare", "text": "Open Enrollment runs October 15 through December 7. Your Annual Notice of Change should arrive by September 30.", "url": "https://seniordailybenefits.com/articles/medicare-open-enrollment-2026-checklist.html" },
-    { "tag": "Travel", "text": "The lifetime National Parks Senior Pass is still $80 for U.S. citizens 62 and older and covers everyone in your vehicle.", "url": "https://seniordailybenefits.com/articles/senior-discounts-you-have-to-ask-for.html" },
-    { "tag": "Phone", "text": "Lifeline takes up to $9.25 a month off phone or internet for anyone on Medicaid, SNAP, or SSI. Most eligible seniors have never applied.", "url": "https://seniordailybenefits.com/articles/senior-discounts-you-have-to-ask-for.html" }
+    {
+      "tag": "Taxes",
+      "text": "The new $6,000 senior deduction applies to 2025 returns filed this coming spring, and it phases out above $75,000 of income for single filers.",
+      "url": "https://seniordailybenefits.com/articles/three-retirement-rules-changed-2026.html"
+    },
+    {
+      "tag": "Medicare",
+      "text": "Open Enrollment runs October 15 through December 7. Your Annual Notice of Change should arrive by September 30.",
+      "url": "https://seniordailybenefits.com/articles/medicare-open-enrollment-2026-checklist.html"
+    },
+    {
+      "tag": "Travel",
+      "text": "The lifetime National Parks Senior Pass is still $80 for U.S. citizens 62 and older and covers everyone in your vehicle.",
+      "url": "https://seniordailybenefits.com/articles/senior-discounts-you-have-to-ask-for.html"
+    },
+    {
+      "tag": "Phone",
+      "text": "Lifeline takes up to $9.25 a month off phone or internet for anyone on Medicaid, SNAP, or SSI. Most eligible seniors have never applied.",
+      "url": "https://seniordailybenefits.com/articles/senior-discounts-you-have-to-ask-for.html"
+    }
   ]
 }

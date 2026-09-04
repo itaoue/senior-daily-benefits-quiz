@@ -53,14 +53,6 @@ SPONSORS = {
         "cta": "Check your options",
         "url": "https://www.ultiy.com/TQ39S5C8/XKBJT9PL/",
     },
-    "balance_transfer": {
-        "kicker": "From our partner",
-        "title": "Paying interest on a credit card balance?",
-        "body": "Some cards offer 0% interest on transferred balances into 2027 with no annual fee. "
-                "Moving a balance can stop interest while you pay it down.",
-        "cta": "See balance transfer cards",
-        "url": "https://www.ultiy.com/TQ39S5C8/XLBX6LNW/",
-    },
     "debt_settlement": {
         "kicker": "From our partner",
         "title": "More than $24,000 in credit card debt?",
@@ -68,14 +60,6 @@ SPONSORS = {
                 "They are not right for everyone, so start with a free, no-obligation review.",
         "cta": "Get a free review",
         "url": "https://www.ultiy.com/TQ39S5C8/XL22LGZ7/",
-    },
-    "cashback_card": {
-        "kicker": "From our partner",
-        "title": "A card that pays you back on everyday spending",
-        "body": "Cards with 0% introductory interest and up to 5% cash back on common categories "
-                "like groceries and gas. Compare current offers side by side.",
-        "cta": "Compare cards",
-        "url": "https://www.ultiy.com/TQ39S5C8/XKGF674Z/",
     },
     "heloc": {
         "kicker": "From our partner",
@@ -157,14 +141,6 @@ SPONSORS = {
         "url": "https://www.fnule.com/TQ39S5C8/XL9PTF2B/",
     },
     # --- health & everyday (no medical claims) ----------------------------------
-    "hearing": {
-        "kicker": "From our partner",
-        "title": "Hearing devices that cost far less than you'd expect",
-        "body": "Over-the-counter hearing devices for adults with mild to moderate hearing loss, "
-                "currently $100 off.",
-        "cta": "See the offer",
-        "url": "https://www.fugyn.com/TQ39S5C8/XLHKPMTZ/",
-    },
     "pillow": {
         "kicker": "From our partner",
         "title": "An ergonomic pillow, 70% off",
@@ -203,14 +179,6 @@ SPONSORS = {
         "cta": "Compare rates",
         "url": "https://www.fugyn.com/TQ39S5C8/XL5LL3XX/",
     },
-    "aarp": {
-        "kicker": "From our partner",
-        "title": "AARP membership, $15 for the first year",
-        "body": "Discounts on hotels, restaurants, prescriptions, and car rentals, plus access to "
-                "AARP's benefits guides. Open to anyone 50 and over.",
-        "cta": "Join AARP",
-        "url": "https://www.fugyn.com/TQ39S5C8/XH4DSCJT/",
-    },
     "adblock": {
         "kicker": "From our partner",
         "title": "Stop pop-ups and fake 'your computer is infected' ads",
@@ -218,6 +186,34 @@ SPONSORS = {
                 "from $2.42 a month.",
         "cta": "See the offer",
         "url": "https://www.zegea.com/TQ39S5C8/XLJ51CZM/",
+    },
+    "fb_retirement_cuts": {
+        "kicker": "From our partner",
+        "title": "22 expenses retirees say they cut first",
+        "body": "FinanceBuzz's list of everyday costs people living on retirement income review first, from subscriptions to insurance add-ons. See which ones apply to you.",
+        "cta": "See the list",
+        "url": "https://www.yrxtrk.com/aff_c?offer_id=25035&aff_id=2259&aff_sub=x",
+    },
+    "fb_budget_cuts": {
+        "kicker": "From our partner",
+        "title": "19 things to cut when money gets tight",
+        "body": "A practical checklist of household costs to look at when the budget stops stretching. Some take five minutes to change.",
+        "cta": "See the list",
+        "url": "https://www.yrxtrk.com/aff_c?offer_id=24637&aff_id=2259&aff_sub=x",
+    },
+    "fb_senior_benefits": {
+        "kicker": "From our partner",
+        "title": "16 programs people born 1941 to 1969 may qualify for",
+        "body": "A roundup of discounts and benefit programs available to older Americans that many never claim. Eligibility depends on your age, income and state.",
+        "cta": "See what applies",
+        "url": "https://www.yrxtrk.com/aff_c?offer_id=22607&aff_id=2259&aff_sub=x",
+    },
+    "fb_zero_apr_cards": {
+        "kicker": "From our partner",
+        "title": "Carrying a card balance? Some cards offer 0% intro APR into 2028",
+        "body": "A comparison of cards with 0% introductory interest on balance transfers and purchases. Terms and approval vary, so check the transfer fee before you move a balance.",
+        "cta": "Compare cards",
+        "url": "https://www.yrxtrk.com/aff_c?offer_id=20693&aff_id=2259&aff_sub=x",
     },
 }
 
@@ -316,11 +312,16 @@ QUIZ_CTA = """<div class="quiz-cta">
   <small>100% free · No credit card · 2 minutes</small>
 </div>"""
 
+def offer_url(key, context="sdbarticles"):
+    """Tracking URL for an offer. yrxtrk links carry aff_sub=x; x becomes sdbarticles on article
+    pages and sdbnewsletter in emails (build_newsletter.py passes the context)."""
+    return SPONSORS[key]["url"].replace("aff_sub=x", "aff_sub=" + context)
+
 def sponsor_block(name):
     s = SPONSORS.get(name)
     if not s: return ""
     return (f'<div class="partner"><div class="kicker">{s["kicker"]}</div><h3>{s["title"]}</h3>'
-            f'<p>{s["body"]}</p><a class="btn btn-orange btn-lg" href="{s["url"]}" rel="sponsored nofollow noopener" target="_blank">{s["cta"]}</a></div>')
+            f'<p>{s["body"]}</p><a class="btn btn-orange btn-lg" href="{offer_url(name)}" rel="sponsored nofollow noopener" target="_blank">{s["cta"]}</a></div>')
 
 def page(title, desc, body, canonical, og=SITE + "/images/topics/general.svg"):
     return f"""<!DOCTYPE html>

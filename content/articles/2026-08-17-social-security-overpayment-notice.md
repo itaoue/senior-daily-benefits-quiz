@@ -5,7 +5,7 @@ date: 2026-08-17
 topic: Social Security
 summary: The agency can now hold back 50% of your benefit to recover money it says it overpaid you, even when the mistake was theirs. You have options, but the clock starts the day the letter arrives.
 image: images/articles/social-security-overpayment-letter-what-to-do.jpg
-sponsor: tax_relief, aarp
+sponsor: tax_relief, fb_senior_benefits
 sources:
   - Social Security Administration, Overpayments|https://www.ssa.gov/manage-benefits/overpayments
   - Social Security Administration, Form SSA-632 Request for Waiver|https://www.ssa.gov/forms/ssa-632.html

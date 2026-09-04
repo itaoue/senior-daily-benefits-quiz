@@ -5,7 +5,7 @@ date: 2026-08-31
 topic: Taxes & Retirement Accounts
 summary: Starting with the return you file next spring, most people 65 and older get an extra $6,000 deduction, $12,000 for a couple. Here's who qualifies, how the phase-out works, and one move to make before December 31.
 image: images/articles/6000-senior-tax-deduction-explained.jpg
-sponsor: tax_relief, aarp
+sponsor: tax_relief, fb_senior_benefits
 sources:
   - IRS, One Big Beautiful Bill Act, tax deductions for working Americans and seniors|https://www.irs.gov/newsroom/one-big-beautiful-bill-act-tax-deductions-for-working-americans-and-seniors
   - IRS, Publication 554, Tax guide for seniors|https://www.irs.gov/publications/p554

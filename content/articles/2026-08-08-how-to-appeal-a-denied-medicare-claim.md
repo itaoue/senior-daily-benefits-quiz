@@ -5,7 +5,7 @@ date: 2026-08-08
 topic: Medicare
 summary: One woman's claims were denied because her long name didn't fit Medicare's records. Paperwork glitches like that, along with coding errors and coverage disputes, get overturned on appeal all the time. Here are the deadlines and the steps for Original Medicare and Medicare Advantage.
 image: images/articles/how-to-appeal-a-denied-medicare-claim.jpg
-sponsor: hearing, pillow
+sponsor: home_warranty, pillow
 sources:
   - Medicare.gov, How do I file an appeal?|https://www.medicare.gov/claims-appeals/how-do-i-file-an-appeal
   - Medicare.gov, Appeals if you have a Medicare health plan|https://www.medicare.gov/claims-appeals/file-an-appeal/if-you-have-a-medicare-health-plan
