@@ -254,7 +254,11 @@ def md_to_html(md):
         nonlocal para, ul, quote
         if para:  out.append("<p>" + inline(" ".join(para)) + "</p>"); para = []
         if ul:    out.append("<ul>" + "".join(f"<li>{inline(i)}</li>" for i in ul) + "</ul>"); ul = []
-        if quote: out.append('<aside class="callout"><p>' + inline(" ".join(quote)) + "</p></aside>"); quote = []
+        if quote:
+            # Blockquotes were written as "> **What to do:** ..." callouts. Render them as ordinary
+            # paragraphs without the label so the advice reads as part of the prose, not a template.
+            text = re.sub(r"^\*\*What to do[^*]*:\*\*\s*", "", " ".join(quote))
+            out.append("<p>" + inline(text) + "</p>"); quote = []
     for line in md.splitlines():
         s = line.rstrip()
         if not s.strip():
