@@ -32,7 +32,7 @@ Email-client rules: table layout, inline styles, web-safe font stack, no externa
 """
 import sys, json, pathlib, html, re, datetime
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
-from build_articles import SPONSORS, parse, SITE, CONTENT, nice_date, article_image, offer_url
+from build_articles import SPONSORS, parse, SITE, CONTENT, nice_date, article_image, offer_url, partner_name
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "dist" / "newsletters"
@@ -48,18 +48,6 @@ POSTAL_ADDRESS = "499 Evernia Street, Apt 303, West Palm Beach, FL 33401"
 
 def esc(s): return html.escape(s, quote=False)
 
-# Display names for the "In partnership with" kicker (SPONSORS entries only carry copy + URL).
-PARTNER_NAMES = {
-    "tax_relief": "TRA Tax Relief", "walkin_shower": "HomeBuddy",
-    "fb_retirement_cuts": "FinanceBuzz", "fb_budget_cuts": "FinanceBuzz", "fb_senior_benefits": "FinanceBuzz", "fb_zero_apr_cards": "FinanceBuzz",
-    "home_warranty": "Home Warranty", "title_lock": "Home Title Lock", "home_security": "Guardlane",
-    "timeshare_exit": "Stonegate", "pillow": "Derila", "insoles": "Akusoli", "skincare": "Beverly Hills MD",
-    "detox_tea": "Lulutox", "adblock": "Total Adblock", "auto_insurance": "Insurvo",
-    "debt_settlement": "National Debt Relief",
-    "heloc": "Quicken Loans", "windows": "our window partner", "roof": "our roofing partner",
-    "gutters": "our gutter partner", "solar_exit": "our solar partner",
-}
-def partner_name(key): return PARTNER_NAMES.get(key, "our partner")
 
 
 # ---------------------------------------------------------------- atoms

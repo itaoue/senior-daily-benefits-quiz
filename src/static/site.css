@@ -427,3 +427,37 @@ body.lp{background:#fff}
 .lp-footer a{color:var(--amber);text-decoration:none}
 @media (max-width:960px){.lp-grid{grid-template-columns:1fr}.lp-card{position:static}.lp-four{grid-template-columns:1fr 1fr}.lp-copy h1{font-size:2rem}}
 @media (max-width:640px){.lp-four,.lp-steps{grid-template-columns:1fr}.lp-badge{display:none}}
+
+/* ── Article layout (FinanceBuzz-style modules) ───────────────────── */
+.byline{display:flex;align-items:center;gap:.6rem}
+.byline-avatar{width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;font-size:.7rem;font-weight:800;display:inline-flex;align-items:center;justify-content:center}
+.sp-wrap{margin:2rem 0 2.2rem}
+.sp-box{background:#F5F6F8;border:1px solid #D1D5DB;border-radius:.5rem;padding:1.8rem 2rem}
+.sp-box .sp-headline{font-size:1.75rem;font-weight:800;line-height:1.2;color:var(--navy-dark);margin:0 0 1rem}
+.sp-box p{font-size:1.1rem;line-height:1.6;margin:0 0 1rem;color:var(--ink)}
+.sp-box p:last-child{margin-bottom:0}
+.sp-box a{color:#3139E3;text-decoration:underline}
+.sp-box .sp-cta{font-weight:600}
+.sp-label{text-align:right;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#9CA3AF;margin-top:.5rem}
+.sp-inline{margin:1.6rem 0 2rem;font-size:1.1rem}
+.sp-inline a{color:#3139E3;text-decoration:underline}
+.sp-inline a b{color:#3139E3}
+.sp-tag{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#9CA3AF;margin-left:.4rem}
+.more-from{margin:2.2rem 0 1rem;font-size:1.1rem}
+.more-from ul{margin:.4rem 0 0 1.3rem}
+.more-from li{margin-bottom:.45rem}
+.more-from a{color:#3139E3;text-decoration:underline}
+.subscribe-box{background:#E4ECF5;border-radius:1rem;padding:2.2rem 1.8rem;margin:2.4rem 0}
+.sb-eyebrow{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#3139E3;margin:0 0 .4rem}
+.subscribe-box h4{font-size:1.55rem;margin:0 0 .5rem;color:var(--navy-dark)}
+.sb-desc{font-size:1.1rem;color:var(--ink);margin:0}
+.sb-form{display:flex;gap:.7rem;margin-top:1.6rem}
+.sb-form input{flex:1;font-family:var(--body);font-size:1.05rem;padding:.95rem 1rem;border:1px solid #CBD5E1;border-radius:.4rem;background:#fff;min-width:0}
+.sb-form .btn{white-space:nowrap}
+.sb-fine{font-size:.85rem;color:#6B7280;text-align:center;margin:.9rem 0 0}
+.sb-fine a{color:#6B7280}
+.also-like{margin:2.6rem 0 1rem}
+.also-like h2{font-size:1.5rem;margin-bottom:1rem}
+.also-like .card-grid{grid-template-columns:repeat(3,1fr)}
+.also-like .card-sm h3{font-size:1rem}
+@media (max-width:760px){.also-like .card-grid{grid-template-columns:1fr}.sb-form{flex-direction:column}.sp-box{padding:1.4rem 1.2rem}.sp-box .sp-headline{font-size:1.4rem}}

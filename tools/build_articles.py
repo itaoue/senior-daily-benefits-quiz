@@ -314,16 +314,77 @@ QUIZ_CTA = """<div class="quiz-cta">
   <small>100% free · No credit card · 2 minutes</small>
 </div>"""
 
+# Display names for partner offers (used in sponsor boxes and the newsletter).
+PARTNER_NAMES = {
+    "tax_relief": "TRA Tax Relief", "walkin_shower": "HomeBuddy", "home_warranty": "Home Warranty",
+    "title_lock": "Home Title Lock", "home_security": "Guardlane", "timeshare_exit": "Stonegate", "pillow": "Derila",
+    "insoles": "Akusoli", "skincare": "Beverly Hills MD", "detox_tea": "Lulutox", "adblock": "Total Adblock",
+    "auto_insurance": "Insurvo", "debt_settlement": "National Debt Relief", "heloc": "Quicken Loans",
+    "fb_retirement_cuts": "FinanceBuzz", "fb_budget_cuts": "FinanceBuzz", "fb_senior_benefits": "FinanceBuzz", "fb_zero_apr_cards": "FinanceBuzz",
+    "windows": "our window partner", "roof": "our roofing partner", "gutters": "our gutter partner", "solar_exit": "our solar partner",
+}
+def partner_name(key): return PARTNER_NAMES.get(key, "our partner")
+
 def offer_url(key, context="sdbarticles"):
     """Tracking URL for an offer. yrxtrk links carry aff_sub=x; x becomes sdbarticles on article
     pages and sdbnewsletter in emails (build_newsletter.py passes the context)."""
     return SPONSORS[key]["url"].replace("aff_sub=x", "aff_sub=" + context)
 
-def sponsor_block(name):
-    s = SPONSORS.get(name)
+def sponsor_box(key):
+    """FinanceBuzz-style gray sponsor box: bold headline, short copy with the partner name linked,
+    an underlined text call-to-action, and a small SPONSORED label under the box."""
+    s = SPONSORS.get(key)
     if not s: return ""
-    return (f'<div class="partner"><div class="kicker">{s["kicker"]}</div><h3>{s["title"]}</h3>'
-            f'<p>{s["body"]}</p><a class="btn btn-orange btn-lg" href="{offer_url(name)}" rel="sponsored nofollow noopener" target="_blank">{s["cta"]}</a></div>')
+    url = offer_url(key); name = partner_name(key)
+    return (f'<div class="sp-wrap"><div class="sp-box"><p class="sp-headline">{html.escape(s["title"])}</p>'
+            f'<p>{html.escape(s["body"])}</p>'
+            f'<p>See the offer from <a href="{url}" rel="sponsored nofollow noopener" target="_blank">{html.escape(name)}</a>.</p>'
+            f'<p><a class="sp-cta" href="{url}" rel="sponsored nofollow noopener" target="_blank">{html.escape(s["cta"])}</a></p></div>'
+            f'<div class="sp-label">Sponsored</div></div>')
+
+def sponsor_inline(key):
+    """One-line text link between sections: bold question plus an underlined call to action."""
+    s = SPONSORS.get(key)
+    if not s: return ""
+    return (f'<p class="sp-inline"><a href="{offer_url(key)}" rel="sponsored nofollow noopener" target="_blank">'
+            f'<b>{html.escape(s["title"])}</b> {html.escape(s["cta"])}.</a> <span class="sp-tag">Sponsored</span></p>')
+
+def sponsor_block(name):   # kept for anything else that still calls it
+    return sponsor_box(name)
+
+def related_articles(meta, articles, n=3):
+    from build_home import lane_of
+    lane = lane_of(meta)
+    same = [m for m in articles if m["slug"] != meta["slug"] and lane_of(m) == lane]
+    rest = [m for m in articles if m["slug"] != meta["slug"] and m not in same]
+    return (same + rest)[:n]
+
+def more_from(related, offer_key):
+    items = "".join(f'<li><a href="/articles/{m["slug"]}.html">{html.escape(m["title"])}</a></li>' for m in related)
+    if offer_key and offer_key in SPONSORS:
+        s = SPONSORS[offer_key]
+        items += (f'<li><a href="{offer_url(offer_key)}" rel="sponsored nofollow noopener" target="_blank">{html.escape(s["title"])}</a> '
+                  f'<span class="sp-tag">Sponsored</span></li>')
+    return f'<div class="more-from"><p><b>More from Senior Daily Benefits:</b></p><ul>{items}</ul></div>'
+
+SUBSCRIBE_BOX = """<div class="subscribe-box">
+  <p class="sb-eyebrow">Subscribe today</p>
+  <h4>The money news that matters after 60</h4>
+  <p class="sb-desc">Investing, insurance, mortgages, taxes, household cash flow, retirement planning, and what the economy is doing to your check. One free email every weekday morning.</p>
+  <form class="sb-form" onsubmit="subscribe(event, 'article')">
+    <input type="email" required placeholder="Enter your email address" autocomplete="email" aria-label="Email address">
+    <button class="btn btn-orange" type="submit">Subscribe free →</button>
+  </form>
+  <p class="sb-fine">By subscribing you agree to receive emails from Senior Daily Benefits and to the <a href="/privacy-policy.html">privacy policy</a> and <a href="/terms-conditions.html">terms</a>. Unsubscribe anytime.</p>
+  <div class="success" hidden><div class="celebrate">✅</div><h3>You're in!</h3><p>Your first issue arrives tomorrow morning.</p></div>
+</div>"""
+
+def also_like(related):
+    cards = "".join(
+        f'<a class="card-sm" href="/articles/{m["slug"]}.html"><img src="{article_image(m)}" alt="" width="1200" height="630" loading="lazy">'
+        f'<span class="topic-chip">{html.escape(m.get("topic","Benefits"))}</span><h3>{html.escape(m["title"])}</h3><time>{nice_date(m["date"])}</time></a>'
+        for m in related)
+    return f'<section class="also-like"><h2>You may also like</h2><div class="card-grid">{cards}</div></section>'
 
 def page(title, desc, body, canonical, og=SITE + "/images/topics/general.svg"):
     return f"""<!DOCTYPE html>
@@ -338,21 +399,28 @@ def page(title, desc, body, canonical, og=SITE + "/images/topics/general.svg"):
 {FOOTER.format(year=datetime.date.today().year, css=CSS_VERSION)}
 </body></html>"""
 
-def build_article(meta, body_md):
+def build_article(meta, body_md, articles=None):
     body_html = md_to_html(body_md)
-    keys = [k.strip() for k in meta.get("sponsor", "").split(",") if k.strip()]
-    blocks = [sponsor_block(k) for k in keys if sponsor_block(k)]
-    # place each partner block right before the 2nd, 3rd, ... <h2>
-    parts = body_html.split("<h2>")
-    for i, blk in enumerate(blocks):
-        idx = i + 2
-        if idx < len(parts):
+    keys = [k.strip() for k in meta.get("sponsor", "").split(",") if k.strip() in SPONSORS]
+    parts = body_html.split("<h2>")            # parts[0] = intro, parts[i] = section i
+    n = len(parts) - 1
+    # slot 1: gray box after the intro (before h2 #1) when the intro has 2+ paragraphs, else before h2 #2
+    # slot 2: one-line text link in the middle; slot 3: second gray box before the last section
+    slots = []
+    if keys:
+        slots.append((1 if parts[0].count("<p>") >= 2 else 2, sponsor_box(keys[0])))
+    if len(keys) > 1 and n >= 3:
+        slots.append((max(2, n // 2 + 1), sponsor_inline(keys[1])))
+    if len(keys) > 2 and n >= 4:
+        slots.append((n, sponsor_box(keys[2])))
+    for idx, blk in slots:
+        if idx <= n:
             parts[idx] = blk + "<h2>" + parts[idx]
         else:
             parts[-1] += blk
-    body_html = parts[0] + "".join(
-        p if p.startswith('<div class="partner">') else "<h2>" + p for p in parts[1:])
-    sp = bool(blocks)
+    body_html = parts[0] + "".join(p if p.startswith(("<div class=\"sp-wrap\">", "<p class=\"sp-inline\">")) else "<h2>" + p for p in parts[1:])
+    related = related_articles(meta, articles or [])
+    more_key = keys[1] if len(keys) > 1 and n < 3 else (keys[2] if len(keys) > 2 and n < 4 else (keys[-1] if keys else None))
     sources = ""
     if meta.get("sources"):
         items = []
@@ -364,12 +432,16 @@ def build_article(meta, body_md):
   <span class="topic-chip">{html.escape(meta.get("topic","Benefits"))}</span>
   <h1>{html.escape(meta["title"])}</h1>
   <p class="summary">{html.escape(meta["summary"])}</p>
-  <p class="meta">Updated {nice_date(meta["date"])}</p>
+  <p class="meta byline"><span class="byline-avatar">SDB</span> By the Senior Daily Benefits team &middot; Updated {nice_date(meta["date"])}</p>
 </div></section>
 <div class="container" style="max-width:820px;padding-top:2rem"><img class="hero-img" src="{article_image(meta)}" alt="" width="1200" height="630">{image_credit(meta)}</div>
 <article class="article"><div class="container">
 {body_html}
-{QUIZ_CTA}
+{more_from(related, more_key)}
+{sources}
+<p class="disclosure">{DISCLOSURE if keys else ""} This article is for general information and is not financial, legal, or tax advice.</p>
+{SUBSCRIBE_BOX}
+{also_like(related) if related else ""}
 <section class="comments" id="comments" data-slug="{meta['slug']}">
   <h2>Comments <span class="comment-count muted"></span></h2>
   <div class="comment-list"><p class="muted">Loading comments…</p></div>
@@ -386,8 +458,6 @@ def build_article(meta, body_md):
     <p class="comment-note" role="status"></p>
   </form>
 </section>
-{sources}
-<p class="disclosure">{DISCLOSURE if sp else ""} This article is for general information and is not financial, legal, or tax advice.</p>
 </div></article>\n<script src="/comments.js" defer></script>"""
     return page(meta["title"], meta["summary"], body, f"{SITE}/articles/{meta['slug']}.html", SITE + article_image(meta))
 
@@ -406,13 +476,11 @@ def build_index(articles):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    articles = []
-    for p in sorted(CONTENT.glob("*.md")):
-        meta, body = parse(p)
-        (OUT / f"{meta['slug']}.html").write_text(build_article(meta, body), encoding="utf-8")
-        articles.append(meta)
+    parsed = [parse(p) for p in sorted(CONTENT.glob("*.md"))]
+    articles = sorted([m for m, _ in parsed], key=lambda m: m["date"], reverse=True)
+    for meta, body in parsed:
+        (OUT / f"{meta['slug']}.html").write_text(build_article(meta, body, articles), encoding="utf-8")
         print("built", meta["slug"])
-    articles.sort(key=lambda m: m["date"], reverse=True)
     (OUT / "index.html").write_text(build_index(articles), encoding="utf-8")
     import json
     (OUT / "latest.json").write_text(json.dumps([
