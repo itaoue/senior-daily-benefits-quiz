@@ -10,7 +10,7 @@ Senior Daily Benefits, and print a ranked candidate list.
 
 Sources: RSS where a site offers one (money.com, gobankingrates.com,
 moneytalksnews.com, kiplinger.com) and Google News site-search RSS for the
-rest (moneywise.com, thepennyhoarder.com) plus a second pass over all six.
+rest (moneywise.com, thepennyhoarder.com, financebuzz.com) plus a second pass over all seven.
 Scoring: named celebrities/politicians (required for the newsletter lead),
 senior-money keywords, and recency. Candidates that overlap an existing
 article title are flagged so we don't write the same piece twice.
@@ -22,7 +22,7 @@ from email.utils import parsedate_to_datetime
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
 
-SITES = ["moneywise.com", "money.com", "gobankingrates.com", "moneytalksnews.com", "thepennyhoarder.com", "kiplinger.com"]
+SITES = ["moneywise.com", "money.com", "gobankingrates.com", "moneytalksnews.com", "thepennyhoarder.com", "kiplinger.com", "financebuzz.com"]
 RSS = {
     "money.com": "https://money.com/feed/",
     "gobankingrates.com": "https://www.gobankingrates.com/feed/",
